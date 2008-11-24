@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B0202900ECB2AA700A6EB85 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B02028F0ECB2AA700A6EB85 /* Security.framework */; };
+		8B4A3EB00ED245F0006BFDD8 /* About.html in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A3EAF0ED245F0006BFDD8 /* About.html */; };
+		8B4A41B20ED31D25006BFDD8 /* com.google.macfuse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A41B10ED31D25006BFDD8 /* com.google.macfuse.plist */; };
+		8B84BF130ED64CDE003D9F0F /* GTMSystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B84BF110ED64CDE003D9F0F /* GTMSystemVersion.m */; };
+		8BDF5DC80ECE9031006AF1EF /* autoinstall-macfuse-core in Copy Executables (2) */ = {isa = PBXBuildFile; fileRef = 8BDF5DC20ECE8FD9006AF1EF /* autoinstall-macfuse-core */; };
+		8BE4F6370EDB2A2C0087B5C1 /* MacFUSE_48x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BE4F6360EDB2A2C0087B5C1 /* MacFUSE_48x48.png */; };
+		8BE4F63A0EDB2A300087B5C1 /* MacFUSE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8BE4F6380EDB2A300087B5C1 /* MacFUSE.icns */; };
+		8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D202CEF0486D31800D8A456 /* MacFUSEPref.xib in Resources */ = {isa = PBXBuildFile; fileRef = F506C042013D9D8C01CA16C8 /* MacFUSEPref.xib */; };
+		8D202CF10486D31800D8A456 /* MacFUSEPref.m in Sources */ = {isa = PBXBuildFile; fileRef = F506C03D013D9D7901CA16C8 /* MacFUSEPref.m */; };
+		8D202CF30486D31800D8A456 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BDF5DBD0ECE8FD9006AF1EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F92468F10E3163D1004ADF93;
+			remoteInfo = "Extensions Tests";
+		};
+		8BDF5DBF0ECE8FD9006AF1EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9246A200E3199F9004ADF93;
+			remoteInfo = plist_signer;
+		};
+		8BDF5DC10ECE8FD9006AF1EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F931FE600E92D311009FB4B0;
+			remoteInfo = "autoinstall-macfuse-core";
+		};
+		8BDF5DC30ECE8FED006AF1EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F931FE5F0E92D311009FB4B0;
+			remoteInfo = "autoinstall-macfuse-core";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8BDF5DD00ECE903A006AF1EF /* Copy Executables (2) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				8BDF5DC80ECE9031006AF1EF /* autoinstall-macfuse-core in Copy Executables (2) */,
+			);
+			name = "Copy Executables (2)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCFA20370C41700C91783 /* MacFUSE_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFUSE_Prefix.pch; sourceTree = "<group>"; };
+		8B02028F0ECB2AA700A6EB85 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		8B449EF70ED379BC00E7026D /* LoadableBundle.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = LoadableBundle.xcconfig; sourceTree = "<group>"; };
+		8B449EFE0ED379BC00E7026D /* xcconfigs-readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xcconfigs-readme.txt"; sourceTree = "<group>"; };
+		8B4A3DE40ED243EE006BFDD8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
+		8B4A3EAD0ED245DA006BFDD8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/About.html; sourceTree = "<group>"; };
+		8B4A41B10ED31D25006BFDD8 /* com.google.macfuse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = com.google.macfuse.plist; path = ../packaging/com.google.macfuse.plist; sourceTree = "<group>"; };
+		8B84BDD10ED63320003D9F0F /* ReleaseTigerOrLater.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ReleaseTigerOrLater.xcconfig; sourceTree = "<group>"; };
+		8B84BDD20ED63320003D9F0F /* DebugTigerOrLater.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DebugTigerOrLater.xcconfig; sourceTree = "<group>"; };
+		8B84BF110ED64CDE003D9F0F /* GTMSystemVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSystemVersion.m; path = "../externals/google-toolbox-for-mac/Foundation/GTMSystemVersion.m"; sourceTree = SOURCE_ROOT; };
+		8B84BF120ED64CDE003D9F0F /* GTMSystemVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSystemVersion.h; path = "../externals/google-toolbox-for-mac/Foundation/GTMSystemVersion.h"; sourceTree = SOURCE_ROOT; };
+		8B84BF200ED64D59003D9F0F /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "../externals/google-toolbox-for-mac/GTMDefines.h"; sourceTree = SOURCE_ROOT; };
+		8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = autoinstaller.xcodeproj; path = ../autoinstaller/autoinstaller.xcodeproj; sourceTree = SOURCE_ROOT; };
+		8BE4F6360EDB2A2C0087B5C1 /* MacFUSE_48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MacFUSE_48x48.png; path = ../packaging/images/MacFUSE_48x48.png; sourceTree = SOURCE_ROOT; };
+		8BE4F6390EDB2A300087B5C1 /* English */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = English; path = English.lproj/MacFUSE.icns; sourceTree = "<group>"; };
+		8D202CF70486D31800D8A456 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D202CF80486D31800D8A456 /* MacFUSE.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacFUSE.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		F506C035013D953901CA16C8 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
+		F506C03C013D9D7901CA16C8 /* MacFUSEPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFUSEPref.h; sourceTree = "<group>"; };
+		F506C03D013D9D7901CA16C8 /* MacFUSEPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFUSEPref.m; sourceTree = "<group>"; };
+		F506C043013D9D8C01CA16C8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MacFUSEPref.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D202CF20486D31800D8A456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D202CF30486D31800D8A456 /* Cocoa.framework in Frameworks */,
+				8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */,
+				8B0202900ECB2AA700A6EB85 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* MacFuse */ = {
+			isa = PBXGroup;
+			children = (
+				8B449ED70ED379BC00E7026D /* externals */,
+				8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */,
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32DBCFA10370C40200C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = MacFuse;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8B4A3DE40ED243EE006BFDD8 /* WebKit.framework */,
+				8B02028F0ECB2AA700A6EB85 /* Security.framework */,
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8BE4F6360EDB2A2C0087B5C1 /* MacFUSE_48x48.png */,
+				8BE4F6380EDB2A300087B5C1 /* MacFUSE.icns */,
+				8B4A3EAF0ED245F0006BFDD8 /* About.html */,
+				8B4A41B10ED31D25006BFDD8 /* com.google.macfuse.plist */,
+				8D202CF70486D31800D8A456 /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+				F506C042013D9D8C01CA16C8 /* MacFUSEPref.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8B84BF200ED64D59003D9F0F /* GTMDefines.h */,
+				8B84BF110ED64CDE003D9F0F /* GTMSystemVersion.m */,
+				8B84BF120ED64CDE003D9F0F /* GTMSystemVersion.h */,
+				F506C03C013D9D7901CA16C8 /* MacFUSEPref.h */,
+				F506C03D013D9D7901CA16C8 /* MacFUSEPref.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+				F506C035013D953901CA16C8 /* PreferencePanes.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D202CF80486D31800D8A456 /* MacFUSE.prefPane */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32DBCFA10370C40200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCFA20370C41700C91783 /* MacFUSE_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		8B449ED70ED379BC00E7026D /* externals */ = {
+			isa = PBXGroup;
+			children = (
+				8B449ED80ED379BC00E7026D /* google-toolbox-for-mac */,
+			);
+			name = externals;
+			path = ../externals;
+			sourceTree = "<group>";
+		};
+		8B449ED80ED379BC00E7026D /* google-toolbox-for-mac */ = {
+			isa = PBXGroup;
+			children = (
+				8B449ED90ED379BC00E7026D /* XcodeConfig */,
+			);
+			path = "google-toolbox-for-mac";
+			sourceTree = "<group>";
+		};
+		8B449ED90ED379BC00E7026D /* XcodeConfig */ = {
+			isa = PBXGroup;
+			children = (
+				8B449EDA0ED379BC00E7026D /* Project */,
+				8B449EF50ED379BC00E7026D /* Target */,
+				8B449EFE0ED379BC00E7026D /* xcconfigs-readme.txt */,
+			);
+			path = XcodeConfig;
+			sourceTree = "<group>";
+		};
+		8B449EDA0ED379BC00E7026D /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				8B84BDD10ED63320003D9F0F /* ReleaseTigerOrLater.xcconfig */,
+				8B84BDD20ED63320003D9F0F /* DebugTigerOrLater.xcconfig */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		8B449EF50ED379BC00E7026D /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				8B449EF70ED379BC00E7026D /* LoadableBundle.xcconfig */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		8BDF5DB40ECE8FD9006AF1EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BDF5DBE0ECE8FD9006AF1EF /* Extensions Tests.octest */,
+				8BDF5DC00ECE8FD9006AF1EF /* plist_signer */,
+				8BDF5DC20ECE8FD9006AF1EF /* autoinstall-macfuse-core */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D202CE80486D31800D8A456 /* MacFUSE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "MacFUSE" */;
+			buildPhases = (
+				8D202CEC0486D31800D8A456 /* Resources */,
+				8BDF5DD00ECE903A006AF1EF /* Copy Executables (2) */,
+				8D202CF00486D31800D8A456 /* Sources */,
+				8D202CF20486D31800D8A456 /* Frameworks */,
+				8D202CF50486D31800D8A456 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BDF5DC40ECE8FED006AF1EF /* PBXTargetDependency */,
+			);
+			name = MacFUSE;
+			productInstallPath = "$(HOME)/Library/PreferencePanes";
+			productName = MacFuse;
+			productReference = 8D202CF80486D31800D8A456 /* MacFUSE.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "MacFUSEPref" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* MacFuse */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8BDF5DB40ECE8FD9006AF1EF /* Products */;
+					ProjectRef = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D202CE80486D31800D8A456 /* MacFUSE */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8BDF5DBE0ECE8FD9006AF1EF /* Extensions Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Extensions Tests.octest";
+			remoteRef = 8BDF5DBD0ECE8FD9006AF1EF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8BDF5DC00ECE8FD9006AF1EF /* plist_signer */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = plist_signer;
+			remoteRef = 8BDF5DBF0ECE8FD9006AF1EF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8BDF5DC20ECE8FD9006AF1EF /* autoinstall-macfuse-core */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "autoinstall-macfuse-core";
+			remoteRef = 8BDF5DC10ECE8FD9006AF1EF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D202CEC0486D31800D8A456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */,
+				8D202CEF0486D31800D8A456 /* MacFUSEPref.xib in Resources */,
+				8B4A3EB00ED245F0006BFDD8 /* About.html in Resources */,
+				8B4A41B20ED31D25006BFDD8 /* com.google.macfuse.plist in Resources */,
+				8BE4F6370EDB2A2C0087B5C1 /* MacFUSE_48x48.png in Resources */,
+				8BE4F63A0EDB2A300087B5C1 /* MacFUSE.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		8D202CF50486D31800D8A456 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D202CF00486D31800D8A456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D202CF10486D31800D8A456 /* MacFUSEPref.m in Sources */,
+				8B84BF130ED64CDE003D9F0F /* GTMSystemVersion.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BDF5DC40ECE8FED006AF1EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "autoinstall-macfuse-core";
+			targetProxy = 8BDF5DC30ECE8FED006AF1EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8B4A3EAF0ED245F0006BFDD8 /* About.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B4A3EAD0ED245DA006BFDD8 /* English */,
+			);
+			name = About.html;
+			sourceTree = "<group>";
+		};
+		8BE4F6380EDB2A300087B5C1 /* MacFUSE.icns */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BE4F6390EDB2A300087B5C1 /* English */,
+			);
+			name = MacFUSE.icns;
+			sourceTree = "<group>";
+		};
+		F506C042013D9D8C01CA16C8 /* MacFUSEPref.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F506C043013D9D8C01CA16C8 /* English */,
+			);
+			name = MacFUSEPref.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DBD214908BA80EA00186707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B449EF70ED379BC00E7026D /* LoadableBundle.xcconfig */;
+			buildSettings = {
+				GCC_PREFIX_HEADER = MacFUSEPref_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = MacFUSE;
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Debug;
+		};
+		1DBD214A08BA80EA00186707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B449EF70ED379BC00E7026D /* LoadableBundle.xcconfig */;
+			buildSettings = {
+				GCC_PREFIX_HEADER = MacFUSEPref_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = MacFUSE;
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Release;
+		};
+		1DBD214D08BA80EA00186707 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B84BDD20ED63320003D9F0F /* DebugTigerOrLater.xcconfig */;
+			buildSettings = {
+				"ARCHS[sdk=macosx10.5*]" = "$(ARCHS_STANDARD_32_BIT)";
+			};
+			name = Debug;
+		};
+		1DBD214E08BA80EA00186707 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B84BDD10ED63320003D9F0F /* ReleaseTigerOrLater.xcconfig */;
+			buildSettings = {
+				"ARCHS[sdk=macosx10.5*]" = "$(ARCHS_STANDARD_32_BIT)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "MacFUSE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DBD214908BA80EA00186707 /* Debug */,
+				1DBD214A08BA80EA00186707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "MacFUSEPref" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DBD214D08BA80EA00186707 /* Debug */,
+				1DBD214E08BA80EA00186707 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
