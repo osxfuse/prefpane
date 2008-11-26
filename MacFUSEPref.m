@@ -140,7 +140,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
     NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
     NSDate *startDate = [NSDate date];
     do {
-      NSDate *waitDate = [NSDate dateWithTimeIntervalSinceNow:0.1];
+      NSDate *waitDate = [NSDate dateWithTimeIntervalSinceNow:0.01];
       if ([waitDate timeIntervalSinceDate:startDate] > kNetworkTimeOutInterval) {
         result = -1;
         [task terminate];
@@ -265,9 +265,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
 }
 
 - (void)updateUI {
-  [spinner performSelector:@selector(startAnimation:) 
-                withObject:self 
-                afterDelay:1];
+  [spinner startAnimation:self];
   NSString *installedVersion = [self installedVersion];
   BOOL isInstalled = installedVersion != nil;
   NSString *availableVersion = [self availableVersion];
