@@ -370,7 +370,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   [spinner startAnimation:self];
   [self setMessageText:NSLocalizedString(@"Removing MacFUSE…", nil)];
   int result = [self runTaskForPath:[self removeToolPath] 
-                      withArguments:[NSArray array]
+                      withArguments:[NSArray arrayWithObject:@"-q"]
                          authorized:YES
                              output:&output];
   [spinner stopAnimation:self];
