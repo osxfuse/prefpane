@@ -408,6 +408,12 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
     = [[[NSAttributedString alloc] initWithPath:path documentAttributes:nil] 
        autorelease];
   [aboutBoxView setAttributedStringValue:attrString];
+  if ([GTMSystemVersion isTiger]) {
+    NSView *view = [self mainView];
+    NSSize size = [view frame].size;
+    size.width = 594;
+    [view setFrameSize:size]; // Resize for Tiger
+  }
 }
 
 - (void)applicationDidBecomeActive:(NSNotification *)notification {
