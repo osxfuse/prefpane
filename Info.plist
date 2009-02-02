@@ -21,16 +21,16 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>2.0</string>
 	<key>NSMainNibFile</key>
 	<string>MacFUSEPref</string>
 	<key>NSPrefPaneIconFile</key>
 	<string>MacFUSE.icns</string>
 	<key>NSPrefPaneIconLabel</key>
 	<string>MacFUSE</string>
-	<key>NSPrincipalClass</key>
-	<string>MacFUSEPref</string>
 	<key>NSPrefPaneSearchParameters</key>
 	<string>MacFUSE</string>
+	<key>NSPrincipalClass</key>
+	<string>MacFUSEPref</string>
 </dict>
 </plist>

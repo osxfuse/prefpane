@@ -30,7 +30,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
 - (NSString *)installedVersion;
 - (void)checkForUpdates:(id)sender;
 - (void)updateMacFUSE:(id)sender;
-- (BOOL)isBetaVersion;
+- (BOOL)useBetaVersion;
 - (void)setUseBetaVersion:(BOOL)useBeta;
 - (void)updateUI;
 - (NSString *)installToolPath;
@@ -255,6 +255,14 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
       if ([updates count]) {
         NSDictionary *update = [updates objectAtIndex:0];
         version = [update objectForKey:@"Version"];
+        NSString *codeBase = [update objectForKey:@"Codebase"];
+        if (codeBase) {
+          NSRange devRange = [codeBase rangeOfString:@"/developer/"];
+          if (devRange.location != NSNotFound) {
+            NSString *formatString = NSLocalizedString(@"%@ (Beta)", nil);
+            version = [NSString stringWithFormat:formatString, version];
+          }
+        }
       }
       else {
         version = @"";
@@ -296,21 +304,13 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
     }
   }
   [self setMessageText:updateString];
-  BOOL isBetaVersion = [self isBetaVersion];
-  [self setUseBetaVersion:isBetaVersion];
+  BOOL useBetaVersion = [self useBetaVersion];
+  [self setUseBetaVersion:useBetaVersion];
   [self setInstalled:isInstalled];
   if (!installedVersion) {
     installedVersion 
       = NSLocalizedString(@"MacFUSE does not appear to be installed.", nil);
-  } else {
-    NSString *betaVersionString = @"";
-    if (isBetaVersion) {
-      betaVersionString = NSLocalizedString(@" (Beta)", nil);
-    }    
-    NSString *installedFormat = NSLocalizedString(@"Installed Version: %@%@", nil);
-    installedVersion = [NSString stringWithFormat:installedFormat, 
-                        installedVersion, betaVersionString, nil];
-  }
+  } 
   [self setInstalledVersionText:installedVersion];
   [updateButton setTitle:buttonText];
   [updateButton setTarget:self];
@@ -449,19 +449,15 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   return path;
 }
 
-- (BOOL)isBetaVersion {
-  BOOL isBetaVersion = NO;
+- (BOOL)useBetaVersion {
+  BOOL useBetaVersion = NO;
   NSString *path = [self betaPreferencesPath];
   NSDictionary *properties = [NSDictionary dictionaryWithContentsOfFile:path];
   if (properties) {
     NSString *value = [properties objectForKey:kURLKey];
-    isBetaVersion = [value isEqualToString:kBetaValue];
+    useBetaVersion = [value isEqualToString:kBetaValue];
   }
-  return isBetaVersion;
-}
-
-- (BOOL)useBetaVersion {
-  return [self isBetaVersion];
+  return useBetaVersion;
 }
 
 -(BOOL)validateUseBetaVersion:(id *)ioValue error:(NSError **)outError
@@ -476,7 +472,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
 }
 
 - (void)setUseBetaVersion:(BOOL)useBeta {
-  BOOL currentlyBeta = [self isBetaVersion];
+  BOOL currentlyBeta = [self useBetaVersion];
   if (useBeta != currentlyBeta) {
     NSString *prefPath = [self betaPreferencesPath];
     NSString *prefPlistPath = [[self bundle] pathForResource:kPreferencesName
