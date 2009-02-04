@@ -228,6 +228,20 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
         versionNumber = [versionNumber substringFromIndex:[versionTag length]];
         if ([versionNumber intValue] != 0) {
           versionString = versionNumber;
+          NSString *fusePath 
+            = @"/Library/FileSystems/fusefs.fs/Contents/Info.plist";
+          if ([GTMSystemVersion isTiger]) {
+            fusePath = [@"/System" stringByAppendingPathComponent:fusePath];
+          }
+          NSDictionary *fusePlist 
+            = [NSDictionary dictionaryWithContentsOfFile:fusePath];
+          if (fusePlist) {
+            NSString *flavor = [fusePlist objectForKey:@"BuildFlavor"];
+            if (flavor) {
+              versionString = [NSString stringWithFormat:@"%@ (%@)", 
+                               versionString, flavor];
+            }
+          }
         }
       }
     }

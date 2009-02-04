@@ -72,7 +72,6 @@
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		32DBCFA20370C41700C91783 /* MacFUSE_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFUSE_Prefix.pch; sourceTree = "<group>"; };
 		8B02028F0ECB2AA700A6EB85 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		8B449EF70ED379BC00E7026D /* LoadableBundle.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = LoadableBundle.xcconfig; sourceTree = "<group>"; };
 		8B449EFE0ED379BC00E7026D /* xcconfigs-readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xcconfigs-readme.txt"; sourceTree = "<group>"; };
@@ -116,7 +115,6 @@
 				8B449ED70ED379BC00E7026D /* externals */,
 				8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
-				32DBCFA10370C40200C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
@@ -186,14 +184,6 @@
 				8D202CF80486D31800D8A456 /* MacFUSE.prefPane */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		32DBCFA10370C40200C91783 /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				32DBCFA20370C41700C91783 /* MacFUSE_Prefix.pch */,
-			);
-			name = "Other Sources";
 			sourceTree = "<group>";
 		};
 		8B449ED70ED379BC00E7026D /* externals */ = {
