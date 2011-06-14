@@ -34,17 +34,17 @@ static unsigned int macfuse_public_der_len = 162;
 
 @implementation SignedPlistServer
 
-- (id)initWithURL:(NSURL *)url params:(NSDictionary *)params {
+- (id)initWithURL:(NSURL *)url params:(NSDictionary *)params engine:(KSUpdateEngine *)engine {
   // By default, this class will create a SignedPlistServer customized with 
   // the appropriate public key for the signature of MacFUSE rules plists.
   NSData *pubKey = [NSData dataWithBytes:macfuse_public_der
                                   length:macfuse_public_der_len];
   Signer *macfuseSigner = [Signer signerWithPublicKey:pubKey privateKey:nil];
-  return [self initWithURL:url signer:macfuseSigner];
+  return [self initWithURL:url signer:macfuseSigner engine:engine];
 }
 
-- (id)initWithURL:(NSURL *)url signer:(Signer *)signer {
-  if ((self = [super initWithURL:url params:nil])) {
+- (id)initWithURL:(NSURL *)url signer:(Signer *)signer engine:(KSUpdateEngine *)engine {
+  if ((self = [super initWithURL:url params:nil engine:engine])) {
     signer_ = [signer retain];
     if (signer_ == nil) {
       [self release];
@@ -54,13 +54,19 @@ static unsigned int macfuse_public_der_len = 162;
   return self;
 }
 
+- (id)initWithURL:(NSURL *)url signer:(Signer *)signer {
+  return [self initWithURL:url signer:signer engine:nil];
+}
+
+
 - (void)dealloc {
   [signer_ release];
   [super dealloc];
 }
 
 - (NSArray *)updateInfosForResponse:(NSURLResponse *)response
-                               data:(NSData *)data {
+                               data:(NSData *)data
+                      outOfBandData:(NSDictionary **)oob {
   // Decode the response |data| into a plist
   NSString *body = [[[NSString alloc]
                      initWithData:data
@@ -85,7 +91,7 @@ static unsigned int macfuse_public_der_len = 162;
     return nil;
   }
   
-  return [super updateInfosForResponse:response data:data];
+  return [super updateInfosForResponse:response data:data outOfBandData:oob];
 }
 
 @end

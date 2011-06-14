@@ -147,7 +147,7 @@ static NSString *const kSignedPlist =
                        dataFromPropertyList:plist
                        format:NSPropertyListXMLFormat_v1_0
                        errorDescription:NULL];
-  NSArray *infos = [server_ updateInfosForResponse:nil data:plistData];
+  NSArray *infos = [server_ updateInfosForResponse:nil data:plistData outOfBandData:nil];
   STAssertNil(infos, nil);
 }
 
@@ -157,7 +157,7 @@ static NSString *const kSignedPlist =
                        dataFromPropertyList:plist
                        format:NSPropertyListXMLFormat_v1_0
                        errorDescription:NULL];
-  NSArray *infos = [server_ updateInfosForResponse:nil data:plistData];
+  NSArray *infos = [server_ updateInfosForResponse:nil data:plistData outOfBandData:nil];
   STAssertNotNil(infos, nil);
   STAssertTrue([infos count] == 1, nil);
 }

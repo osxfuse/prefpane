@@ -27,6 +27,11 @@
 // Returns an instance that will use |signer_| to verify the signature on all 
 // server responses. |signer| MUST be configured with a public key, or else
 // all signature verification will fail.
+- (id)initWithURL:(NSURL *)url signer:(Signer *)signer engine:(KSUpdateEngine *)engine;
+
+// Returns an instance that will use |signer_| to verify the signature on all 
+// server responses. |signer| MUST be configured with a public key, or else
+// all signature verification will fail.
 - (id)initWithURL:(NSURL *)url signer:(Signer *)signer;
 
 @end

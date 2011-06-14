@@ -98,7 +98,7 @@
   
   int success = 0;
   
-  unsigned char *bytes = (unsigned char *)[publicKey_ bytes];
+  const unsigned char *bytes = (unsigned char *)[publicKey_ bytes];
   RSA *rsa = d2i_RSA_PUBKEY(NULL, &bytes, [publicKey_ length]);
   if (rsa) {    
     EVP_PKEY *keyWrapper = EVP_PKEY_new();

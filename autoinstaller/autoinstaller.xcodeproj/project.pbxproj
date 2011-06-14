@@ -245,7 +245,7 @@
 		F931FE600E92D311009FB4B0 /* autoinstall-macfuse-core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "autoinstall-macfuse-core"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F954BF900E2D548A00E776EB /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		F954C0CA0E2D6C6400E776EB /* SignedPlistServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignedPlistServer.h; sourceTree = "<group>"; };
-		F954C0CB0E2D6C6400E776EB /* SignedPlistServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignedPlistServer.m; sourceTree = "<group>"; };
+		F954C0CB0E2D6C6400E776EB /* SignedPlistServer.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = SignedPlistServer.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		F954C0CC0E2D6C6400E776EB /* EngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngineDelegate.h; sourceTree = "<group>"; };
 		F954C0CD0E2D6C6400E776EB /* EngineDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EngineDelegate.m; sourceTree = "<group>"; };
 		F95A05210E25327300A22FA6 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
