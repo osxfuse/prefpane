@@ -3,9 +3,12 @@
 //
 
 #ifdef __OBJC__
-  #import <Foundation/Foundation.h>
-  #import "GTMLogger.h"
-  
-  #define _GTMDevLog GTMLoggerInfo
-  #import "GTMDefines.h"
+#  import <Foundation/Foundation.h>
+#  import "GTMLogger.h"
+#  import "GTMDefines.h"
+#  ifdef _GTMDevLog
+#    undef _GTMDevLog
+#  endif
+#  define _GTMDevLog GTMLoggerInfo
+#  import "GTMDefines.h"
 #endif
