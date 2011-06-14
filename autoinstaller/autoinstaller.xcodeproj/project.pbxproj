@@ -621,7 +621,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "autoinstaller" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* autoinstaller */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -773,10 +777,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F931FBEB0E92B6F9009FB4B0 /* DebugTigerOrLater.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PREFIX_HEADER = autoinstaller_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = "";
+				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -784,7 +792,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F931FBEC0E92B6F9009FB4B0 /* ReleaseTigerOrLater.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PREFIX_HEADER = autoinstaller_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
