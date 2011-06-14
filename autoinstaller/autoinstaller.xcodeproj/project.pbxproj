@@ -834,6 +834,7 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PREFIX_HEADER = autoinstaller_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				LIBRARY_SEARCH_PATHS = "\"../externals/google-toolbox-for-mac/TigerGcov\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = "";
 				SDKROOT = macosx10.6;
