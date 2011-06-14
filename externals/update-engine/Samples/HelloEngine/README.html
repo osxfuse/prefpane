@@ -1,0 +1,256 @@
+<html>
+
+<head>
+  <title>Welcome to HelloEngine</title>
+</head>
+
+<body bgcolor="white">
+
+<h1>Welcome to HelloEngine</h1>
+
+Welcome to HelloEngine, a minimal, but functional, Update Engine
+program.  <tt>HelloEngine.m</tt> has some comments about how Update
+Engine works.  This file has instructions on how to run the sample,
+and to get your own Stuff into Update Engine's pipeline.
+
+<p>
+
+Here's how to run things:
+<ul>
+  <li> Copy <tt>Samples/HelloEngine/TestApp.dmg</tt> to <tt>/tmp</tt>
+  <li> Copy <tt>Samples/HelloEngine/ServerResponse.plist</tt> to <tt>/tmp</tt>
+  <li> Build HelloEngine
+  <li> Run HelloEngine:<br>
+<pre>HelloEngine -productID com.google.HelloEngineTest -version 1.2 -serverURL file:///tmp/ServerResponse.plist</pre>
+  <li> Note new file, <tt>/tmp/HiEngine.sh</tt>, which has been "updated".
+Run that for a little message of greetings.
+<pre>
+
+</pre>
+</ul>
+
+<p>
+
+You'll see a lot of output.  This is Update Engine letting you know
+what's going on, and can be useful when debugging things.  It also
+looks cool.
+
+<p>
+
+The very last line of the output will look something like:
+<pre>
+2008-09-12 11:51:01.933 HelloEngine[7055/0x0b0e] [lvl=2] main Update Succeeded
+</pre>
+
+<p>
+
+
+The last word from HelloEngine will be "Succeeded" or "Failed".  If it
+Succeeded, try running <tt>/tmp/HiEngine.sh</tt>
+
+
+
+<h1>Getting HelloEngine to run your own stuff</h1>
+
+There are a couple of steps to get HelloEngine to run your stuff:
+<ul>
+  <li> Edit the <tt>.engine_install</tt> script
+  <li> Build your disk image
+  <li> Calculate hash and file size
+  <li> Edit your <tt>ServerResponse.plist</tt>
+</ul>
+
+
+<h2>.engine_install</h2>
+
+First you'll need to edit the install script, which you can find at
+<tt>Samples/HelloEngine/TestAppDMGSource/.engine_install</tt>.  This script
+is what does the heavy lifting of updating your product.
+
+<p>
+
+<tt>.engine_install</tt> is required for Update Engine to function
+properly.  You can also create <tt>.engine_preinstall</tt> and
+<tt>.engine_postinstall</tt> scripts to do preflight and postflight
+work.  Outside of these scripts, Update Engine doesn't care what you
+have on the disk image.
+
+<p>
+
+The standard-out of the preinstall script gets added to the
+environment of the install and postinstall scripts under the
+environment variable <tt>KS_PREINSTALL_OUT</tt>.  Likewise, the
+standard-out of the install script gets added to the environment of
+the postinstall script under the environment variable
+<tt>KS_INSTALL_OUT</tt>.  This way you can pass information from one
+script phase to the next.
+
+<p>
+
+The scripts can be written in any language you want, but you'll want to
+stick to the languages (and language versions) that exist on your
+user's machines - they probably don't want to download and install the
+Object Fortran++ Scripting Bridge so that you can update your
+software.  Likewise, if you're using Python, don't use any Python 2.5
+features if you intend to update users on Tiger, who only have python 2.3.
+
+<p>
+
+<tt>.engine_install</tt> and the others don't even have to be a
+script, they can be compiled C programs if that makes sense for what
+you need to do.
+
+<p>
+
+The first argument of the script is the directory to the mount point
+of the disk image that Update Engine downloads.  Be aware that this
+path can contain spaces, so do whatever string-space-quoting hygiene
+is necessary for your language of choice.
+
+<p>
+
+Inside of the script, you're welcome to do whatever you want, assuming
+it can be done as the user ID that the HelloEngine tool is run as.  If
+you run it as root, then you can do most anything, please don't delete
+the user's <tt>/Application</tt> directory.
+
+
+<h2>Build your Disk Image</h2>
+
+Once you've written your script, you'll need to build your disk image.
+The easy way to do this is to drop all your stuff into a directory and
+use Disk Utility to create the disk image.  The command to do so is
+hidden under <i>File &gt; New &gt; New Disk Image From Folder</i>.
+Choose the <tt>TestAppDMGSource</tt> folder, or whatever folder you're using for
+your product update, and make sure you're making a compressed,
+unencrypted disk image.
+
+<p>
+
+Here's a command for doing the same thing that's easier to put into an
+Xcode project:
+<pre>
+hdiutil create -ov -imagekey zlib-level=9 -fs HFS+ -format UDZO -scrub
+-srcfolder $DIR $DISKIMAGENAME
+</pre>
+
+<p>
+
+In a real-world application, this can (and should) be the disk image
+that you give your users.  This saves you from having to build, test,
+and deploy two different payloads for your product.  The reason
+the scripts have the leading dot is so that they won't interfere with
+the Finder's presentation of the disk image when it's mounted by the user.
+
+<h2>Caculate Hash and File Size</h2>
+
+Once you have the disk image, you'll need to calculate a checksum, and
+put the checksum and size into the <tt>ServerResponse.plist</tt> file.
+
+<p>
+
+First, calculate the checksum:
+<pre>
+$ openssl sha1 -binary TestApp.dmg | openssl base64
+</pre>
+
+This will output something like 
+<pre>
+BnKj+Bpy4KspQ4qzlkRn6EIaJ4g=
+</pre>
+
+After you figure out how to pronounce that, you'll need to figure out
+how big the file is:
+
+<pre>
+$ ls -l TestApp.dmg
+-rw-r--r--   1 bork bork  50405 Sep 11 18:29 TestApp.dmg
+</pre
+
+So it's 50405 bytes.
+
+<h2>Edit your ServerResponse.plist</h2>
+
+Edit the ServerResponse.plist and plug the values into the Size and
+Hash settings:
+
+<pre>
+<font color="gray">
+...
+  &lt;array&gt;
+    &lt;dict&gt;
+      &lt;key&gt;ProductID&lt;/key&gt;
+      &lt;string&gt;com.google.HelloEngineTest&lt;/string&gt;
+      &lt;key&gt;Predicate&lt;/key&gt;
+      &lt;string&gt;Ticket.version != '2.0'&lt;/string&gt;
+      &lt;key&gt;Codebase&lt;/key&gt;
+      &lt;string&gt;file:///tmp/TestApp.dmg&lt;/string&gt;
+<font color="black">
+      &lt;key&gt;Size&lt;/key&gt;
+      &lt;string&gt;<b>50405</b>&lt;/string&gt;
+      &lt;key&gt;Hash&lt;/key&gt;
+      &lt;string&gt;<b>BnKj+Bpy4KspQ4qzlkRn6EIaJ4g=</b>&lt;/string&gt;
+</font>
+    &lt;/dict&gt;
+  &lt;/array&gt;
+...
+</font>
+</pre>
+
+In a real development environment, you'll probably want an Xcode
+script build phase to do this automatically for you.
+
+<p>
+
+Now you can use your <tt>ServerResponse.plist</tt> and your
+<tt>TestApp.dmg</tt> with HelloEngine to get your stuff run.
+
+
+<h1>What can go wrong</h1>
+
+There are some moving pieces involved, and some things that might go wrong
+as you get things working.  Here are some common ones:
+
+<ul>
+
+ <li> Forgot to replace <tt>/tmp/TestApp.dmg</tt>
+ <li> Forgot to copy <tt>ServerResponse.plist</tt> to <tt>/tmp</tt>
+ <li> Bad hash or bad size when you change the payload<br>
+</ul>
+
+These result in <tt>ServerResponse.plist</tt> having a size and/or hash that's
+out of sync with the TestApp.dmg file.  Update Engine will reject any paylod
+that doesn't match the size and hash.
+
+<ul>
+ <li> Your <tt>.engine_install</tt> is not <tt>+x</tt>
+</ul>
+
+Make sure that your .engine_install file has the executable bit, set with
+<tt>chmod +x .engine_install</tt>
+
+<ul>
+ <li> Making assumptions about the current working directory
+</ul>
+
+The current working directory for your script is undefined, and will
+probably be the directory where you are running the HelloEngine
+command from.  This can confuse your testing if you run HelloEngine
+with your current working directory being that of your
+TestAppDMGSource directory.  The script will work fine when you run
+the install script by hand, but will fail when Update Engine is doing
+its thing.
+
+<p>
+
+Make sure you get the path to your mounted disk from the
+first argument to the script, and make sure that you account for the
+the fact that it might contain spaces.  Even if your disk image name
+doesn't contain spaces, the system might mount it at
+<tt>"/Volumes/Payload 1"</tt> if <tt>/Volumes/Payload</tt> is already
+in use.
+
+</ul>
+
+</body>
+</html>

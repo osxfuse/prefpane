@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Copy the disk image's executable over the existing EngineRunner
+# executable.  This is safe to do.  The old executable is still open
+# and mapped, so won't be disturbed.  It doesn't load any resources
+# either.
+
+# Make sure we have the KS_TICKET_XC_PATH enviornment variable.
+# This is taken from the ticket.
+if [ "${KS_TICKET_XC_PATH:=undefined}" = "undefined" ]; then
+  echo "D'oh!  The ticket doesn't have an existence checker path."
+  echo "That path is used to figure out which EngineRunner to update"
+  exit 1
+
+else
+  # Run the copy.
+  cp "$1/EngineRunner" "${KS_TICKET_XC_PATH}"
+
+  # Did it succeed?
+  if [ $? != 0 ]; then
+    echo "D'oh!  Copy command to ${KS_TICKET_XC_PATH} failed."
+    echo "Are the destination permissions ok?"
+    exit 1
+  fi
+fi
+
+# Happiness and light.
+exit 0

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Rules</key>
+  <array>
+    <dict>
+      <key>ProductID</key>
+      <string>COM.GOOGLE.UPDATEENGINE.KSUPDATEENGINE_TEST</string>
+      <key>Predicate</key>
+      <string>TRUEPREDICATE</string>
+      <key>Codebase</key>
+      <string>file:///tmp/Test-FAILURE.dmg</string>
+      <key>Hash</key>
+      <string>yXjlNEAb02iVFytGgZae37BefeM=</string>
+      <key>Size</key>
+      <string>69234</string>
+    </dict>
+  </array>
+</dict>
+</plist>
+

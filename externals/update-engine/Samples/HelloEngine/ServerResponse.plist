@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Rules</key>  <!-- Update Engine RULES!  WOOOOOO! -->
+
+  <!-- See the comments in Core/KSPlistServer.h for the full description of
+       the stuff in here. -->
+
+  <array>
+    <dict>
+      <!-- The product ID in question.  If the ticket matches this 
+           productID, then consider it for an update. -->
+      <key>ProductID</key>
+      <string>com.google.HelloEngineTest</string>
+
+      <!-- The gatekeeper for this update.  If this predicate returns a
+           true value, then the product needs updating. -->
+      <key>Predicate</key>
+      <string>Ticket.version != '2.0'</string>
+
+      <!-- If we need to update the product, download the new version
+           from here -->
+      <key>Codebase</key>
+      <string>file:///tmp/TestApp.dmg</string>
+  
+      <!-- How large the download is. -->
+      <key>Size</key>
+      <string>51051</string>
+
+      <!-- Base64-encoded SHA-1 hash of the file at the CodeBase URL.
+           This and the size are used to verify 
+           that it was downloaded OK.  -->
+      <key>Hash</key>
+      <string>L8O0cuNwVXQd79lMyBImvuSD9DY=</string>
+
+    </dict>
+
+     <!-- You can have multiple products here, just add more dictionaries. -->
+
+  </array>
+</dict>
+</plist>

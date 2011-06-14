@@ -1,0 +1,154 @@
+Update Engine Release Notes
+
+Project site:     http://code.google.com/p/update-engine
+Discussion group: http://groups.google.com/group/update-engine
+
+
+
+Release 9
+20-Apr-2010
+
+- Removed userID and machineID from KSOmahaServer.
+- Added out-of-band data reported from server subclasses.
+  KSOmahaServer now reports some out-of-band data.
+  New KSUpdateEngine delegate message for receiving out of band data:
+  - (void)engine:(KSUpdateEngine *)engine hasOutOfBandData:(NSDictionary *)oob;
+  New KSOutOfBandDataAction class which invokes this delegate method.
+- KSCheckAction now gets the KSUpdateEngine that is performing the update,
+  and the engine is passed to server classes (if they want it)
+- Added KSClientActives for accumulating product-active information.  It is also
+  a way of maintaining state between a server's request and response
+- Added per-product info delegate method:
+  - (void)engine:(KSUpdateEngine *)engine
+      serverData:(id)stuff
+    forProductID:(NSString *)productID
+         withKey:(NSString *)key;
+  This allows server classes to pass on information about a product, even if
+  there's not an update.  Ordiniarily, if there is no update, there is no
+  KSUpdateInfo created and shuffled through the system.
+- Added engine parameter keys for passing product active and server info into
+  UpdateEngine.
+- Added "installsource" tag to KSOmahaServer update requests if the update
+  request is user-initiated.
+- KSDownloadAction fixes permissions on the local cache directory so ksurl
+  won't be blocked from downloading.
+- Added TicketPath to KSTicket, which lets you specify the version to report
+  during update checks.
+
+
+Release 8
+25-Jan-2010
+
+- Now that Omaha (http://code.google.com/p/omaha/) has been
+  open-sourced, we've added the KSOmahaServer class, to demonstrate a
+  more sophisticated server class.
+- Added KSTicketTestBase, for writing unit tests that involve tickets
+  and servers.
+- KSCommandRunner now returns text printed to the command's standard error
+  stream.
+- KSInstallAction prints out the standard error from scripts.
+- Added TagPath to KSTicket, allowing for an indrection to a file (say
+  your application's Info.plist) for determining the tag.
+- Added BrandPath to KSTicket, which lets you specify a brand code to be
+  reported during update checks.
+- Added dictionary-based API for setting ticket parameters.
+- Added tests to cover some uncovered code.
+
+
+
+Release 7
+23-Sep-2009
+
+- Added mechanism for getting product active statistics from the delegate into
+  the server class.
+- Updated Actions sample UI: now empties the table when starting a new
+  download
+- Prettied up the project a little.
+- Added creationDate as a settable attribute of KSTicket.  If you preserve
+  the creationDate, you can see when the user first started using your
+  product.
+- Added Tag as a settable attribute of KSTicket.  One use of the tag is to
+  provide an extra piece of data that gets sent during an update check (assuming
+  your server class passes the tag along.)  This is for Chrome's release channel
+  support.
+- Added "user initiated" parameter to the engine parameters.  This parameter
+  is then passed to the install action, and eventually makes its way to
+  the KS_USER_INITIATED environment variable for the update scripts.
+- Added KS_SUPPORTS_TAG to the update script environment.
+- Added KS_INTERACTIVE environment variable so update scripts know that they
+  can interact with the user.
+
+
+Release 6
+30-March-2009
+
+- Updated Xcode project to 3.1
+- Removed HTTPFetcher logging code to reduce code size
+- Added Actions sample
+
+
+Release 5
+5-March-2009
+
+- Added KSDiskImage method to make mount visible in the Finder
+
+- Track migration of GTMHTTPFetcher to GDataHTTPFetcher
+
+
+Release 4
+17-November-2008
+
+- Fixed bug in the creation of DMG mount paths. The mount paths are using the
+  SHA-1 hash as part of the path component, but SHA-1 hashes often (always?)
+  contain forward slashes, which are illegal in path component names. Now,
+  forward slashes are replaced with underscores.
+
+- Fixed bug where running Update Engine as root would fail if you did not
+  run with sudo and you use bash for your .engine_install script.
+  (thanks to dmaclach)
+
+
+Release 3
+11-November-2008
+
+- Added extra field in KSTickets for trusted tester support
+
+- Added dmg mount location clarity
+
+
+Release 2
+
+- Fixed Tiger Debug build error: Spaces in the enclosing path weren't quoted
+  completely.
+
+- Changed KSURLTest.m to use a file: url for a test rather than an http: url
+  because OpenDNS was messing up the test w/ http:
+  (Issue: http://code.google.com/p/update-engine/issues/detail?id=4)
+
+- Added EngineRunner selfupdate command.
+
+- Added kshash.sh and enginerunner-plist-generator.sh scripts that can
+  be used to automate configuration plist creation.
+
+- Added UPDATE_ENGINE_VERSION xcode setting.
+
+- Ticket information now added to the KSUpdateInfo, accessible by -ticket.
+
+- Ticket information is set as environment variables provided to the
+  install scripts:
+    * KS_TICKET_PRODUCT_ID
+    * KS_TICKET_SERVER_URL
+    * KS_TICKET_VERSION
+    * KS_TICKET_XC_PATH
+
+- Added -path accessor for file existence checkers.
+
+
+
+Release 1
+30-September-2008
+
+- First post!
+
+- Initial public release.  Includes Update Engine and sample programs.
+

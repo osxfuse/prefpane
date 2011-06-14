@@ -1,0 +1,36 @@
+// Copyright 2008 Google Inc.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+// Unittests are loadable bundles
+#include "LoadableBundle.xcconfig"
+
+// Update Engine uses a lot of NSTasking of hdiutil, and this can cause lots of
+// problems when run under rosetta. So, we're going to disable running unit
+// tests under rosetta here, and only run the unit tests on the machine's
+// native architecture. Note that the failures do NOT happen when running on
+// PPC natively, only when running in PPC mode under rosetta.
+ARCHS = $(NATIVE_ARCH)
+
+// Force C99 dialect with GNU extensions (needed for OCUnit)
+GCC_C_LANGUAGE_STANDARD = gnu99
+
+// Deploment postprocessing is what triggers Xcode to strip, we don't strip
+// unittests
+DEPLOYMENT_POSTPROCESSING = NO
+
+// Most common unittests will be objective-c
+WRAPPER_EXTENSION = octest
+
+// Unit tests need to link with the SenTestingKit framework
+OTHER_LDFLAGS = $(OTHER_LDFLAGS) -framework SenTestingKit

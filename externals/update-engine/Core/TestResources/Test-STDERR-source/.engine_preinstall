@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "preinstall to stderr" >&2
+
+# Make sure we report success so the next script will run.
+exit 0
+
