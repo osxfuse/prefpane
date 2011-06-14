@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'autoinstaller' target in the 'autoinstaller' project.
+//
+
+#ifdef __OBJC__
+  #import <Foundation/Foundation.h>
+  #import "GTMLogger.h"
+  
+  #define _GTMDevLog GTMLoggerInfo
+  #import "GTMDefines.h"
+#endif

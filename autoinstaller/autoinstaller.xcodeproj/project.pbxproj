@@ -1,0 +1,937 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		F9246C460E31BEFE004ADF93 /* Build All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F9246C560E31BF20004ADF93 /* Build configuration list for PBXAggregateTarget "Build All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				F9246C600E31BF61004ADF93 /* PBXTargetDependency */,
+				F9246C520E31BF11004ADF93 /* PBXTargetDependency */,
+				F93100FC0E92D8A0009FB4B0 /* PBXTargetDependency */,
+			);
+			name = "Build All";
+			productName = "Build All";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		F92468FF0E3164AA004ADF93 /* SignerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F92468FE0E316468004ADF93 /* SignerTest.m */; };
+		F924691D0E31689E004ADF93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
+		F92469A80E316B5A004ADF93 /* SignedPlistServerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F92469A70E316B5A004ADF93 /* SignedPlistServerTest.m */; };
+		F9246A5D0E319CE3004ADF93 /* plist_signer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9246A1B0E3199E3004ADF93 /* plist_signer.m */; };
+		F9246A5E0E319CEA004ADF93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
+		F9246A730E319DF4004ADF93 /* Signer.m in Sources */ = {isa = PBXBuildFile; fileRef = F92468FC0E316468004ADF93 /* Signer.m */; };
+		F9246AB50E31A856004ADF93 /* PlistSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = F9246AAF0E31A5DC004ADF93 /* PlistSigner.m */; };
+		F9246AB70E31A861004ADF93 /* PlistSignerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9246AB10E31A681004ADF93 /* PlistSignerTest.m */; };
+		F9246CA10E3260B9004ADF93 /* EngineDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9246CA00E3260B9004ADF93 /* EngineDelegateTest.m */; };
+		F9246CA60E3261CB004ADF93 /* UpdatePrinterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F9246CA50E3261CB004ADF93 /* UpdatePrinterTest.m */; };
+		F93100160E92D465009FB4B0 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A05260E25328100A22FA6 /* CoreServices.framework */; };
+		F93100220E92D4FE009FB4B0 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A05210E25327300A22FA6 /* Carbon.framework */; };
+		F931005D0E92D7D3009FB4B0 /* EngineDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F954C0CD0E2D6C6400E776EB /* EngineDelegate.m */; };
+		F931005E0E92D7D3009FB4B0 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA590E92B699009FB4B0 /* GTMBase64.m */; };
+		F931005F0E92D7D3009FB4B0 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA6A0E92B699009FB4B0 /* GTMHTTPFetcher.m */; };
+		F93100600E92D7D3009FB4B0 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA730E92B699009FB4B0 /* GTMLogger.m */; };
+		F93100610E92D7D3009FB4B0 /* GTMLoggerRingBufferWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA750E92B699009FB4B0 /* GTMLoggerRingBufferWriter.m */; };
+		F93100620E92D7D3009FB4B0 /* GTMMethodCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA550E92B699009FB4B0 /* GTMMethodCheck.m */; };
+		F93100630E92D7D3009FB4B0 /* GTMNSString+FindFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA8F0E92B699009FB4B0 /* GTMNSString+FindFolder.m */; };
+		F93100640E92D7D3009FB4B0 /* GTMObjC2Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA9E0E92B699009FB4B0 /* GTMObjC2Runtime.m */; };
+		F93100650E92D7D3009FB4B0 /* GTMPath.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FAA20E92B699009FB4B0 /* GTMPath.m */; };
+		F93100660E92D7D3009FB4B0 /* GTMScriptRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FAAB0E92B699009FB4B0 /* GTMScriptRunner.m */; };
+		F93100670E92D7D3009FB4B0 /* KSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9B20E92B699009FB4B0 /* KSAction.m */; };
+		F93100680E92D7D3009FB4B0 /* KSActionPipe.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9B40E92B699009FB4B0 /* KSActionPipe.m */; };
+		F93100690E92D7D3009FB4B0 /* KSActionProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9B70E92B699009FB4B0 /* KSActionProcessor.m */; };
+		F931006A0E92D7D3009FB4B0 /* KSCheckAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9D70E92B699009FB4B0 /* KSCheckAction.m */; };
+		F931006B0E92D7D3009FB4B0 /* KSCommandRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9DA0E92B699009FB4B0 /* KSCommandRunner.m */; };
+		F931006C0E92D7D3009FB4B0 /* KSCompositeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9BB0E92B699009FB4B0 /* KSCompositeAction.m */; };
+		F931006D0E92D7D3009FB4B0 /* KSDiskImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9BE0E92B699009FB4B0 /* KSDiskImage.m */; };
+		F931006E0E92D7D3009FB4B0 /* KSDownloadAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9DD0E92B699009FB4B0 /* KSDownloadAction.m */; };
+		F931006F0E92D7D3009FB4B0 /* KSEthernetAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9C10E92B699009FB4B0 /* KSEthernetAddress.m */; };
+		F93100700E92D7D3009FB4B0 /* KSExistenceChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9E00E92B699009FB4B0 /* KSExistenceChecker.m */; };
+		F93100710E92D7D3009FB4B0 /* KSFetcherFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9E30E92B699009FB4B0 /* KSFetcherFactory.m */; };
+		F93100720E92D7D3009FB4B0 /* KSFrameworkStats.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9E60E92B699009FB4B0 /* KSFrameworkStats.m */; };
+		F93100730E92D7D3009FB4B0 /* KSInstallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9E90E92B699009FB4B0 /* KSInstallAction.m */; };
+		F93100740E92D7D3009FB4B0 /* KSMemoryTicketStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9EC0E92B699009FB4B0 /* KSMemoryTicketStore.m */; };
+		F93100750E92D7D3009FB4B0 /* KSMockFetcherFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9EF0E92B699009FB4B0 /* KSMockFetcherFactory.m */; };
+		F93100760E92D7D3009FB4B0 /* KSMultiAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9C40E92B699009FB4B0 /* KSMultiAction.m */; };
+		F93100770E92D7D3009FB4B0 /* KSMultiUpdateAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9F10E92B699009FB4B0 /* KSMultiUpdateAction.m */; };
+		F93100780E92D7D3009FB4B0 /* KSPlistServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9F40E92B699009FB4B0 /* KSPlistServer.m */; };
+		F93100790E92D7D3009FB4B0 /* KSPrefetchAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9F70E92B699009FB4B0 /* KSPrefetchAction.m */; };
+		F931007A0E92D7D3009FB4B0 /* KSPromptAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9FA0E92B699009FB4B0 /* KSPromptAction.m */; };
+		F931007B0E92D7D3009FB4B0 /* KSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9FD0E92B699009FB4B0 /* KSServer.m */; };
+		F931007C0E92D7D3009FB4B0 /* KSSilentUpdateAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA000E92B699009FB4B0 /* KSSilentUpdateAction.m */; };
+		F931007D0E92D7D3009FB4B0 /* KSStatsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9C70E92B699009FB4B0 /* KSStatsCollection.m */; };
+		F931007E0E92D7D3009FB4B0 /* KSTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA030E92B699009FB4B0 /* KSTicket.m */; };
+		F931007F0E92D7D3009FB4B0 /* KSTicketStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA050E92B699009FB4B0 /* KSTicketStore.m */; };
+		F93100800E92D7D3009FB4B0 /* KSUpdateAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA0A0E92B699009FB4B0 /* KSUpdateAction.m */; };
+		F93100810E92D7D3009FB4B0 /* KSUpdateCheckAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA0D0E92B699009FB4B0 /* KSUpdateCheckAction.m */; };
+		F93100820E92D7D3009FB4B0 /* KSUpdateEngine+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA100E92B699009FB4B0 /* KSUpdateEngine+Configuration.m */; };
+		F93100830E92D7D3009FB4B0 /* KSUpdateEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA130E92B699009FB4B0 /* KSUpdateEngine.m */; };
+		F93100840E92D7D3009FB4B0 /* KSUpdateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA170E92B699009FB4B0 /* KSUpdateInfo.m */; };
+		F93100850E92D7D3009FB4B0 /* KSURLData.m.xxd in Sources */ = {isa = PBXBuildFile; fileRef = F931FA1D0E92B699009FB4B0 /* KSURLData.m.xxd */; };
+		F93100860E92D7D3009FB4B0 /* KSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9CA0E92B699009FB4B0 /* KSUUID.m */; };
+		F93100870E92D7D3009FB4B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.m */; };
+		F93100880E92D7D3009FB4B0 /* NSData+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9CD0E92B699009FB4B0 /* NSData+Hash.m */; };
+		F93100890E92D7D3009FB4B0 /* PlistSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = F9246AAF0E31A5DC004ADF93 /* PlistSigner.m */; };
+		F931008A0E92D7D3009FB4B0 /* SignedPlistServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F954C0CB0E2D6C6400E776EB /* SignedPlistServer.m */; };
+		F931008B0E92D7D3009FB4B0 /* Signer.m in Sources */ = {isa = PBXBuildFile; fileRef = F92468FC0E316468004ADF93 /* Signer.m */; };
+		F931008C0E92D7D3009FB4B0 /* UpdatePrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DEA5960E2F02E200060106 /* UpdatePrinter.m */; };
+		F931011D0E92D906009FB4B0 /* KSPlistServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9F40E92B699009FB4B0 /* KSPlistServer.m */; };
+		F93101330E92D96E009FB4B0 /* KSTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA030E92B699009FB4B0 /* KSTicket.m */; };
+		F931013B0E92D97F009FB4B0 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA730E92B699009FB4B0 /* GTMLogger.m */; };
+		F93101410E92D98D009FB4B0 /* KSExistenceChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9E00E92B699009FB4B0 /* KSExistenceChecker.m */; };
+		F93101450E92D99D009FB4B0 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A05260E25328100A22FA6 /* CoreServices.framework */; };
+		F93101490E92D9A5009FB4B0 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A05210E25327300A22FA6 /* Carbon.framework */; };
+		F931FC400E92B8C0009FB4B0 /* KSServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F931F9FD0E92B699009FB4B0 /* KSServer.m */; };
+		F931FC500E92B91C009FB4B0 /* EngineDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F954C0CD0E2D6C6400E776EB /* EngineDelegate.m */; };
+		F931FC510E92B91C009FB4B0 /* PlistSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = F9246AAF0E31A5DC004ADF93 /* PlistSigner.m */; };
+		F931FC520E92B91C009FB4B0 /* SignedPlistServer.m in Sources */ = {isa = PBXBuildFile; fileRef = F954C0CB0E2D6C6400E776EB /* SignedPlistServer.m */; };
+		F931FC530E92B91C009FB4B0 /* Signer.m in Sources */ = {isa = PBXBuildFile; fileRef = F92468FC0E316468004ADF93 /* Signer.m */; };
+		F931FC540E92B91C009FB4B0 /* UpdatePrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DEA5960E2F02E200060106 /* UpdatePrinter.m */; };
+		F931FEA30E92D3F2009FB4B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
+		F931FEB00E92D455009FB4B0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F954BF900E2D548A00E776EB /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9246C510E31BF11004ADF93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9246A1F0E3199F9004ADF93;
+			remoteInfo = rule_signer;
+		};
+		F9246C5F0E31BF61004ADF93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F92468F00E3163D1004ADF93;
+			remoteInfo = "Extensions Tests";
+		};
+		F93100FB0E92D8A0009FB4B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F931FE5F0E92D311009FB4B0;
+			remoteInfo = "autoinstaller-macfuse-core";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32A70AAB03705E1F00C91783 /* autoinstaller_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autoinstaller_Prefix.pch; sourceTree = "<group>"; };
+		F9041AE40E25397800886258 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		F92468F10E3163D1004ADF93 /* Extensions Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Extensions Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F92468FB0E316468004ADF93 /* Signer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signer.h; sourceTree = "<group>"; };
+		F92468FC0E316468004ADF93 /* Signer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signer.m; sourceTree = "<group>"; };
+		F92468FE0E316468004ADF93 /* SignerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignerTest.m; sourceTree = "<group>"; };
+		F92469A70E316B5A004ADF93 /* SignedPlistServerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignedPlistServerTest.m; sourceTree = "<group>"; };
+		F9246A1B0E3199E3004ADF93 /* plist_signer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = plist_signer.m; sourceTree = "<group>"; };
+		F9246A200E3199F9004ADF93 /* plist_signer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = plist_signer; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9246AAE0E31A5DC004ADF93 /* PlistSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistSigner.h; sourceTree = "<group>"; };
+		F9246AAF0E31A5DC004ADF93 /* PlistSigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistSigner.m; sourceTree = "<group>"; };
+		F9246AB10E31A681004ADF93 /* PlistSignerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistSignerTest.m; sourceTree = "<group>"; };
+		F9246CA00E3260B9004ADF93 /* EngineDelegateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EngineDelegateTest.m; sourceTree = "<group>"; };
+		F9246CA50E3261CB004ADF93 /* UpdatePrinterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePrinterTest.m; sourceTree = "<group>"; };
+		F931F9B10E92B699009FB4B0 /* KSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAction.h; sourceTree = "<group>"; };
+		F931F9B20E92B699009FB4B0 /* KSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAction.m; sourceTree = "<group>"; };
+		F931F9B30E92B699009FB4B0 /* KSActionPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSActionPipe.h; sourceTree = "<group>"; };
+		F931F9B40E92B699009FB4B0 /* KSActionPipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSActionPipe.m; sourceTree = "<group>"; };
+		F931F9B60E92B699009FB4B0 /* KSActionProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSActionProcessor.h; sourceTree = "<group>"; };
+		F931F9B70E92B699009FB4B0 /* KSActionProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSActionProcessor.m; sourceTree = "<group>"; };
+		F931F9BA0E92B699009FB4B0 /* KSCompositeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCompositeAction.h; sourceTree = "<group>"; };
+		F931F9BB0E92B699009FB4B0 /* KSCompositeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCompositeAction.m; sourceTree = "<group>"; };
+		F931F9BD0E92B699009FB4B0 /* KSDiskImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDiskImage.h; sourceTree = "<group>"; };
+		F931F9BE0E92B699009FB4B0 /* KSDiskImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDiskImage.m; sourceTree = "<group>"; };
+		F931F9C00E92B699009FB4B0 /* KSEthernetAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSEthernetAddress.h; sourceTree = "<group>"; };
+		F931F9C10E92B699009FB4B0 /* KSEthernetAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSEthernetAddress.m; sourceTree = "<group>"; };
+		F931F9C30E92B699009FB4B0 /* KSMultiAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMultiAction.h; sourceTree = "<group>"; };
+		F931F9C40E92B699009FB4B0 /* KSMultiAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSMultiAction.m; sourceTree = "<group>"; };
+		F931F9C60E92B699009FB4B0 /* KSStatsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSStatsCollection.h; sourceTree = "<group>"; };
+		F931F9C70E92B699009FB4B0 /* KSStatsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSStatsCollection.m; sourceTree = "<group>"; };
+		F931F9C90E92B699009FB4B0 /* KSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUUID.h; sourceTree = "<group>"; };
+		F931F9CA0E92B699009FB4B0 /* KSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUUID.m; sourceTree = "<group>"; };
+		F931F9CC0E92B699009FB4B0 /* NSData+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Hash.h"; sourceTree = "<group>"; };
+		F931F9CD0E92B699009FB4B0 /* NSData+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hash.m"; sourceTree = "<group>"; };
+		F931F9D60E92B699009FB4B0 /* KSCheckAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCheckAction.h; sourceTree = "<group>"; };
+		F931F9D70E92B699009FB4B0 /* KSCheckAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCheckAction.m; sourceTree = "<group>"; };
+		F931F9D90E92B699009FB4B0 /* KSCommandRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSCommandRunner.h; sourceTree = "<group>"; };
+		F931F9DA0E92B699009FB4B0 /* KSCommandRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSCommandRunner.m; sourceTree = "<group>"; };
+		F931F9DC0E92B699009FB4B0 /* KSDownloadAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDownloadAction.h; sourceTree = "<group>"; };
+		F931F9DD0E92B699009FB4B0 /* KSDownloadAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDownloadAction.m; sourceTree = "<group>"; };
+		F931F9DF0E92B699009FB4B0 /* KSExistenceChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSExistenceChecker.h; sourceTree = "<group>"; };
+		F931F9E00E92B699009FB4B0 /* KSExistenceChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSExistenceChecker.m; sourceTree = "<group>"; };
+		F931F9E20E92B699009FB4B0 /* KSFetcherFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFetcherFactory.h; sourceTree = "<group>"; };
+		F931F9E30E92B699009FB4B0 /* KSFetcherFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFetcherFactory.m; sourceTree = "<group>"; };
+		F931F9E50E92B699009FB4B0 /* KSFrameworkStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSFrameworkStats.h; sourceTree = "<group>"; };
+		F931F9E60E92B699009FB4B0 /* KSFrameworkStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSFrameworkStats.m; sourceTree = "<group>"; };
+		F931F9E80E92B699009FB4B0 /* KSInstallAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSInstallAction.h; sourceTree = "<group>"; };
+		F931F9E90E92B699009FB4B0 /* KSInstallAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSInstallAction.m; sourceTree = "<group>"; };
+		F931F9EB0E92B699009FB4B0 /* KSMemoryTicketStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMemoryTicketStore.h; sourceTree = "<group>"; };
+		F931F9EC0E92B699009FB4B0 /* KSMemoryTicketStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSMemoryTicketStore.m; sourceTree = "<group>"; };
+		F931F9EE0E92B699009FB4B0 /* KSMockFetcherFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMockFetcherFactory.h; sourceTree = "<group>"; };
+		F931F9EF0E92B699009FB4B0 /* KSMockFetcherFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSMockFetcherFactory.m; sourceTree = "<group>"; };
+		F931F9F00E92B699009FB4B0 /* KSMultiUpdateAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSMultiUpdateAction.h; sourceTree = "<group>"; };
+		F931F9F10E92B699009FB4B0 /* KSMultiUpdateAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSMultiUpdateAction.m; sourceTree = "<group>"; };
+		F931F9F30E92B699009FB4B0 /* KSPlistServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPlistServer.h; sourceTree = "<group>"; };
+		F931F9F40E92B699009FB4B0 /* KSPlistServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPlistServer.m; sourceTree = "<group>"; };
+		F931F9F60E92B699009FB4B0 /* KSPrefetchAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPrefetchAction.h; sourceTree = "<group>"; };
+		F931F9F70E92B699009FB4B0 /* KSPrefetchAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPrefetchAction.m; sourceTree = "<group>"; };
+		F931F9F90E92B699009FB4B0 /* KSPromptAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSPromptAction.h; sourceTree = "<group>"; };
+		F931F9FA0E92B699009FB4B0 /* KSPromptAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSPromptAction.m; sourceTree = "<group>"; };
+		F931F9FC0E92B699009FB4B0 /* KSServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSServer.h; sourceTree = "<group>"; };
+		F931F9FD0E92B699009FB4B0 /* KSServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSServer.m; sourceTree = "<group>"; };
+		F931F9FF0E92B699009FB4B0 /* KSSilentUpdateAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSSilentUpdateAction.h; sourceTree = "<group>"; };
+		F931FA000E92B699009FB4B0 /* KSSilentUpdateAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSSilentUpdateAction.m; sourceTree = "<group>"; };
+		F931FA020E92B699009FB4B0 /* KSTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTicket.h; sourceTree = "<group>"; };
+		F931FA030E92B699009FB4B0 /* KSTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTicket.m; sourceTree = "<group>"; };
+		F931FA040E92B699009FB4B0 /* KSTicketStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSTicketStore.h; sourceTree = "<group>"; };
+		F931FA050E92B699009FB4B0 /* KSTicketStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSTicketStore.m; sourceTree = "<group>"; };
+		F931FA090E92B699009FB4B0 /* KSUpdateAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUpdateAction.h; sourceTree = "<group>"; };
+		F931FA0A0E92B699009FB4B0 /* KSUpdateAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUpdateAction.m; sourceTree = "<group>"; };
+		F931FA0C0E92B699009FB4B0 /* KSUpdateCheckAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUpdateCheckAction.h; sourceTree = "<group>"; };
+		F931FA0D0E92B699009FB4B0 /* KSUpdateCheckAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUpdateCheckAction.m; sourceTree = "<group>"; };
+		F931FA0F0E92B699009FB4B0 /* KSUpdateEngine+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KSUpdateEngine+Configuration.h"; sourceTree = "<group>"; };
+		F931FA100E92B699009FB4B0 /* KSUpdateEngine+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KSUpdateEngine+Configuration.m"; sourceTree = "<group>"; };
+		F931FA120E92B699009FB4B0 /* KSUpdateEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUpdateEngine.h; sourceTree = "<group>"; };
+		F931FA130E92B699009FB4B0 /* KSUpdateEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUpdateEngine.m; sourceTree = "<group>"; };
+		F931FA140E92B699009FB4B0 /* KSUpdateEngineParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUpdateEngineParameters.h; sourceTree = "<group>"; };
+		F931FA160E92B699009FB4B0 /* KSUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSUpdateInfo.h; sourceTree = "<group>"; };
+		F931FA170E92B699009FB4B0 /* KSUpdateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSUpdateInfo.m; sourceTree = "<group>"; };
+		F931FA1C0E92B699009FB4B0 /* KSURLData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSURLData.h; sourceTree = "<group>"; };
+		F931FA1D0E92B699009FB4B0 /* KSURLData.m.xxd */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = KSURLData.m.xxd; sourceTree = "<group>"; };
+		F931FA1E0E92B699009FB4B0 /* KSURLNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSURLNotification.h; sourceTree = "<group>"; };
+		F931FA530E92B699009FB4B0 /* GTMDebugSelectorValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDebugSelectorValidation.h; sourceTree = "<group>"; };
+		F931FA540E92B699009FB4B0 /* GTMMethodCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMMethodCheck.h; sourceTree = "<group>"; };
+		F931FA550E92B699009FB4B0 /* GTMMethodCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMMethodCheck.m; sourceTree = "<group>"; };
+		F931FA580E92B699009FB4B0 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		F931FA590E92B699009FB4B0 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		F931FA640E92B699009FB4B0 /* GTMGarbageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMGarbageCollection.h; sourceTree = "<group>"; };
+		F931FA690E92B699009FB4B0 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
+		F931FA6A0E92B699009FB4B0 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
+		F931FA720E92B699009FB4B0 /* GTMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMLogger.h; sourceTree = "<group>"; };
+		F931FA730E92B699009FB4B0 /* GTMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMLogger.m; sourceTree = "<group>"; };
+		F931FA740E92B699009FB4B0 /* GTMLoggerRingBufferWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMLoggerRingBufferWriter.h; sourceTree = "<group>"; };
+		F931FA750E92B699009FB4B0 /* GTMLoggerRingBufferWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMLoggerRingBufferWriter.m; sourceTree = "<group>"; };
+		F931FA8E0E92B699009FB4B0 /* GTMNSString+FindFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+FindFolder.h"; sourceTree = "<group>"; };
+		F931FA8F0E92B699009FB4B0 /* GTMNSString+FindFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+FindFolder.m"; sourceTree = "<group>"; };
+		F931FA9D0E92B699009FB4B0 /* GTMObjC2Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMObjC2Runtime.h; sourceTree = "<group>"; };
+		F931FA9E0E92B699009FB4B0 /* GTMObjC2Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMObjC2Runtime.m; sourceTree = "<group>"; };
+		F931FAA10E92B699009FB4B0 /* GTMPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMPath.h; sourceTree = "<group>"; };
+		F931FAA20E92B699009FB4B0 /* GTMPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMPath.m; sourceTree = "<group>"; };
+		F931FAAA0E92B699009FB4B0 /* GTMScriptRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMScriptRunner.h; sourceTree = "<group>"; };
+		F931FAAB0E92B699009FB4B0 /* GTMScriptRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMScriptRunner.m; sourceTree = "<group>"; };
+		F931FAC00E92B699009FB4B0 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		F931FB770E92B699009FB4B0 /* UpdateEngine.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateEngine.pch; sourceTree = "<group>"; };
+		F931FBEB0E92B6F9009FB4B0 /* DebugTigerOrLater.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DebugTigerOrLater.xcconfig; sourceTree = "<group>"; };
+		F931FBEC0E92B6F9009FB4B0 /* ReleaseTigerOrLater.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ReleaseTigerOrLater.xcconfig; sourceTree = "<group>"; };
+		F931FBEE0E92B6F9009FB4B0 /* CodeCoverage.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CodeCoverage.xcconfig; sourceTree = "<group>"; };
+		F931FBEF0E92B6F9009FB4B0 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		F931FBF00E92B6F9009FB4B0 /* General.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = General.xcconfig; sourceTree = "<group>"; };
+		F931FBF10E92B6F9009FB4B0 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		F931FBF20E92B6F9009FB4B0 /* TigerOrLater.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = TigerOrLater.xcconfig; sourceTree = "<group>"; };
+		F931FBF40E92B6F9009FB4B0 /* DebugUnittest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DebugUnittest.xcconfig; sourceTree = "<group>"; };
+		F931FBF50E92B6F9009FB4B0 /* LoadableBundle.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = LoadableBundle.xcconfig; sourceTree = "<group>"; };
+		F931FBF60E92B6F9009FB4B0 /* ReleaseUnittest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ReleaseUnittest.xcconfig; sourceTree = "<group>"; };
+		F931FBF70E92B6F9009FB4B0 /* SharedLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SharedLibrary.xcconfig; sourceTree = "<group>"; };
+		F931FBF80E92B6F9009FB4B0 /* Unittest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Unittest.xcconfig; sourceTree = "<group>"; };
+		F931FE600E92D311009FB4B0 /* autoinstall-macfuse-core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "autoinstall-macfuse-core"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F954BF900E2D548A00E776EB /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		F954C0CA0E2D6C6400E776EB /* SignedPlistServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignedPlistServer.h; sourceTree = "<group>"; };
+		F954C0CB0E2D6C6400E776EB /* SignedPlistServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignedPlistServer.m; sourceTree = "<group>"; };
+		F954C0CC0E2D6C6400E776EB /* EngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngineDelegate.h; sourceTree = "<group>"; };
+		F954C0CD0E2D6C6400E776EB /* EngineDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EngineDelegate.m; sourceTree = "<group>"; };
+		F95A05210E25327300A22FA6 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		F95A05260E25328100A22FA6 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
+		F975C8490E957D26000D9E9A /* Extensions Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Extensions Tests-Info.plist"; sourceTree = "<group>"; };
+		F9DEA5950E2F02E200060106 /* UpdatePrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePrinter.h; sourceTree = "<group>"; };
+		F9DEA5960E2F02E200060106 /* UpdatePrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePrinter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F92468EE0E3163D1004ADF93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93101490E92D9A5009FB4B0 /* Carbon.framework in Frameworks */,
+				F93101450E92D99D009FB4B0 /* CoreServices.framework in Frameworks */,
+				F924691D0E31689E004ADF93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9246A1E0E3199F9004ADF93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9246A5E0E319CEA004ADF93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F931FE5E0E92D311009FB4B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F93100220E92D4FE009FB4B0 /* Carbon.framework in Frameworks */,
+				F93100160E92D465009FB4B0 /* CoreServices.framework in Frameworks */,
+				F931FEB00E92D455009FB4B0 /* IOKit.framework in Frameworks */,
+				F931FEA30E92D3F2009FB4B0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* autoinstaller */ = {
+			isa = PBXGroup;
+			children = (
+				32A70AAB03705E1F00C91783 /* autoinstaller_Prefix.pch */,
+				F931F9AE0E92B699009FB4B0 /* update-engine */,
+				F954C0C90E2D6C6400E776EB /* UpdateEngineExtensions */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				F916621F0E26B54400E2806B /* Resources */,
+				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = autoinstaller;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7796FE84155DC02AAC07 /* main.m */,
+				F9246A1B0E3199E3004ADF93 /* plist_signer.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				F954BF900E2D548A00E776EB /* IOKit.framework */,
+				F9041AE40E25397800886258 /* Security.framework */,
+				F95A05260E25328100A22FA6 /* CoreServices.framework */,
+				F95A05210E25327300A22FA6 /* Carbon.framework */,
+				08FB779EFE84155DC02AAC07 /* Foundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F92468F10E3163D1004ADF93 /* Extensions Tests.octest */,
+				F9246A200E3199F9004ADF93 /* plist_signer */,
+				F931FE600E92D311009FB4B0 /* autoinstall-macfuse-core */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F916621F0E26B54400E2806B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F975C8490E957D26000D9E9A /* Extensions Tests-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F931F9AE0E92B699009FB4B0 /* update-engine */ = {
+			isa = PBXGroup;
+			children = (
+				F931FBE90E92B6F9009FB4B0 /* XcodeConfigs */,
+				F931F9AF0E92B699009FB4B0 /* Common */,
+				F931F9D40E92B699009FB4B0 /* Core */,
+				F931FA270E92B699009FB4B0 /* externals */,
+				F931FB770E92B699009FB4B0 /* UpdateEngine.pch */,
+			);
+			name = "update-engine";
+			path = "../externals/update-engine";
+			sourceTree = "<group>";
+		};
+		F931F9AF0E92B699009FB4B0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F931F9B10E92B699009FB4B0 /* KSAction.h */,
+				F931F9B20E92B699009FB4B0 /* KSAction.m */,
+				F931F9B30E92B699009FB4B0 /* KSActionPipe.h */,
+				F931F9B40E92B699009FB4B0 /* KSActionPipe.m */,
+				F931F9B60E92B699009FB4B0 /* KSActionProcessor.h */,
+				F931F9B70E92B699009FB4B0 /* KSActionProcessor.m */,
+				F931F9BA0E92B699009FB4B0 /* KSCompositeAction.h */,
+				F931F9BB0E92B699009FB4B0 /* KSCompositeAction.m */,
+				F931F9BD0E92B699009FB4B0 /* KSDiskImage.h */,
+				F931F9BE0E92B699009FB4B0 /* KSDiskImage.m */,
+				F931F9C00E92B699009FB4B0 /* KSEthernetAddress.h */,
+				F931F9C10E92B699009FB4B0 /* KSEthernetAddress.m */,
+				F931F9C30E92B699009FB4B0 /* KSMultiAction.h */,
+				F931F9C40E92B699009FB4B0 /* KSMultiAction.m */,
+				F931F9C60E92B699009FB4B0 /* KSStatsCollection.h */,
+				F931F9C70E92B699009FB4B0 /* KSStatsCollection.m */,
+				F931F9C90E92B699009FB4B0 /* KSUUID.h */,
+				F931F9CA0E92B699009FB4B0 /* KSUUID.m */,
+				F931F9CC0E92B699009FB4B0 /* NSData+Hash.h */,
+				F931F9CD0E92B699009FB4B0 /* NSData+Hash.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F931F9D40E92B699009FB4B0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F931F9D60E92B699009FB4B0 /* KSCheckAction.h */,
+				F931F9D70E92B699009FB4B0 /* KSCheckAction.m */,
+				F931F9D90E92B699009FB4B0 /* KSCommandRunner.h */,
+				F931F9DA0E92B699009FB4B0 /* KSCommandRunner.m */,
+				F931F9DC0E92B699009FB4B0 /* KSDownloadAction.h */,
+				F931F9DD0E92B699009FB4B0 /* KSDownloadAction.m */,
+				F931F9DF0E92B699009FB4B0 /* KSExistenceChecker.h */,
+				F931F9E00E92B699009FB4B0 /* KSExistenceChecker.m */,
+				F931F9E20E92B699009FB4B0 /* KSFetcherFactory.h */,
+				F931F9E30E92B699009FB4B0 /* KSFetcherFactory.m */,
+				F931F9E50E92B699009FB4B0 /* KSFrameworkStats.h */,
+				F931F9E60E92B699009FB4B0 /* KSFrameworkStats.m */,
+				F931F9E80E92B699009FB4B0 /* KSInstallAction.h */,
+				F931F9E90E92B699009FB4B0 /* KSInstallAction.m */,
+				F931F9EB0E92B699009FB4B0 /* KSMemoryTicketStore.h */,
+				F931F9EC0E92B699009FB4B0 /* KSMemoryTicketStore.m */,
+				F931F9EE0E92B699009FB4B0 /* KSMockFetcherFactory.h */,
+				F931F9EF0E92B699009FB4B0 /* KSMockFetcherFactory.m */,
+				F931F9F00E92B699009FB4B0 /* KSMultiUpdateAction.h */,
+				F931F9F10E92B699009FB4B0 /* KSMultiUpdateAction.m */,
+				F931F9F30E92B699009FB4B0 /* KSPlistServer.h */,
+				F931F9F40E92B699009FB4B0 /* KSPlistServer.m */,
+				F931F9F60E92B699009FB4B0 /* KSPrefetchAction.h */,
+				F931F9F70E92B699009FB4B0 /* KSPrefetchAction.m */,
+				F931F9F90E92B699009FB4B0 /* KSPromptAction.h */,
+				F931F9FA0E92B699009FB4B0 /* KSPromptAction.m */,
+				F931F9FC0E92B699009FB4B0 /* KSServer.h */,
+				F931F9FD0E92B699009FB4B0 /* KSServer.m */,
+				F931F9FF0E92B699009FB4B0 /* KSSilentUpdateAction.h */,
+				F931FA000E92B699009FB4B0 /* KSSilentUpdateAction.m */,
+				F931FA020E92B699009FB4B0 /* KSTicket.h */,
+				F931FA030E92B699009FB4B0 /* KSTicket.m */,
+				F931FA040E92B699009FB4B0 /* KSTicketStore.h */,
+				F931FA050E92B699009FB4B0 /* KSTicketStore.m */,
+				F931FA090E92B699009FB4B0 /* KSUpdateAction.h */,
+				F931FA0A0E92B699009FB4B0 /* KSUpdateAction.m */,
+				F931FA0C0E92B699009FB4B0 /* KSUpdateCheckAction.h */,
+				F931FA0D0E92B699009FB4B0 /* KSUpdateCheckAction.m */,
+				F931FA0F0E92B699009FB4B0 /* KSUpdateEngine+Configuration.h */,
+				F931FA100E92B699009FB4B0 /* KSUpdateEngine+Configuration.m */,
+				F931FA120E92B699009FB4B0 /* KSUpdateEngine.h */,
+				F931FA130E92B699009FB4B0 /* KSUpdateEngine.m */,
+				F931FA140E92B699009FB4B0 /* KSUpdateEngineParameters.h */,
+				F931FA160E92B699009FB4B0 /* KSUpdateInfo.h */,
+				F931FA170E92B699009FB4B0 /* KSUpdateInfo.m */,
+				F931FA190E92B699009FB4B0 /* Support */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F931FA190E92B699009FB4B0 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F931FA1C0E92B699009FB4B0 /* KSURLData.h */,
+				F931FA1D0E92B699009FB4B0 /* KSURLData.m.xxd */,
+				F931FA1E0E92B699009FB4B0 /* KSURLNotification.h */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		F931FA270E92B699009FB4B0 /* externals */ = {
+			isa = PBXGroup;
+			children = (
+				F931FA280E92B699009FB4B0 /* google-toolbox-for-mac */,
+			);
+			path = externals;
+			sourceTree = "<group>";
+		};
+		F931FA280E92B699009FB4B0 /* google-toolbox-for-mac */ = {
+			isa = PBXGroup;
+			children = (
+				F931FA520E92B699009FB4B0 /* DebugUtils */,
+				F931FA570E92B699009FB4B0 /* Foundation */,
+				F931FAC00E92B699009FB4B0 /* GTMDefines.h */,
+			);
+			path = "google-toolbox-for-mac";
+			sourceTree = "<group>";
+		};
+		F931FA520E92B699009FB4B0 /* DebugUtils */ = {
+			isa = PBXGroup;
+			children = (
+				F931FA530E92B699009FB4B0 /* GTMDebugSelectorValidation.h */,
+				F931FA540E92B699009FB4B0 /* GTMMethodCheck.h */,
+				F931FA550E92B699009FB4B0 /* GTMMethodCheck.m */,
+			);
+			path = DebugUtils;
+			sourceTree = "<group>";
+		};
+		F931FA570E92B699009FB4B0 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				F931FA580E92B699009FB4B0 /* GTMBase64.h */,
+				F931FA590E92B699009FB4B0 /* GTMBase64.m */,
+				F931FA640E92B699009FB4B0 /* GTMGarbageCollection.h */,
+				F931FA690E92B699009FB4B0 /* GTMHTTPFetcher.h */,
+				F931FA6A0E92B699009FB4B0 /* GTMHTTPFetcher.m */,
+				F931FA720E92B699009FB4B0 /* GTMLogger.h */,
+				F931FA730E92B699009FB4B0 /* GTMLogger.m */,
+				F931FA740E92B699009FB4B0 /* GTMLoggerRingBufferWriter.h */,
+				F931FA750E92B699009FB4B0 /* GTMLoggerRingBufferWriter.m */,
+				F931FA8E0E92B699009FB4B0 /* GTMNSString+FindFolder.h */,
+				F931FA8F0E92B699009FB4B0 /* GTMNSString+FindFolder.m */,
+				F931FA9D0E92B699009FB4B0 /* GTMObjC2Runtime.h */,
+				F931FA9E0E92B699009FB4B0 /* GTMObjC2Runtime.m */,
+				F931FAA10E92B699009FB4B0 /* GTMPath.h */,
+				F931FAA20E92B699009FB4B0 /* GTMPath.m */,
+				F931FAAA0E92B699009FB4B0 /* GTMScriptRunner.h */,
+				F931FAAB0E92B699009FB4B0 /* GTMScriptRunner.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		F931FBE90E92B6F9009FB4B0 /* XcodeConfigs */ = {
+			isa = PBXGroup;
+			children = (
+				F931FBEA0E92B6F9009FB4B0 /* Project */,
+				F931FBED0E92B6F9009FB4B0 /* subconfig */,
+				F931FBF30E92B6F9009FB4B0 /* Target */,
+			);
+			path = XcodeConfigs;
+			sourceTree = "<group>";
+		};
+		F931FBEA0E92B6F9009FB4B0 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				F931FBEB0E92B6F9009FB4B0 /* DebugTigerOrLater.xcconfig */,
+				F931FBEC0E92B6F9009FB4B0 /* ReleaseTigerOrLater.xcconfig */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		F931FBED0E92B6F9009FB4B0 /* subconfig */ = {
+			isa = PBXGroup;
+			children = (
+				F931FBEE0E92B6F9009FB4B0 /* CodeCoverage.xcconfig */,
+				F931FBEF0E92B6F9009FB4B0 /* Debug.xcconfig */,
+				F931FBF00E92B6F9009FB4B0 /* General.xcconfig */,
+				F931FBF10E92B6F9009FB4B0 /* Release.xcconfig */,
+				F931FBF20E92B6F9009FB4B0 /* TigerOrLater.xcconfig */,
+			);
+			path = subconfig;
+			sourceTree = "<group>";
+		};
+		F931FBF30E92B6F9009FB4B0 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				F931FBF40E92B6F9009FB4B0 /* DebugUnittest.xcconfig */,
+				F931FBF50E92B6F9009FB4B0 /* LoadableBundle.xcconfig */,
+				F931FBF60E92B6F9009FB4B0 /* ReleaseUnittest.xcconfig */,
+				F931FBF70E92B6F9009FB4B0 /* SharedLibrary.xcconfig */,
+				F931FBF80E92B6F9009FB4B0 /* Unittest.xcconfig */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		F954C0C90E2D6C6400E776EB /* UpdateEngineExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				F92468FB0E316468004ADF93 /* Signer.h */,
+				F92468FC0E316468004ADF93 /* Signer.m */,
+				F92468FE0E316468004ADF93 /* SignerTest.m */,
+				F9246AAE0E31A5DC004ADF93 /* PlistSigner.h */,
+				F9246AAF0E31A5DC004ADF93 /* PlistSigner.m */,
+				F9246AB10E31A681004ADF93 /* PlistSignerTest.m */,
+				F954C0CA0E2D6C6400E776EB /* SignedPlistServer.h */,
+				F954C0CB0E2D6C6400E776EB /* SignedPlistServer.m */,
+				F92469A70E316B5A004ADF93 /* SignedPlistServerTest.m */,
+				F954C0CC0E2D6C6400E776EB /* EngineDelegate.h */,
+				F954C0CD0E2D6C6400E776EB /* EngineDelegate.m */,
+				F9246CA00E3260B9004ADF93 /* EngineDelegateTest.m */,
+				F9DEA5950E2F02E200060106 /* UpdatePrinter.h */,
+				F9DEA5960E2F02E200060106 /* UpdatePrinter.m */,
+				F9246CA50E3261CB004ADF93 /* UpdatePrinterTest.m */,
+			);
+			path = UpdateEngineExtensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F92468F00E3163D1004ADF93 /* Extensions Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F92468F50E3163D2004ADF93 /* Build configuration list for PBXNativeTarget "Extensions Tests" */;
+			buildPhases = (
+				F92468EC0E3163D1004ADF93 /* Resources */,
+				F92468ED0E3163D1004ADF93 /* Sources */,
+				F92468EE0E3163D1004ADF93 /* Frameworks */,
+				F92468EF0E3163D1004ADF93 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Extensions Tests";
+			productName = "Extensions Tests";
+			productReference = F92468F10E3163D1004ADF93 /* Extensions Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		F9246A1F0E3199F9004ADF93 /* plist_signer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9246A240E319A18004ADF93 /* Build configuration list for PBXNativeTarget "plist_signer" */;
+			buildPhases = (
+				F9246A1D0E3199F9004ADF93 /* Sources */,
+				F9246A1E0E3199F9004ADF93 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = plist_signer;
+			productName = rule_signer;
+			productReference = F9246A200E3199F9004ADF93 /* plist_signer */;
+			productType = "com.apple.product-type.tool";
+		};
+		F931FE5F0E92D311009FB4B0 /* autoinstall-macfuse-core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F931FE8F0E92D331009FB4B0 /* Build configuration list for PBXNativeTarget "autoinstall-macfuse-core" */;
+			buildPhases = (
+				F931FE5D0E92D311009FB4B0 /* Sources */,
+				F931FE5E0E92D311009FB4B0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "autoinstall-macfuse-core";
+			productName = autoinstaller;
+			productReference = F931FE600E92D311009FB4B0 /* autoinstall-macfuse-core */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "autoinstaller" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* autoinstaller */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9246C460E31BEFE004ADF93 /* Build All */,
+				F92468F00E3163D1004ADF93 /* Extensions Tests */,
+				F9246A1F0E3199F9004ADF93 /* plist_signer */,
+				F931FE5F0E92D311009FB4B0 /* autoinstall-macfuse-core */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F92468EC0E3163D1004ADF93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F92468EF0E3163D1004ADF93 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F92468ED0E3163D1004ADF93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F931FC500E92B91C009FB4B0 /* EngineDelegate.m in Sources */,
+				F931011D0E92D906009FB4B0 /* KSPlistServer.m in Sources */,
+				F931FC400E92B8C0009FB4B0 /* KSServer.m in Sources */,
+				F931FC510E92B91C009FB4B0 /* PlistSigner.m in Sources */,
+				F931FC520E92B91C009FB4B0 /* SignedPlistServer.m in Sources */,
+				F931FC530E92B91C009FB4B0 /* Signer.m in Sources */,
+				F931FC540E92B91C009FB4B0 /* UpdatePrinter.m in Sources */,
+				F92468FF0E3164AA004ADF93 /* SignerTest.m in Sources */,
+				F92469A80E316B5A004ADF93 /* SignedPlistServerTest.m in Sources */,
+				F9246AB70E31A861004ADF93 /* PlistSignerTest.m in Sources */,
+				F9246CA10E3260B9004ADF93 /* EngineDelegateTest.m in Sources */,
+				F9246CA60E3261CB004ADF93 /* UpdatePrinterTest.m in Sources */,
+				F93101330E92D96E009FB4B0 /* KSTicket.m in Sources */,
+				F931013B0E92D97F009FB4B0 /* GTMLogger.m in Sources */,
+				F93101410E92D98D009FB4B0 /* KSExistenceChecker.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9246A1D0E3199F9004ADF93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9246A5D0E319CE3004ADF93 /* plist_signer.m in Sources */,
+				F9246A730E319DF4004ADF93 /* Signer.m in Sources */,
+				F9246AB50E31A856004ADF93 /* PlistSigner.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F931FE5D0E92D311009FB4B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F931005D0E92D7D3009FB4B0 /* EngineDelegate.m in Sources */,
+				F931005E0E92D7D3009FB4B0 /* GTMBase64.m in Sources */,
+				F931005F0E92D7D3009FB4B0 /* GTMHTTPFetcher.m in Sources */,
+				F93100600E92D7D3009FB4B0 /* GTMLogger.m in Sources */,
+				F93100610E92D7D3009FB4B0 /* GTMLoggerRingBufferWriter.m in Sources */,
+				F93100620E92D7D3009FB4B0 /* GTMMethodCheck.m in Sources */,
+				F93100630E92D7D3009FB4B0 /* GTMNSString+FindFolder.m in Sources */,
+				F93100640E92D7D3009FB4B0 /* GTMObjC2Runtime.m in Sources */,
+				F93100650E92D7D3009FB4B0 /* GTMPath.m in Sources */,
+				F93100660E92D7D3009FB4B0 /* GTMScriptRunner.m in Sources */,
+				F93100670E92D7D3009FB4B0 /* KSAction.m in Sources */,
+				F93100680E92D7D3009FB4B0 /* KSActionPipe.m in Sources */,
+				F93100690E92D7D3009FB4B0 /* KSActionProcessor.m in Sources */,
+				F931006A0E92D7D3009FB4B0 /* KSCheckAction.m in Sources */,
+				F931006B0E92D7D3009FB4B0 /* KSCommandRunner.m in Sources */,
+				F931006C0E92D7D3009FB4B0 /* KSCompositeAction.m in Sources */,
+				F931006D0E92D7D3009FB4B0 /* KSDiskImage.m in Sources */,
+				F931006E0E92D7D3009FB4B0 /* KSDownloadAction.m in Sources */,
+				F931006F0E92D7D3009FB4B0 /* KSEthernetAddress.m in Sources */,
+				F93100700E92D7D3009FB4B0 /* KSExistenceChecker.m in Sources */,
+				F93100710E92D7D3009FB4B0 /* KSFetcherFactory.m in Sources */,
+				F93100720E92D7D3009FB4B0 /* KSFrameworkStats.m in Sources */,
+				F93100730E92D7D3009FB4B0 /* KSInstallAction.m in Sources */,
+				F93100740E92D7D3009FB4B0 /* KSMemoryTicketStore.m in Sources */,
+				F93100750E92D7D3009FB4B0 /* KSMockFetcherFactory.m in Sources */,
+				F93100760E92D7D3009FB4B0 /* KSMultiAction.m in Sources */,
+				F93100770E92D7D3009FB4B0 /* KSMultiUpdateAction.m in Sources */,
+				F93100780E92D7D3009FB4B0 /* KSPlistServer.m in Sources */,
+				F93100790E92D7D3009FB4B0 /* KSPrefetchAction.m in Sources */,
+				F931007A0E92D7D3009FB4B0 /* KSPromptAction.m in Sources */,
+				F931007B0E92D7D3009FB4B0 /* KSServer.m in Sources */,
+				F931007C0E92D7D3009FB4B0 /* KSSilentUpdateAction.m in Sources */,
+				F931007D0E92D7D3009FB4B0 /* KSStatsCollection.m in Sources */,
+				F931007E0E92D7D3009FB4B0 /* KSTicket.m in Sources */,
+				F931007F0E92D7D3009FB4B0 /* KSTicketStore.m in Sources */,
+				F93100800E92D7D3009FB4B0 /* KSUpdateAction.m in Sources */,
+				F93100810E92D7D3009FB4B0 /* KSUpdateCheckAction.m in Sources */,
+				F93100820E92D7D3009FB4B0 /* KSUpdateEngine+Configuration.m in Sources */,
+				F93100830E92D7D3009FB4B0 /* KSUpdateEngine.m in Sources */,
+				F93100840E92D7D3009FB4B0 /* KSUpdateInfo.m in Sources */,
+				F93100850E92D7D3009FB4B0 /* KSURLData.m.xxd in Sources */,
+				F93100860E92D7D3009FB4B0 /* KSUUID.m in Sources */,
+				F93100870E92D7D3009FB4B0 /* main.m in Sources */,
+				F93100880E92D7D3009FB4B0 /* NSData+Hash.m in Sources */,
+				F93100890E92D7D3009FB4B0 /* PlistSigner.m in Sources */,
+				F931008A0E92D7D3009FB4B0 /* SignedPlistServer.m in Sources */,
+				F931008B0E92D7D3009FB4B0 /* Signer.m in Sources */,
+				F931008C0E92D7D3009FB4B0 /* UpdatePrinter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9246C520E31BF11004ADF93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9246A1F0E3199F9004ADF93 /* plist_signer */;
+			targetProxy = F9246C510E31BF11004ADF93 /* PBXContainerItemProxy */;
+		};
+		F9246C600E31BF61004ADF93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F92468F00E3163D1004ADF93 /* Extensions Tests */;
+			targetProxy = F9246C5F0E31BF61004ADF93 /* PBXContainerItemProxy */;
+		};
+		F93100FC0E92D8A0009FB4B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F931FE5F0E92D311009FB4B0 /* autoinstall-macfuse-core */;
+			targetProxy = F93100FB0E92D8A0009FB4B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB927908733DD40010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F931FBEB0E92B6F9009FB4B0 /* DebugTigerOrLater.xcconfig */;
+			buildSettings = {
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
+				GCC_PREFIX_HEADER = autoinstaller_Prefix.pch;
+				OTHER_LDFLAGS = "";
+			};
+			name = Debug;
+		};
+		1DEB927A08733DD40010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F931FBEC0E92B6F9009FB4B0 /* ReleaseTigerOrLater.xcconfig */;
+			buildSettings = {
+				GCC_PREFIX_HEADER = autoinstaller_Prefix.pch;
+			};
+			name = Release;
+		};
+		F92468F30E3163D2004ADF93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F931FBF40E92B6F9009FB4B0 /* DebugUnittest.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = "Resources/Extensions Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "Extensions Tests";
+				SEPARATE_STRIP = NO;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F92468F40E3163D2004ADF93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F931FBF60E92B6F9009FB4B0 /* ReleaseUnittest.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = "Resources/Extensions Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+					"-lcrypto",
+				);
+				PRODUCT_NAME = "Extensions Tests";
+				SEPARATE_STRIP = NO;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		F9246A220E3199FA004ADF93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-lcrypto";
+				PRODUCT_NAME = plist_signer;
+			};
+			name = Debug;
+		};
+		F9246A230E3199FA004ADF93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-lcrypto";
+				PRODUCT_NAME = plist_signer;
+			};
+			name = Release;
+		};
+		F9246C470E31BEFE004ADF93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Build All";
+			};
+			name = Debug;
+		};
+		F9246C480E31BEFE004ADF93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "Build All";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		F931FE620E92D311009FB4B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-lcrypto";
+				PRODUCT_NAME = "autoinstall-macfuse-core";
+			};
+			name = Debug;
+		};
+		F931FE630E92D311009FB4B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "-lcrypto";
+				PREBINDING = NO;
+				PRODUCT_NAME = "autoinstall-macfuse-core";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "autoinstaller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB927908733DD40010E9CD /* Debug */,
+				1DEB927A08733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F92468F50E3163D2004ADF93 /* Build configuration list for PBXNativeTarget "Extensions Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F92468F30E3163D2004ADF93 /* Debug */,
+				F92468F40E3163D2004ADF93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9246A240E319A18004ADF93 /* Build configuration list for PBXNativeTarget "plist_signer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9246A220E3199FA004ADF93 /* Debug */,
+				F9246A230E3199FA004ADF93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9246C560E31BF20004ADF93 /* Build configuration list for PBXAggregateTarget "Build All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9246C470E31BEFE004ADF93 /* Debug */,
+				F9246C480E31BEFE004ADF93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F931FE8F0E92D331009FB4B0 /* Build configuration list for PBXNativeTarget "autoinstall-macfuse-core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F931FE620E92D311009FB4B0 /* Debug */,
+				F931FE630E92D311009FB4B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
