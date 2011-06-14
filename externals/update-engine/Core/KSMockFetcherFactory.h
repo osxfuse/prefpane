@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #import "KSFetcherFactory.h"
-#import "GDataHTTPFetcher.h"
+#import "GTMHTTPFetcher.h"
 
 // A fetcher factory is needed for the UpdateChecker API.
 // This lets us provide mock factories with special behaviors.

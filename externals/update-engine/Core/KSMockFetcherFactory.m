@@ -15,7 +15,7 @@
 #import "KSMockFetcherFactory.h"
 
 
-// Base class for mock fetchers, to be used in place of GDataHTTPFetcher.
+// Base class for mock fetchers, to be used in place of GTMHTTPFetcher.
 @interface KSMockFetcher : NSObject {
   NSURLRequest *request_;
   id delegate_;
@@ -24,7 +24,7 @@
 }
 - (id)initWithURLRequest:(NSURLRequest *)request;
 
-// Let's try and look like a GDataHTTPFetcher; at least enough
+// Let's try and look like a GTMHTTPFetcher; at least enough
 // to fool KSUpdateChecker.
 - (BOOL)beginFetchWithDelegate:(id)delegate
              didFinishSelector:(SEL)finishedSEL
@@ -209,7 +209,7 @@
   [super dealloc];
 }
 
-- (GDataHTTPFetcher *)createFetcherForRequest:(NSURLRequest *)request {
+- (GTMHTTPFetcher *)createFetcherForRequest:(NSURLRequest *)request {
   if (class_ == [KSMockFetcherFinishWithData class]) {
     return [[[KSMockFetcherFinishWithData alloc] initWithURLRequest:request
                                                                   data:arg1_]

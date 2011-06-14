@@ -17,7 +17,7 @@
 
 @class KSFetcherFactory;
 @class KSServer;
-@class GDataHTTPFetcher;
+@class GTMHTTPFetcher;
 @class KSFetcherFactory;
 
 // The KSUpdateCheckAction class checks for updates.  Its input consists of:
@@ -58,7 +58,7 @@
 + (id)checkerWithServer:(KSServer *)server tickets:(NSArray *)tickets;
 
 // Calls through to designated initializer with a new instance of
-// GDataHTTPFetcher.  This is the standard initailizer that you will
+// GTMHTTPFetcher.  This is the standard initailizer that you will
 // almost always want to use.  |tickets|, an array of KSTickets, are
 // required to all point to the same server URL.
 - (id)initWithServer:(KSServer *)server tickets:(NSArray *)tickets;
@@ -79,13 +79,4 @@
 - (id)delegate;
 - (void)setDelegate:(id)delegate;
 
-@end
-
-
-// Protocol for a delegate which receives error messages.  Currently
-// fetcher errors are logged and thrown away.  (An error here has the
-// functional meaning "do nothing more".)  Use of a delegate with this
-// protocol in KSUpdateCheckAction is optional.
-@interface KSUpdateCheckAction (KSUpdateCheckActionDelegateMethods)
-- (void)fetcher:(GDataHTTPFetcher *)fetcher failedWithError:(NSError *)error;
 @end
