@@ -24,6 +24,7 @@
 
 /* Begin PBXBuildFile section */
 		4397826E13A704AE00C60D51 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4397826D13A704AE00C60D51 /* SenTestingKit.framework */; };
+		43BCA5BC13A7DAF700305194 /* KSOutOfBandDataAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA5BA13A7DAC000305194 /* KSOutOfBandDataAction.m */; };
 		43F956B113A7CC6E00332B06 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F9568C13A7CC4B00332B06 /* GTMHTTPFetcher.m */; };
 		F92468FF0E3164AA004ADF93 /* SignerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F92468FE0E316468004ADF93 /* SignerTest.m */; };
 		F924691D0E31689E004ADF93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
@@ -129,6 +130,8 @@
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* autoinstaller_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autoinstaller_Prefix.pch; sourceTree = "<group>"; };
 		4397826D13A704AE00C60D51 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		43BCA5B913A7DAC000305194 /* KSOutOfBandDataAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSOutOfBandDataAction.h; sourceTree = "<group>"; };
+		43BCA5BA13A7DAC000305194 /* KSOutOfBandDataAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSOutOfBandDataAction.m; sourceTree = "<group>"; };
 		43F9568713A7CC4B00332B06 /* GTMGatherInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMGatherInputStream.h; sourceTree = "<group>"; };
 		43F9568813A7CC4B00332B06 /* GTMGatherInputStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMGatherInputStream.m; sourceTree = "<group>"; };
 		43F9568913A7CC4B00332B06 /* GTMHTTPFetchHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetchHistory.h; sourceTree = "<group>"; };
@@ -450,6 +453,8 @@
 				F931F9EF0E92B699009FB4B0 /* KSMockFetcherFactory.m */,
 				F931F9F00E92B699009FB4B0 /* KSMultiUpdateAction.h */,
 				F931F9F10E92B699009FB4B0 /* KSMultiUpdateAction.m */,
+				43BCA5B913A7DAC000305194 /* KSOutOfBandDataAction.h */,
+				43BCA5BA13A7DAC000305194 /* KSOutOfBandDataAction.m */,
 				F931F9F30E92B699009FB4B0 /* KSPlistServer.h */,
 				F931F9F40E92B699009FB4B0 /* KSPlistServer.m */,
 				F931F9F60E92B699009FB4B0 /* KSPrefetchAction.h */,
@@ -774,6 +779,7 @@
 				F93100750E92D7D3009FB4B0 /* KSMockFetcherFactory.m in Sources */,
 				F93100760E92D7D3009FB4B0 /* KSMultiAction.m in Sources */,
 				F93100770E92D7D3009FB4B0 /* KSMultiUpdateAction.m in Sources */,
+				43BCA5BC13A7DAF700305194 /* KSOutOfBandDataAction.m in Sources */,
 				F93100780E92D7D3009FB4B0 /* KSPlistServer.m in Sources */,
 				F93100790E92D7D3009FB4B0 /* KSPrefetchAction.m in Sources */,
 				F931007A0E92D7D3009FB4B0 /* KSPromptAction.m in Sources */,
