@@ -76,8 +76,8 @@
 
 - (NSDictionary *)attributes {
   NSFileManager *mgr = [NSFileManager defaultManager];
-  NSDictionary *attributes = [mgr fileAttributesAtPath:fullPath_ 
-                                              traverseLink:NO];
+  NSDictionary *attributes = [mgr attributesOfItemAtPath:fullPath_ 
+                                                   error:nil];
   return attributes;
 }
 
@@ -113,7 +113,10 @@
   
   if (!nascentPath) {
     NSFileManager *mgr = [NSFileManager defaultManager];
-    BOOL created = [mgr createDirectoryAtPath:newPath attributes:attributes];
+    BOOL created = [mgr createDirectoryAtPath:newPath
+                  withIntermediateDirectories:YES
+                                   attributes:attributes
+                                        error:nil];
     nascentPath = created ? [GTMPath pathWithFullPath:newPath] : nil;
   }
 

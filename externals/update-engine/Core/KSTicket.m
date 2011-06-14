@@ -274,7 +274,7 @@
 }
 
 // The trustedTesterToken_, tag, and brand are intentionally excluded from hash.
-- (unsigned)hash {
+- (NSUInteger)hash {
   return [productID_ hash] + [version_ hash] + [existenceChecker_ hash]
        + [serverURL_ hash] + [creationDate_ hash];
 }
@@ -360,14 +360,14 @@
 }
 
 - (id)plistForPath:(NSString *)path {
-  NSString *fullPath = [path stringByExpandingTildeInPath];
+  NSString *fullPath = [path stringByStandardizingPath];
 
   // Make sure it exists.
   NSFileManager *fm = [NSFileManager defaultManager];
   if (![fm fileExistsAtPath:fullPath]) return nil;
 
   // Make sure file is not too big.
-  NSDictionary *fileAttrs = [fm fileAttributesAtPath:fullPath traverseLink:YES];
+  NSDictionary *fileAttrs = [fm attributesOfItemAtPath:fullPath error:nil];
   NSNumber *sizeNumber = [fileAttrs valueForKey:NSFileSize];
   if (sizeNumber == nil) return nil;
 

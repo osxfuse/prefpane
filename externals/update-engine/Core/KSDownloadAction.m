@@ -342,7 +342,7 @@ static void MarkFileDescriptorsCloseOnExec(void) {
     // we'd rather it fail than recursively remove things.
     NSFileManager *fm = [NSFileManager defaultManager];
     unlink([path_ fileSystemRepresentation]);  // Remove destination path
-    if (![fm copyPath:tempPath_ toPath:path_ handler:nil]) {
+    if (![fm copyItemAtPath:tempPath_ toPath:path_ error:nil]) {
       GTMLoggerError(@"Failed to rename %@ -> %@: errno=%d",  // COV_NF_LINE
                      tempPath_, path_, errno);                // COV_NF_LINE
     }
@@ -442,8 +442,8 @@ static void MarkFileDescriptorsCloseOnExec(void) {
 
 - (unsigned long long)sizeOfFileAtPath:(NSString *)path {
   if (path == nil) return 0;
-  return [[[NSFileManager defaultManager] fileAttributesAtPath:path
-                                                  traverseLink:NO] fileSize];
+  return [[[NSFileManager defaultManager] attributesOfItemAtPath:path
+                                                           error:nil] fileSize];
 }
 
 // Return a directory in which to put ksurl.
@@ -465,8 +465,8 @@ static void MarkFileDescriptorsCloseOnExec(void) {
              isDirectory:&isDir] &&
       isDir) {
     attributes = [[NSFileManager defaultManager]
-                                 fileAttributesAtPath:directory
-                                         traverseLink:NO];
+                               attributesOfItemAtPath:directory
+                                                error:nil];
     if ([[attributes objectForKey:NSFilePosixPermissions]
           isEqual:properPermission] &&
         [[attributes objectForKey:NSFileOwnerAccountID]
@@ -488,13 +488,15 @@ static void MarkFileDescriptorsCloseOnExec(void) {
   }
 
   // Doesn't exist, or exists with wrong permission/owner.  Delete and create.
-  [[NSFileManager defaultManager] removeFileAtPath:directory
-                                           handler:nil];
+  [[NSFileManager defaultManager] removeItemAtPath:directory
+                                             error:nil];
   NSDictionary *attr =
     [NSDictionary dictionaryWithObject:properPermission
                                 forKey:NSFilePosixPermissions];
   [[NSFileManager defaultManager] createDirectoryAtPath:directory
-                                             attributes:attr];
+                            withIntermediateDirectories:YES
+                                             attributes:attr
+                                                  error:nil];
 
   // reconfirm in case it failed
   if ([self isValidAndSafeDirectory:directory]) {

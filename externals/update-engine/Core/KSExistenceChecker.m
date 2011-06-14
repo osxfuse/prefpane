@@ -45,7 +45,7 @@
 }
 
 // Must be defined to make falseCheckers equal
-- (unsigned)hash {
+- (NSUInteger)hash {
   return 0;
 }
 
@@ -105,7 +105,7 @@
   [coder encodeObject:path_ forKey:@"path"];
 }
 
-- (unsigned)hash {
+- (NSUInteger)hash {
   return [path_ hash];
 }
 
@@ -172,7 +172,7 @@
   [coder encodeObject:bundleID_ forKey:@"bundle_id"];
 }
 
-- (unsigned)hash {
+- (NSUInteger)hash {
   return [bundleID_ hash];
 }
 
@@ -244,7 +244,7 @@
   [coder encodeObject:query_ forKey:@"query"];
 }
 
-- (unsigned)hash {
+- (NSUInteger)hash {
   return [query_ hash];
 }
 
