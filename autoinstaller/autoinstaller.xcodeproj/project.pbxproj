@@ -23,6 +23,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4397826E13A704AE00C60D51 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4397826D13A704AE00C60D51 /* SenTestingKit.framework */; };
 		F92468FF0E3164AA004ADF93 /* SignerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F92468FE0E316468004ADF93 /* SignerTest.m */; };
 		F924691D0E31689E004ADF93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		F92469A80E316B5A004ADF93 /* SignedPlistServerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F92469A70E316B5A004ADF93 /* SignedPlistServerTest.m */; };
@@ -37,7 +38,6 @@
 		F93100220E92D4FE009FB4B0 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F95A05210E25327300A22FA6 /* Carbon.framework */; };
 		F931005D0E92D7D3009FB4B0 /* EngineDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F954C0CD0E2D6C6400E776EB /* EngineDelegate.m */; };
 		F931005E0E92D7D3009FB4B0 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA590E92B699009FB4B0 /* GTMBase64.m */; };
-		F931005F0E92D7D3009FB4B0 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA6A0E92B699009FB4B0 /* GTMHTTPFetcher.m */; };
 		F93100600E92D7D3009FB4B0 /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA730E92B699009FB4B0 /* GTMLogger.m */; };
 		F93100610E92D7D3009FB4B0 /* GTMLoggerRingBufferWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA750E92B699009FB4B0 /* GTMLoggerRingBufferWriter.m */; };
 		F93100620E92D7D3009FB4B0 /* GTMMethodCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = F931FA550E92B699009FB4B0 /* GTMMethodCheck.m */; };
@@ -127,12 +127,13 @@
 		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* autoinstaller_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autoinstaller_Prefix.pch; sourceTree = "<group>"; };
+		4397826D13A704AE00C60D51 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		F9041AE40E25397800886258 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		F92468F10E3163D1004ADF93 /* Extensions Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Extensions Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92468FB0E316468004ADF93 /* Signer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Signer.h; sourceTree = "<group>"; };
 		F92468FC0E316468004ADF93 /* Signer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Signer.m; sourceTree = "<group>"; };
 		F92468FE0E316468004ADF93 /* SignerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignerTest.m; sourceTree = "<group>"; };
-		F92469A70E316B5A004ADF93 /* SignedPlistServerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignedPlistServerTest.m; sourceTree = "<group>"; };
+		F92469A70E316B5A004ADF93 /* SignedPlistServerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = SignedPlistServerTest.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		F9246A1B0E3199E3004ADF93 /* plist_signer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = plist_signer.m; sourceTree = "<group>"; };
 		F9246A200E3199F9004ADF93 /* plist_signer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = plist_signer; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9246AAE0E31A5DC004ADF93 /* PlistSigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistSigner.h; sourceTree = "<group>"; };
@@ -214,8 +215,6 @@
 		F931FA580E92B699009FB4B0 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		F931FA590E92B699009FB4B0 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		F931FA640E92B699009FB4B0 /* GTMGarbageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMGarbageCollection.h; sourceTree = "<group>"; };
-		F931FA690E92B699009FB4B0 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
-		F931FA6A0E92B699009FB4B0 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
 		F931FA720E92B699009FB4B0 /* GTMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMLogger.h; sourceTree = "<group>"; };
 		F931FA730E92B699009FB4B0 /* GTMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMLogger.m; sourceTree = "<group>"; };
 		F931FA740E92B699009FB4B0 /* GTMLoggerRingBufferWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMLoggerRingBufferWriter.h; sourceTree = "<group>"; };
@@ -260,6 +259,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4397826E13A704AE00C60D51 /* SenTestingKit.framework in Frameworks */,
 				F93101490E92D9A5009FB4B0 /* Carbon.framework in Frameworks */,
 				F93101450E92D99D009FB4B0 /* CoreServices.framework in Frameworks */,
 				F924691D0E31689E004ADF93 /* Foundation.framework in Frameworks */,
@@ -319,6 +319,7 @@
 				F95A05260E25328100A22FA6 /* CoreServices.framework */,
 				F95A05210E25327300A22FA6 /* Carbon.framework */,
 				08FB779EFE84155DC02AAC07 /* Foundation.framework */,
+				4397826D13A704AE00C60D51 /* SenTestingKit.framework */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -478,8 +479,6 @@
 				F931FA580E92B699009FB4B0 /* GTMBase64.h */,
 				F931FA590E92B699009FB4B0 /* GTMBase64.m */,
 				F931FA640E92B699009FB4B0 /* GTMGarbageCollection.h */,
-				F931FA690E92B699009FB4B0 /* GTMHTTPFetcher.h */,
-				F931FA6A0E92B699009FB4B0 /* GTMHTTPFetcher.m */,
 				F931FA720E92B699009FB4B0 /* GTMLogger.h */,
 				F931FA730E92B699009FB4B0 /* GTMLogger.m */,
 				F931FA740E92B699009FB4B0 /* GTMLoggerRingBufferWriter.h */,
@@ -703,7 +702,6 @@
 			files = (
 				F931005D0E92D7D3009FB4B0 /* EngineDelegate.m in Sources */,
 				F931005E0E92D7D3009FB4B0 /* GTMBase64.m in Sources */,
-				F931005F0E92D7D3009FB4B0 /* GTMHTTPFetcher.m in Sources */,
 				F93100600E92D7D3009FB4B0 /* GTMLogger.m in Sources */,
 				F93100610E92D7D3009FB4B0 /* GTMLoggerRingBufferWriter.m in Sources */,
 				F93100620E92D7D3009FB4B0 /* GTMMethodCheck.m in Sources */,
@@ -805,6 +803,10 @@
 			baseConfigurationReference = F931FBF40E92B6F9009FB4B0 /* DebugUnittest.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
 				INFOPLIST_FILE = "Resources/Extensions Tests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -822,6 +824,10 @@
 			baseConfigurationReference = F931FBF60E92B6F9009FB4B0 /* ReleaseUnittest.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
 				INFOPLIST_FILE = "Resources/Extensions Tests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-framework",
