@@ -19,7 +19,6 @@
 #import "GTMPath.h"
 #import "GTMDefines.h"
 
-#if MAC_OS_X_VERSION_MIN_REQUIRED < MAC_OS_X_VERSION_10_5
 // NSFileManager has improved substantially in Leopard and beyond, so GTMPath
 // is now deprecated.
 
@@ -158,5 +157,3 @@
 }
 
 @end
-
-#endif //  MAC_OS_X_VERSION_MIN_REQUIRED < MAC_OS_X_VERSION_10_5
