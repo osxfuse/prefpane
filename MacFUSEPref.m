@@ -161,7 +161,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
       return -1;
     }
     FILE *outPipe = NULL;
-    unsigned int numArgs = [arguments count];
+    NSUInteger numArgs = [arguments count];
     const char **args = malloc(sizeof(char*) * (numArgs + 1));
     if (!args) {
       [self setScriptRunning:NO];
