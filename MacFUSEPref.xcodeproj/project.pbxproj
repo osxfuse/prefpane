@@ -11,7 +11,6 @@
 		8B4A3EB00ED245F0006BFDD8 /* About.html in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A3EAF0ED245F0006BFDD8 /* About.html */; };
 		8B4A41B20ED31D25006BFDD8 /* com.google.macfuse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A41B10ED31D25006BFDD8 /* com.google.macfuse.plist */; };
 		8B84BF130ED64CDE003D9F0F /* GTMSystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B84BF110ED64CDE003D9F0F /* GTMSystemVersion.m */; };
-		8BDF5DC80ECE9031006AF1EF /* autoinstall-macfuse-core in Copy Executables (2) */ = {isa = PBXBuildFile; fileRef = 8BDF5DC20ECE8FD9006AF1EF /* autoinstall-macfuse-core */; };
 		8BE4F6370EDB2A2C0087B5C1 /* MacFUSE_48x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BE4F6360EDB2A2C0087B5C1 /* MacFUSE_48x48.png */; };
 		8BF53A230EE5AC3800D981A0 /* MacFUSE.searchTerms in Resources */ = {isa = PBXBuildFile; fileRef = 8BF53A220EE5AC3800D981A0 /* MacFUSE.searchTerms */; };
 		8BF53A3F0EE5AD0300D981A0 /* MacFUSE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8BE4F6390EDB2A300087B5C1 /* MacFUSE.icns */; };
@@ -22,37 +21,6 @@
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8BDF5DBD0ECE8FD9006AF1EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F92468F10E3163D1004ADF93;
-			remoteInfo = "Extensions Tests";
-		};
-		8BDF5DBF0ECE8FD9006AF1EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F9246A200E3199F9004ADF93;
-			remoteInfo = plist_signer;
-		};
-		8BDF5DC10ECE8FD9006AF1EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F931FE600E92D311009FB4B0;
-			remoteInfo = "autoinstall-macfuse-core";
-		};
-		8BDF5DC30ECE8FED006AF1EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F931FE5F0E92D311009FB4B0;
-			remoteInfo = "autoinstall-macfuse-core";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		8BDF5DD00ECE903A006AF1EF /* Copy Executables (2) */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -60,7 +28,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				8BDF5DC80ECE9031006AF1EF /* autoinstall-macfuse-core in Copy Executables (2) */,
 			);
 			name = "Copy Executables (2)";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,14 +44,14 @@
 		8B449EFE0ED379BC00E7026D /* xcconfigs-readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xcconfigs-readme.txt"; sourceTree = "<group>"; };
 		8B4A3DE40ED243EE006BFDD8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		8B4A3EAD0ED245DA006BFDD8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/About.html; sourceTree = "<group>"; };
-		8B4A41B10ED31D25006BFDD8 /* com.google.macfuse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = com.google.macfuse.plist; path = ../packaging/com.google.macfuse.plist; sourceTree = "<group>"; };
+		8B4A41B10ED31D25006BFDD8 /* com.google.macfuse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.google.macfuse.plist; sourceTree = "<group>"; };
 		8B84BDD10ED63320003D9F0F /* ReleaseTigerOrLater.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ReleaseTigerOrLater.xcconfig; sourceTree = "<group>"; };
 		8B84BDD20ED63320003D9F0F /* DebugTigerOrLater.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DebugTigerOrLater.xcconfig; sourceTree = "<group>"; };
-		8B84BF110ED64CDE003D9F0F /* GTMSystemVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMSystemVersion.m; path = "../externals/google-toolbox-for-mac/Foundation/GTMSystemVersion.m"; sourceTree = SOURCE_ROOT; };
-		8B84BF120ED64CDE003D9F0F /* GTMSystemVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMSystemVersion.h; path = "../externals/google-toolbox-for-mac/Foundation/GTMSystemVersion.h"; sourceTree = SOURCE_ROOT; };
-		8B84BF200ED64D59003D9F0F /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "../externals/google-toolbox-for-mac/GTMDefines.h"; sourceTree = SOURCE_ROOT; };
-		8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = autoinstaller.xcodeproj; path = ../autoinstaller/autoinstaller.xcodeproj; sourceTree = SOURCE_ROOT; };
-		8BE4F6360EDB2A2C0087B5C1 /* MacFUSE_48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MacFUSE_48x48.png; path = ../packaging/images/MacFUSE_48x48.png; sourceTree = SOURCE_ROOT; };
+		8B84BF110ED64CDE003D9F0F /* GTMSystemVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; name = GTMSystemVersion.m; path = "externals/google-toolbox-for-mac/Foundation/GTMSystemVersion.m"; sourceTree = SOURCE_ROOT; tabWidth = 2; usesTabs = 0; };
+		8B84BF120ED64CDE003D9F0F /* GTMSystemVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = GTMSystemVersion.h; path = "externals/google-toolbox-for-mac/Foundation/GTMSystemVersion.h"; sourceTree = SOURCE_ROOT; tabWidth = 2; usesTabs = 0; };
+		8B84BF200ED64D59003D9F0F /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "externals/google-toolbox-for-mac/GTMDefines.h"; sourceTree = SOURCE_ROOT; tabWidth = 2; usesTabs = 0; };
+		8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = autoinstaller.xcodeproj; path = autoinstaller/autoinstaller.xcodeproj; sourceTree = SOURCE_ROOT; };
+		8BE4F6360EDB2A2C0087B5C1 /* MacFUSE_48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MacFUSE_48x48.png; sourceTree = SOURCE_ROOT; };
 		8BE4F6390EDB2A300087B5C1 /* MacFUSE.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MacFUSE.icns; sourceTree = "<group>"; };
 		8BF53A200EE5AC2900D981A0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = English; path = English.lproj/MacFUSE.searchTerms; sourceTree = "<group>"; };
 		8D202CF70486D31800D8A456 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -191,8 +158,7 @@
 			children = (
 				8B449ED80ED379BC00E7026D /* google-toolbox-for-mac */,
 			);
-			name = externals;
-			path = ../externals;
+			path = externals;
 			sourceTree = "<group>";
 		};
 		8B449ED80ED379BC00E7026D /* google-toolbox-for-mac */ = {
@@ -230,16 +196,6 @@
 			path = Target;
 			sourceTree = "<group>";
 		};
-		8BDF5DB40ECE8FD9006AF1EF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8BDF5DBE0ECE8FD9006AF1EF /* Extensions Tests.octest */,
-				8BDF5DC00ECE8FD9006AF1EF /* plist_signer */,
-				8BDF5DC20ECE8FD9006AF1EF /* autoinstall-macfuse-core */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,7 +212,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8BDF5DC40ECE8FED006AF1EF /* PBXTargetDependency */,
 			);
 			name = MacFUSE;
 			productInstallPath = "$(HOME)/Library/PreferencePanes";
@@ -271,45 +226,19 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "MacFUSEPref" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* MacFuse */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8BDF5DB40ECE8FD9006AF1EF /* Products */;
-					ProjectRef = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8D202CE80486D31800D8A456 /* MacFUSE */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		8BDF5DBE0ECE8FD9006AF1EF /* Extensions Tests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Extensions Tests.octest";
-			remoteRef = 8BDF5DBD0ECE8FD9006AF1EF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8BDF5DC00ECE8FD9006AF1EF /* plist_signer */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = plist_signer;
-			remoteRef = 8BDF5DBF0ECE8FD9006AF1EF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8BDF5DC20ECE8FD9006AF1EF /* autoinstall-macfuse-core */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = "autoinstall-macfuse-core";
-			remoteRef = 8BDF5DC10ECE8FD9006AF1EF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D202CEC0486D31800D8A456 /* Resources */ = {
@@ -349,14 +278,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8BDF5DC40ECE8FED006AF1EF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "autoinstall-macfuse-core";
-			targetProxy = 8BDF5DC30ECE8FED006AF1EF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
@@ -398,9 +319,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B449EF70ED379BC00E7026D /* LoadableBundle.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PREFIX_HEADER = MacFUSEPref_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = MacFUSE;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Debug;
@@ -409,9 +334,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B449EF70ED379BC00E7026D /* LoadableBundle.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PREFIX_HEADER = MacFUSEPref_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = MacFUSE;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;
@@ -420,7 +349,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B84BDD20ED63320003D9F0F /* DebugTigerOrLater.xcconfig */;
 			buildSettings = {
-				"ARCHS[sdk=macosx10.5*]" = "$(ARCHS_STANDARD_32_BIT)";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = macosx10.6;
+				WARNING_CFLAGS = (
+					"$(inherited)",
+					"$(GTM_GENERAL_WARNING_CFLAGS)",
+					"$(GTM_PLATFORM_WARNING_CFLAGS)",
+					"$(GTM_CONFIGURATION_WARNING_CFLAGS)",
+					"$(GTM_HOST_WARNING_CFLAGS)",
+					"-Wno-format",
+				);
 			};
 			name = Debug;
 		};
@@ -428,7 +366,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B84BDD10ED63320003D9F0F /* ReleaseTigerOrLater.xcconfig */;
 			buildSettings = {
-				"ARCHS[sdk=macosx10.5*]" = "$(ARCHS_STANDARD_32_BIT)";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = macosx10.6;
+				WARNING_CFLAGS = (
+					"$(inherited)",
+					"$(GTM_GENERAL_WARNING_CFLAGS)",
+					"$(GTM_PLATFORM_WARNING_CFLAGS)",
+					"$(GTM_CONFIGURATION_WARNING_CFLAGS)",
+					"$(GTM_HOST_WARNING_CFLAGS)",
+					"-Wno-format",
+				);
 			};
 			name = Release;
 		};
