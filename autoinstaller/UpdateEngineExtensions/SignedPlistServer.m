@@ -13,7 +13,7 @@
 
 
 // Public Key for officially signed OSXFUSE rules plists
-static unsigned char macfuse_public_der[] = {
+static unsigned char osxfuse_public_der[] = {
   0x30, 0x81, 0x9f, 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x01,
   0x05, 0x00, 0x03, 0x81, 0x8d, 0x00, 0x30, 0x81, 0x89, 0x02, 0x81, 0x81, 0x00, 0xc2, 0xc0, 0x40,
   0x30, 0x28, 0x59, 0x9a, 0xa2, 0xc7, 0xae, 0x93, 0xd5, 0x5c, 0xe2, 0x9d, 0xfa, 0x84, 0x1d, 0xed,
@@ -26,18 +26,18 @@ static unsigned char macfuse_public_der[] = {
   0xee, 0x89, 0x5f, 0x57, 0xe4, 0x29, 0x4f, 0xa5, 0x34, 0x83, 0x50, 0x3b, 0x31, 0x02, 0x03, 0x01,
   0x00, 0x01
 };
-static unsigned int macfuse_public_der_len = 162;
+static unsigned int osxfuse_public_der_len = 162;
 
 
 @implementation SignedPlistServer
 
 - (id)initWithURL:(NSURL *)url params:(NSDictionary *)params engine:(KSUpdateEngine *)engine {
   // By default, this class will create a SignedPlistServer customized with 
-  // the appropriate public key for the signature of MacFUSE rules plists.
-  NSData *pubKey = [NSData dataWithBytes:macfuse_public_der
-                                  length:macfuse_public_der_len];
-  Signer *macfuseSigner = [Signer signerWithPublicKey:pubKey privateKey:nil];
-  return [self initWithURL:url signer:macfuseSigner engine:engine];
+  // the appropriate public key for the signature of OSXFUSE rules plists.
+  NSData *pubKey = [NSData dataWithBytes:osxfuse_public_der
+                                  length:osxfuse_public_der_len];
+  Signer *osxfuseSigner = [Signer signerWithPublicKey:pubKey privateKey:nil];
+  return [self initWithURL:url signer:osxfuseSigner engine:engine];
 }
 
 - (id)initWithURL:(NSURL *)url signer:(Signer *)signer engine:(KSUpdateEngine *)engine {

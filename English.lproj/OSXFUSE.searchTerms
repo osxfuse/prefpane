@@ -8,9 +8,9 @@
 			<array>
 				<dict>
 					<key>index</key>
-					<string>google, fuse, file, update, remove</string>
+					<string>osxfuse, fuse, file, update, remove</string>
 					<key>title</key>
-					<string>MacFUSE</string>
+					<string>FUSE for OS X</string>
 				</dict>
 			</array>
 		</dict>

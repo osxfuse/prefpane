@@ -259,7 +259,7 @@
 		F931FBF60E92B6F9009FB4B0 /* ReleaseUnittest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ReleaseUnittest.xcconfig; sourceTree = "<group>"; };
 		F931FBF70E92B6F9009FB4B0 /* SharedLibrary.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SharedLibrary.xcconfig; sourceTree = "<group>"; };
 		F931FBF80E92B6F9009FB4B0 /* Unittest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Unittest.xcconfig; sourceTree = "<group>"; };
-		F931FE600E92D311009FB4B0 /* autoinstall-macfuse-core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "autoinstall-macfuse-core"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F931FE600E92D311009FB4B0 /* autoinstall-osxfuse-core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "autoinstall-osxfuse-core"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F954BF900E2D548A00E776EB /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		F954C0CA0E2D6C6400E776EB /* SignedPlistServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignedPlistServer.h; sourceTree = "<group>"; };
 		F954C0CB0E2D6C6400E776EB /* SignedPlistServer.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = SignedPlistServer.m; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
@@ -347,7 +347,7 @@
 			children = (
 				F92468F10E3163D1004ADF93 /* Extensions Tests.octest */,
 				F9246A200E3199F9004ADF93 /* plist_signer */,
-				F931FE600E92D311009FB4B0 /* autoinstall-macfuse-core */,
+				F931FE600E92D311009FB4B0 /* autoinstall-osxfuse-core */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -648,9 +648,9 @@
 			productReference = F9246A200E3199F9004ADF93 /* plist_signer */;
 			productType = "com.apple.product-type.tool";
 		};
-		F931FE5F0E92D311009FB4B0 /* autoinstall-macfuse-core */ = {
+		F931FE5F0E92D311009FB4B0 /* autoinstall-osxfuse-core */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F931FE8F0E92D331009FB4B0 /* Build configuration list for PBXNativeTarget "autoinstall-macfuse-core" */;
+			buildConfigurationList = F931FE8F0E92D331009FB4B0 /* Build configuration list for PBXNativeTarget "autoinstall-osxfuse-core" */;
 			buildPhases = (
 				F931FE5D0E92D311009FB4B0 /* Sources */,
 				F931FE5E0E92D311009FB4B0 /* Frameworks */,
@@ -659,9 +659,9 @@
 			);
 			dependencies = (
 			);
-			name = "autoinstall-macfuse-core";
+			name = "autoinstall-osxfuse-core";
 			productName = autoinstaller;
-			productReference = F931FE600E92D311009FB4B0 /* autoinstall-macfuse-core */;
+			productReference = F931FE600E92D311009FB4B0 /* autoinstall-osxfuse-core */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -684,7 +684,7 @@
 				F9246C460E31BEFE004ADF93 /* Build All */,
 				F92468F00E3163D1004ADF93 /* Extensions Tests */,
 				F9246A1F0E3199F9004ADF93 /* plist_signer */,
-				F931FE5F0E92D311009FB4B0 /* autoinstall-macfuse-core */,
+				F931FE5F0E92D311009FB4B0 /* autoinstall-osxfuse-core */,
 			);
 		};
 /* End PBXProject section */
@@ -819,7 +819,7 @@
 		};
 		F93100FC0E92D8A0009FB4B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F931FE5F0E92D311009FB4B0 /* autoinstall-macfuse-core */;
+			target = F931FE5F0E92D311009FB4B0 /* autoinstall-osxfuse-core */;
 			targetProxy = F93100FB0E92D8A0009FB4B0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -936,7 +936,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_LDFLAGS = "-lcrypto";
-				PRODUCT_NAME = "autoinstall-macfuse-core";
+				PRODUCT_NAME = "autoinstall-osxfuse-core";
 			};
 			name = Debug;
 		};
@@ -951,7 +951,7 @@
 				INSTALL_PATH = /usr/local/bin;
 				OTHER_LDFLAGS = "-lcrypto";
 				PREBINDING = NO;
-				PRODUCT_NAME = "autoinstall-macfuse-core";
+				PRODUCT_NAME = "autoinstall-osxfuse-core";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -995,7 +995,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F931FE8F0E92D331009FB4B0 /* Build configuration list for PBXNativeTarget "autoinstall-macfuse-core" */ = {
+		F931FE8F0E92D331009FB4B0 /* Build configuration list for PBXNativeTarget "autoinstall-osxfuse-core" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F931FE620E92D311009FB4B0 /* Debug */,

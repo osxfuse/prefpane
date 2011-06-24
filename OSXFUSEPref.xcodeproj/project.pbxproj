@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		8B0202900ECB2AA700A6EB85 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B02028F0ECB2AA700A6EB85 /* Security.framework */; };
 		8B4A3EB00ED245F0006BFDD8 /* About.html in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A3EAF0ED245F0006BFDD8 /* About.html */; };
-		8B4A41B20ED31D25006BFDD8 /* com.google.macfuse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A41B10ED31D25006BFDD8 /* com.google.macfuse.plist */; };
+		8B4A41B20ED31D25006BFDD8 /* com.github.osxfuse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A41B10ED31D25006BFDD8 /* com.github.osxfuse.plist */; };
 		8B84BF130ED64CDE003D9F0F /* GTMSystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B84BF110ED64CDE003D9F0F /* GTMSystemVersion.m */; };
-		8BE4F6370EDB2A2C0087B5C1 /* MacFUSE_48x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BE4F6360EDB2A2C0087B5C1 /* MacFUSE_48x48.png */; };
-		8BF53A230EE5AC3800D981A0 /* MacFUSE.searchTerms in Resources */ = {isa = PBXBuildFile; fileRef = 8BF53A220EE5AC3800D981A0 /* MacFUSE.searchTerms */; };
-		8BF53A3F0EE5AD0300D981A0 /* MacFUSE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8BE4F6390EDB2A300087B5C1 /* MacFUSE.icns */; };
-		8BF53A450EE5AD7600D981A0 /* MacFUSEPref.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BF53A440EE5AD7600D981A0 /* MacFUSEPref.xib */; };
+		8BE4F6370EDB2A2C0087B5C1 /* OSXFUSE_48x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BE4F6360EDB2A2C0087B5C1 /* OSXFUSE_48x48.png */; };
+		8BF53A230EE5AC3800D981A0 /* OSXFUSE.searchTerms in Resources */ = {isa = PBXBuildFile; fileRef = 8BF53A220EE5AC3800D981A0 /* OSXFUSE.searchTerms */; };
+		8BF53A3F0EE5AD0300D981A0 /* OSXFUSE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8BE4F6390EDB2A300087B5C1 /* OSXFUSE.icns */; };
+		8BF53A450EE5AD7600D981A0 /* OSXFUSEPref.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BF53A440EE5AD7600D981A0 /* OSXFUSEPref.xib */; };
 		8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
-		8D202CF10486D31800D8A456 /* MacFUSEPref.m in Sources */ = {isa = PBXBuildFile; fileRef = F506C03D013D9D7901CA16C8 /* MacFUSEPref.m */; };
+		8D202CF10486D31800D8A456 /* OSXFUSEPref.m in Sources */ = {isa = PBXBuildFile; fileRef = F506C03D013D9D7901CA16C8 /* OSXFUSEPref.m */; };
 		8D202CF30486D31800D8A456 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
 /* End PBXBuildFile section */
@@ -46,20 +46,20 @@
 		8B449EFE0ED379BC00E7026D /* xcconfigs-readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xcconfigs-readme.txt"; sourceTree = "<group>"; };
 		8B4A3DE40ED243EE006BFDD8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		8B4A3EAD0ED245DA006BFDD8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/About.html; sourceTree = "<group>"; };
-		8B4A41B10ED31D25006BFDD8 /* com.google.macfuse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.google.macfuse.plist; sourceTree = "<group>"; };
+		8B4A41B10ED31D25006BFDD8 /* com.github.osxfuse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.github.osxfuse.plist; sourceTree = "<group>"; };
 		8B84BF110ED64CDE003D9F0F /* GTMSystemVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; name = GTMSystemVersion.m; path = "externals/google-toolbox-for-mac/Foundation/GTMSystemVersion.m"; sourceTree = SOURCE_ROOT; tabWidth = 2; usesTabs = 0; };
 		8B84BF120ED64CDE003D9F0F /* GTMSystemVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = GTMSystemVersion.h; path = "externals/google-toolbox-for-mac/Foundation/GTMSystemVersion.h"; sourceTree = SOURCE_ROOT; tabWidth = 2; usesTabs = 0; };
 		8B84BF200ED64D59003D9F0F /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "externals/google-toolbox-for-mac/GTMDefines.h"; sourceTree = SOURCE_ROOT; tabWidth = 2; usesTabs = 0; };
 		8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = autoinstaller.xcodeproj; path = autoinstaller/autoinstaller.xcodeproj; sourceTree = SOURCE_ROOT; };
-		8BE4F6360EDB2A2C0087B5C1 /* MacFUSE_48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MacFUSE_48x48.png; sourceTree = SOURCE_ROOT; };
-		8BE4F6390EDB2A300087B5C1 /* MacFUSE.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MacFUSE.icns; sourceTree = "<group>"; };
-		8BF53A200EE5AC2900D981A0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = English; path = English.lproj/MacFUSE.searchTerms; sourceTree = "<group>"; };
+		8BE4F6360EDB2A2C0087B5C1 /* OSXFUSE_48x48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OSXFUSE_48x48.png; sourceTree = SOURCE_ROOT; };
+		8BE4F6390EDB2A300087B5C1 /* OSXFUSE.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = OSXFUSE.icns; sourceTree = "<group>"; };
+		8BF53A200EE5AC2900D981A0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = English; path = English.lproj/OSXFUSE.searchTerms; sourceTree = "<group>"; };
 		8D202CF70486D31800D8A456 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D202CF80486D31800D8A456 /* MacFUSE.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacFUSE.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D202CF80486D31800D8A456 /* OSXFUSE.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSXFUSE.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		F506C035013D953901CA16C8 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
-		F506C03C013D9D7901CA16C8 /* MacFUSEPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFUSEPref.h; sourceTree = "<group>"; };
-		F506C03D013D9D7901CA16C8 /* MacFUSEPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFUSEPref.m; sourceTree = "<group>"; };
-		F506C043013D9D8C01CA16C8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MacFUSEPref.xib; sourceTree = "<group>"; };
+		F506C03C013D9D7901CA16C8 /* OSXFUSEPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSXFUSEPref.h; sourceTree = "<group>"; };
+		F506C03D013D9D7901CA16C8 /* OSXFUSEPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSXFUSEPref.m; sourceTree = "<group>"; };
+		F506C043013D9D8C01CA16C8 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/OSXFUSEPref.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,14 +103,14 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8BE4F6360EDB2A2C0087B5C1 /* MacFUSE_48x48.png */,
-				8BE4F6390EDB2A300087B5C1 /* MacFUSE.icns */,
+				8BE4F6360EDB2A2C0087B5C1 /* OSXFUSE_48x48.png */,
+				8BE4F6390EDB2A300087B5C1 /* OSXFUSE.icns */,
 				8B4A3EAF0ED245F0006BFDD8 /* About.html */,
-				8B4A41B10ED31D25006BFDD8 /* com.google.macfuse.plist */,
+				8B4A41B10ED31D25006BFDD8 /* com.github.osxfuse.plist */,
 				8D202CF70486D31800D8A456 /* Info.plist */,
-				8BF53A220EE5AC3800D981A0 /* MacFUSE.searchTerms */,
+				8BF53A220EE5AC3800D981A0 /* OSXFUSE.searchTerms */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
-				8BF53A440EE5AD7600D981A0 /* MacFUSEPref.xib */,
+				8BF53A440EE5AD7600D981A0 /* OSXFUSEPref.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -121,8 +121,8 @@
 				8B84BF200ED64D59003D9F0F /* GTMDefines.h */,
 				8B84BF110ED64CDE003D9F0F /* GTMSystemVersion.m */,
 				8B84BF120ED64CDE003D9F0F /* GTMSystemVersion.h */,
-				F506C03C013D9D7901CA16C8 /* MacFUSEPref.h */,
-				F506C03D013D9D7901CA16C8 /* MacFUSEPref.m */,
+				F506C03C013D9D7901CA16C8 /* OSXFUSEPref.h */,
+				F506C03D013D9D7901CA16C8 /* OSXFUSEPref.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 		19C28FB8FE9D52D311CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D202CF80486D31800D8A456 /* MacFUSE.prefPane */,
+				8D202CF80486D31800D8A456 /* OSXFUSE.prefPane */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,9 +199,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D202CE80486D31800D8A456 /* MacFUSE */ = {
+		8D202CE80486D31800D8A456 /* OSXFUSE */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "MacFUSE" */;
+			buildConfigurationList = 1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "OSXFUSE" */;
 			buildPhases = (
 				8D202CEC0486D31800D8A456 /* Resources */,
 				8BDF5DD00ECE903A006AF1EF /* Copy Executables (2) */,
@@ -213,10 +213,10 @@
 			);
 			dependencies = (
 			);
-			name = MacFUSE;
+			name = OSXFUSE;
 			productInstallPath = "$(HOME)/Library/PreferencePanes";
 			productName = MacFuse;
-			productReference = 8D202CF80486D31800D8A456 /* MacFUSE.prefPane */;
+			productReference = 8D202CF80486D31800D8A456 /* OSXFUSE.prefPane */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -224,7 +224,7 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "MacFUSEPref" */;
+			buildConfigurationList = 1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "OSXFUSEPref" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -235,7 +235,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D202CE80486D31800D8A456 /* MacFUSE */,
+				8D202CE80486D31800D8A456 /* OSXFUSE */,
 			);
 		};
 /* End PBXProject section */
@@ -246,12 +246,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */,
-				8BF53A450EE5AD7600D981A0 /* MacFUSEPref.xib in Resources */,
+				8BF53A450EE5AD7600D981A0 /* OSXFUSEPref.xib in Resources */,
 				8B4A3EB00ED245F0006BFDD8 /* About.html in Resources */,
-				8B4A41B20ED31D25006BFDD8 /* com.google.macfuse.plist in Resources */,
-				8BE4F6370EDB2A2C0087B5C1 /* MacFUSE_48x48.png in Resources */,
-				8BF53A3F0EE5AD0300D981A0 /* MacFUSE.icns in Resources */,
-				8BF53A230EE5AC3800D981A0 /* MacFUSE.searchTerms in Resources */,
+				8B4A41B20ED31D25006BFDD8 /* com.github.osxfuse.plist in Resources */,
+				8BE4F6370EDB2A2C0087B5C1 /* OSXFUSE_48x48.png in Resources */,
+				8BF53A3F0EE5AD0300D981A0 /* OSXFUSE.icns in Resources */,
+				8BF53A230EE5AC3800D981A0 /* OSXFUSE.searchTerms in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D202CF10486D31800D8A456 /* MacFUSEPref.m in Sources */,
+				8D202CF10486D31800D8A456 /* OSXFUSEPref.m in Sources */,
 				8B84BF130ED64CDE003D9F0F /* GTMSystemVersion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,20 +296,20 @@
 			name = About.html;
 			sourceTree = "<group>";
 		};
-		8BF53A220EE5AC3800D981A0 /* MacFUSE.searchTerms */ = {
+		8BF53A220EE5AC3800D981A0 /* OSXFUSE.searchTerms */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8BF53A200EE5AC2900D981A0 /* English */,
 			);
-			name = MacFUSE.searchTerms;
+			name = OSXFUSE.searchTerms;
 			sourceTree = "<group>";
 		};
-		8BF53A440EE5AD7600D981A0 /* MacFUSEPref.xib */ = {
+		8BF53A440EE5AD7600D981A0 /* OSXFUSEPref.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F506C043013D9D8C01CA16C8 /* English */,
 			);
-			name = MacFUSEPref.xib;
+			name = OSXFUSEPref.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -319,10 +319,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B449EF70ED379BC00E7026D /* LoadableBundle.xcconfig */;
 			buildSettings = {
-				GCC_PREFIX_HEADER = MacFUSEPref_Prefix.pch;
+				GCC_PREFIX_HEADER = OSXFUSEPref_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				PRODUCT_NAME = MacFUSE;
+				PRODUCT_NAME = OSXFUSE;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Debug;
@@ -331,10 +331,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B449EF70ED379BC00E7026D /* LoadableBundle.xcconfig */;
 			buildSettings = {
-				GCC_PREFIX_HEADER = MacFUSEPref_Prefix.pch;
+				GCC_PREFIX_HEADER = OSXFUSEPref_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				PRODUCT_NAME = MacFUSE;
+				PRODUCT_NAME = OSXFUSE;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;
@@ -362,7 +362,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "MacFUSE" */ = {
+		1DBD214808BA80EA00186707 /* Build configuration list for PBXNativeTarget "OSXFUSE" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DBD214908BA80EA00186707 /* Debug */,
@@ -371,7 +371,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "MacFUSEPref" */ = {
+		1DBD214C08BA80EA00186707 /* Build configuration list for PBXProject "OSXFUSEPref" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DBD214D08BA80EA00186707 /* Debug */,

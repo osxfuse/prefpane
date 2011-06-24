@@ -1,6 +1,6 @@
 //
-//  MacFUSEPref.h
-//  MacFUSE
+//  OSXFUSEPref.h
+//  OSXFUSE
 //
 //  Created by Dave MacLachlan on 2008/11/10.
 //  Copyright (c) 2008 Google Inc. All rights reserved.
@@ -9,7 +9,7 @@
 #import <PreferencePanes/PreferencePanes.h>
 #import <Security/Security.h>
 
-@interface MacFUSEPref : NSPreferencePane {
+@interface OSXFUSEPref : NSPreferencePane {
  @private
   NSString *installedVersionText;
   NSString *messageText;
@@ -26,5 +26,5 @@
 
 - (void)willSelect;
 - (void)mainViewDidLoad;
-- (IBAction)removeMacFUSE:(id)sender;
+- (IBAction)removeOSXFUSE:(id)sender;
 @end

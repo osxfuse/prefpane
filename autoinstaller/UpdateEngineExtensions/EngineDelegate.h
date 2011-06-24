@@ -12,7 +12,7 @@
 
 // EngineDelegate
 //
-// The MacFUSE autoinstaller's delegate object for a KSUpdateEngine instance.
+// The OSXFUSE autoinstaller's delegate object for a KSUpdateEngine instance.
 // This object is created with with an optional UpdatePrinter object, that will
 // print the available updates (if any). A BOOL that specifies whether to
 // actually install the updates is also given. If doInstall is YES, then the 
@@ -31,7 +31,7 @@
 // Designated initializer.
 - (id)initWithPrinter:(UpdatePrinter *)printer doInstall:(BOOL)doInstall;
 
-// Returns whether the MacFUSE update was successful.
+// Returns whether the OSXFUSE update was successful.
 - (BOOL)wasSuccess;
 
 @end

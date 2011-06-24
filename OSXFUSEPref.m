@@ -1,23 +1,23 @@
 //
-//  MacFUSEPref.m
+//  OSXFUSEPref.m
 //
 //  Copyright (c) 2008 Google Inc. All rights reserved.
 //
 
-#import "MacFUSEPref.h"
+#import "OSXFUSEPref.h"
 #import <Carbon/Carbon.h>
 #import <unistd.h>
 #include <sys/stat.h>
 #import "GTMSystemVersion.h"
 
-static NSString *kAutoInstallToolName = @"autoinstall-macfuse-core";
-static NSString *kRemoveToolPath = @"/Library/Filesystems/fusefs.fs/Support/uninstall-macfuse-core.sh";
-static NSString *kPreferencesName = @"com.google.macfuse.plist";
+static NSString *kAutoInstallToolName = @"autoinstall-osxfuse-core";
+static NSString *kRemoveToolPath = @"/Library/Filesystems/osxfusefs.fs/Support/uninstall-osxfuse-core.sh";
+static NSString *kPreferencesName = @"com.github.osxfuse.plist";
 static NSString *kURLKey = @"URL";
 static NSString *kBetaValue = @"http://macfuse.googlecode.com/svn/trunk/DeveloperRelease.plist";
 static const NSTimeInterval kNetworkTimeOutInterval = 15; 
 
-@interface MacFUSEPref (PrivateMethods)
+@interface OSXFUSEPref (PrivateMethods)
 - (BOOL)copyRights;
 - (BOOL)authorize;
 - (void)deauthorize;
@@ -29,7 +29,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
 - (NSString *)availableVersion;
 - (NSString *)installedVersion;
 - (void)checkForUpdates:(id)sender;
-- (void)updateMacFUSE:(id)sender;
+- (void)updateOSXFUSE:(id)sender;
 - (BOOL)useBetaVersion;
 - (void)setUseBetaVersion:(BOOL)useBeta;
 - (void)updateUI;
@@ -48,11 +48,11 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
 - (void)setUpdateAvailable:(BOOL)value;
 @end
 
-@interface NSString (MacFUSE)
+@interface NSString (OSXFUSE)
 + (NSString *)mf_stringWithFSRef:(const FSRef *)fsRef;
 @end
 
-@implementation MacFUSEPref
+@implementation OSXFUSEPref
 
 - (void)dealloc {
   [self deauthorize];
@@ -298,8 +298,8 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   if ([availableVersion length] && installedVersion) {
     NSString *formatString = NSLocalizedString(@"Update Available: %@", nil);
     updateString = [NSString stringWithFormat:formatString, availableVersion];
-    buttonText = NSLocalizedString(@"Update MacFUSE", nil);
-    selector = @selector(updateMacFUSE:);
+    buttonText = NSLocalizedString(@"Update FUSE for OS X", nil);
+    selector = @selector(updateOSXFUSE:);
   } else if (availableVersion && installedVersion) {
     updateString = NSLocalizedString(@"No Updates Available At This Time", nil);
     buttonText = NSLocalizedString(@"Check For Updates", nil);
@@ -309,8 +309,8 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
       NSString *formatString 
         = NSLocalizedString(@"Version Available To Install: %@", nil);
       updateString = [NSString stringWithFormat:formatString, availableVersion];
-      buttonText = NSLocalizedString(@"Install MacFUSE", nil);
-      selector = @selector(updateMacFUSE:);
+      buttonText = NSLocalizedString(@"Install FUSE for OS X", nil);
+      selector = @selector(updateOSXFUSE:);
     } else {
       updateString = NSLocalizedString(@"Unable To Contact Update Server", nil);
       buttonText = NSLocalizedString(@"Check For Updates", nil);
@@ -323,7 +323,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   [self setInstalled:isInstalled];
   if (!installedVersion) {
     installedVersion 
-      = NSLocalizedString(@"MacFUSE does not appear to be installed.", nil);
+      = NSLocalizedString(@"FUSE for OS X does not appear to be installed.", nil);
   } 
   [self setInstalledVersionText:installedVersion];
   [updateButton setTitle:buttonText];
@@ -344,9 +344,9 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   [spinner stopAnimation:self];
 }
 
-- (void)updateMacFUSE:(id)sender {
+- (void)updateOSXFUSE:(id)sender {
   if (![self authorize]) return;
-  [self removeMacFUSE:sender];
+  [self removeOSXFUSE:sender];
   NSData *output = nil;
   [spinner startAnimation:self];
   NSString *installedVersion = [self installedVersion];
@@ -367,7 +367,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
     NSString *string 
       = [[[NSString alloc] initWithData:output
                                encoding:NSUTF8StringEncoding] autorelease];
-    NSLog(@"MacFUSE update failed:\n%@", string);
+    NSLog(@"OSXFUSE update failed:\n%@", string);
     NSString *updateString = NSLocalizedString(@"Update failed. Please check "
                                                @"console log for details.", nil);
     [self setMessageText:updateString];
@@ -375,14 +375,14 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   [self updateUI];
 }
 
-- (IBAction)removeMacFUSE:(id)sender {
+- (IBAction)removeOSXFUSE:(id)sender {
   NSString *removeToolPath = [self removeToolPath];
   struct stat buf;
   if (stat([removeToolPath fileSystemRepresentation], &buf)) return;
   if (![self authorize]) return;
   NSData *output = nil;
   [spinner startAnimation:self];
-  [self setMessageText:NSLocalizedString(@"Removing MacFUSE…", nil)];
+  [self setMessageText:NSLocalizedString(@"Removing FUSE for OS X…", nil)];
   int result = [self runTaskForPath:[self removeToolPath] 
                       withArguments:[NSArray arrayWithObject:@"-q"]
                          authorized:YES
@@ -392,7 +392,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
     NSString *string 
       = [[[NSString alloc] initWithData:output
                                encoding:NSUTF8StringEncoding] autorelease];
-    NSLog(@"MacFUSE remove failed: %@", string);
+    NSLog(@"OSXFUSE remove failed: %@", string);
   }
   [self updateUI];
 }
@@ -509,7 +509,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
       NSString *string 
         = [[[NSString alloc] initWithData:output
                                  encoding:NSUTF8StringEncoding] autorelease];
-      NSLog(@"MacFUSE setting beta value failed:\n%@", string);
+      NSLog(@"OSXFUSE setting beta value failed:\n%@", string);
     }
     [self updateUI];
   }
@@ -569,7 +569,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
 
 @end
                                  
-@implementation NSString (MacFUSE)
+@implementation NSString (OSXFUSE)
 + (NSString *)mf_stringWithFSRef:(const FSRef*)aFSRef {
   CFURLRef theURL = CFURLCreateFromFSRef(kCFAllocatorDefault, aFSRef);
   NSString* thePath = [(NSURL *)theURL path];

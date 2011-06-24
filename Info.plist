@@ -7,13 +7,13 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>MacFUSE.icns</string>
+	<string>OSXFUSE.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.google.${PRODUCT_NAME:identifier}</string>
+	<string>com.github.osxfuse.prefpane</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>FUSE for OS X</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
@@ -23,14 +23,14 @@
 	<key>CFBundleVersion</key>
 	<string>2.0</string>
 	<key>NSMainNibFile</key>
-	<string>MacFUSEPref</string>
+	<string>OSXFUSEPref</string>
 	<key>NSPrefPaneIconFile</key>
-	<string>MacFUSE.icns</string>
+	<string>OSXFUSE.icns</string>
 	<key>NSPrefPaneIconLabel</key>
-	<string>MacFUSE</string>
+	<string>FUSE for OS X</string>
 	<key>NSPrefPaneSearchParameters</key>
-	<string>MacFUSE</string>
+	<string>OSXFUSE</string>
 	<key>NSPrincipalClass</key>
-	<string>MacFUSEPref</string>
+	<string>OSXFUSEPref</string>
 </dict>
 </plist>

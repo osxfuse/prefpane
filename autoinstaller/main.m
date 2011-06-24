@@ -20,7 +20,7 @@
 #import <unistd.h>
 
 
-// The URL to the KSPlistServer-style rules plist to use for MacFUSE updates.
+// The URL to the KSPlistServer-style rules plist to use for OSXFUSE updates.
 static NSString* const kDefaultRulesURL =
   @"http://macfuse.googlecode.com/svn/trunk/CurrentRelease.plist";
 
@@ -31,10 +31,10 @@ static NSString* const kDefaultRulesURL =
 //
 static void Usage(void) {
   printf("Usage: autoinstaller -[plLiv]\n"
-         "  --print,-p    Print info about the currently installed MacFUSE\n"
-         "  --list,-l     List MacFUSE update, if one is available\n"
-         "  --plist,-L    List MacFUSE update in plist XML format\n"
-         "  --install,-i  Download and install MacFUSE update, if available\n"
+         "  --print,-p    Print info about the currently installed OSXFUSE\n"
+         "  --list,-l     List OSXFUSE update, if one is available\n"
+         "  --plist,-L    List OSXFUSE update in plist XML format\n"
+         "  --install,-i  Download and install OSXFUSE update, if available\n"
          "  --verbose,-v  Print VERY verbose output\n"
   );
 }
@@ -52,16 +52,16 @@ static BOOL IsTiger(void) {
 }
 
 
-// GetMacFUSEVersion
+// GetOSXFUSEVersion
 //
-// Returns the version of the currently-installed MacFUSE. If not found, returns
+// Returns the version of the currently-installed OSXFUSE. If not found, returns
 // nil. The version is obtained by running:
 //
-//   MOUNT_FUSEFS_CALL_BY_LIB=1 .../mount_fusefs --version
+//   MOUNT_FUSEFS_CALL_BY_LIB=1 .../mount_osxfusefs --version
 //
-static NSString *GetMacFUSEVersion(void) {
+static NSString *GetOSXFUSEVersion(void) {
   NSString *mountFusePath =
-    @"/Library/Filesystems/fusefs.fs/Support/mount_fusefs";
+    @"/Library/Filesystems/osxfusefs.fs/Support/mount_osxfusefs";
   
   if (IsTiger()) {
     mountFusePath = [@"/System" stringByAppendingPathComponent:mountFusePath];
@@ -78,23 +78,23 @@ static NSString *GetMacFUSEVersion(void) {
 }
 
 
-// GetMacFUSETicket
+// GetOSXFUSETicket
 // 
-// Returns a KSTicket that represents the currently installed MacFUSE instance.
-// If MacFUSE is not currently installed, the version number in the returned 
+// Returns a KSTicket that represents the currently installed OSXFUSE instance.
+// If OSXFUSE is not currently installed, the version number in the returned 
 // ticket will be "0", and the existence checker will reference "/".
 //
-static KSTicket *GetMacFUSETicket(NSString *ticketUrl) {
+static KSTicket *GetOSXFUSETicket(NSString *ticketUrl) {
   NSURL *url = [NSURL URLWithString:ticketUrl];
   NSString *version = @"0";
   KSExistenceChecker *xc = [KSPathExistenceChecker checkerWithPath:@"/"];
 
-  NSString *installedVersion = GetMacFUSEVersion();
+  NSString *installedVersion = GetOSXFUSEVersion();
   if (installedVersion != nil) {
     version = installedVersion;
   }
 
-  return [KSTicket ticketWithProductID:@"com.google.filesystems.fusefs"
+  return [KSTicket ticketWithProductID:@"com.github.osxfuse.osxfusefs"
                                version:version
                       existenceChecker:xc
                              serverURL:url];
@@ -103,14 +103,14 @@ static KSTicket *GetMacFUSETicket(NSString *ticketUrl) {
 
 // GetPreferences
 //
-// Checks the security of the MacFUSE preferences file, and if everything looks
+// Checks the security of the OSXFUSE preferences file, and if everything looks
 // good, returns a dictionary with the contents of prefs plist.
 //
 static NSDictionary *GetPreferences(void) {
   NSDictionary *prefs = nil;
   
   GTMPath *path = [GTMPath pathWithFullPath:
-                   @"/Library/Preferences/com.google.macfuse.plist"];
+                   @"/Library/Preferences/com.github.osxfuse.plist"];
   if (path == nil)
     return nil;
   
@@ -131,7 +131,7 @@ static NSDictionary *GetPreferences(void) {
 // main
 //
 // Parses command-line options, gets the ticket for the currently-installed
-// version of MacFUSE, stuffs that in a KSTicketStore, then finally creates
+// version of OSXFUSE, stuffs that in a KSTicketStore, then finally creates
 // a KSUpdateEngine instance to drive the install/update with this ticket store
 // and a custom delegate.
 //
@@ -197,16 +197,16 @@ int main(int argc, char **argv) {
     rulesUrl = kDefaultRulesURL;
   }
 
-  KSTicket *macfuseTicket = GetMacFUSETicket(rulesUrl);
+  KSTicket *osxfuseTicket = GetOSXFUSETicket(rulesUrl);
   if (print) {
-    printf("%s\n", [[macfuseTicket description] UTF8String]);
+    printf("%s\n", [[osxfuseTicket description] UTF8String]);
     goto done;
   }
   
   KSTicketStore *store = [[[KSMemoryTicketStore alloc] init] autorelease];
-  if (![store storeTicket:macfuseTicket]) {
+  if (![store storeTicket:osxfuseTicket]) {
     fprintf(stderr, "Failed to store ticket %s\n", 
-            [[macfuseTicket description] UTF8String]);
+            [[osxfuseTicket description] UTF8String]);
     goto done;
   }
   
@@ -216,7 +216,7 @@ int main(int argc, char **argv) {
     goto done;
   }
   
-  // Can't install a MacFUSE update w/o being root. 
+  // Can't install a OSXFUSE update w/o being root. 
   if (install && geteuid() != 0) {
     fprintf(stderr, "Must be root.\n");
     rc = 1;
@@ -238,7 +238,7 @@ int main(int argc, char **argv) {
                                      doInstall:install] autorelease];
   
   // Create a KSUpdateEngine instance with our ticket store that only contains
-  // one ticket (for MacFUSE itself), and our custom delegate that knows how to
+  // one ticket (for OSXFUSE itself), and our custom delegate that knows how to
   // handle installing/listing the available updates. Then, tell that Update 
   // Engine to update everything. This will kick off Update Engine, but our 
   // delegate will be able to customize the experience.
