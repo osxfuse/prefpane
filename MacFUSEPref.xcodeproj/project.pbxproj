@@ -39,14 +39,14 @@
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		43DE3FF313B8FA4C00E764AD /* DebugSnowLeopardOrLater.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugSnowLeopardOrLater.xcconfig; sourceTree = "<group>"; };
+		43DE3FF413B8FA4C00E764AD /* ReleaseSnowLeopardOrLater.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ReleaseSnowLeopardOrLater.xcconfig; sourceTree = "<group>"; };
 		8B02028F0ECB2AA700A6EB85 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
 		8B449EF70ED379BC00E7026D /* LoadableBundle.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = LoadableBundle.xcconfig; sourceTree = "<group>"; };
 		8B449EFE0ED379BC00E7026D /* xcconfigs-readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xcconfigs-readme.txt"; sourceTree = "<group>"; };
 		8B4A3DE40ED243EE006BFDD8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		8B4A3EAD0ED245DA006BFDD8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/About.html; sourceTree = "<group>"; };
 		8B4A41B10ED31D25006BFDD8 /* com.google.macfuse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.google.macfuse.plist; sourceTree = "<group>"; };
-		8B84BDD10ED63320003D9F0F /* ReleaseTigerOrLater.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ReleaseTigerOrLater.xcconfig; sourceTree = "<group>"; };
-		8B84BDD20ED63320003D9F0F /* DebugTigerOrLater.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = DebugTigerOrLater.xcconfig; sourceTree = "<group>"; };
 		8B84BF110ED64CDE003D9F0F /* GTMSystemVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; name = GTMSystemVersion.m; path = "externals/google-toolbox-for-mac/Foundation/GTMSystemVersion.m"; sourceTree = SOURCE_ROOT; tabWidth = 2; usesTabs = 0; };
 		8B84BF120ED64CDE003D9F0F /* GTMSystemVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = GTMSystemVersion.h; path = "externals/google-toolbox-for-mac/Foundation/GTMSystemVersion.h"; sourceTree = SOURCE_ROOT; tabWidth = 2; usesTabs = 0; };
 		8B84BF200ED64D59003D9F0F /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "externals/google-toolbox-for-mac/GTMDefines.h"; sourceTree = SOURCE_ROOT; tabWidth = 2; usesTabs = 0; };
@@ -182,8 +182,8 @@
 		8B449EDA0ED379BC00E7026D /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				8B84BDD10ED63320003D9F0F /* ReleaseTigerOrLater.xcconfig */,
-				8B84BDD20ED63320003D9F0F /* DebugTigerOrLater.xcconfig */,
+				43DE3FF413B8FA4C00E764AD /* ReleaseSnowLeopardOrLater.xcconfig */,
+				43DE3FF313B8FA4C00E764AD /* DebugSnowLeopardOrLater.xcconfig */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -319,13 +319,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B449EF70ED379BC00E7026D /* LoadableBundle.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PREFIX_HEADER = MacFUSEPref_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = MacFUSE;
-				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Debug;
@@ -334,48 +331,31 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B449EF70ED379BC00E7026D /* LoadableBundle.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PREFIX_HEADER = MacFUSEPref_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = MacFUSE;
-				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = prefPane;
 			};
 			name = Release;
 		};
 		1DBD214D08BA80EA00186707 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B84BDD20ED63320003D9F0F /* DebugTigerOrLater.xcconfig */;
+			baseConfigurationReference = 43DE3FF313B8FA4C00E764AD /* DebugSnowLeopardOrLater.xcconfig */;
 			buildSettings = {
+				GCC_ENABLE_OBJC_GC = supported;
+				GTM_GENERAL_WARNING_CFLAGS1 = "-Wall -Wendif-labels -Winvalid-pch -Wformat -Wmissing-format-attribute -Wwrite-strings -Wstack-protector -Wstrict-aliasing=2";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = macosx10.6;
-				WARNING_CFLAGS = (
-					"$(inherited)",
-					"$(GTM_GENERAL_WARNING_CFLAGS)",
-					"$(GTM_PLATFORM_WARNING_CFLAGS)",
-					"$(GTM_CONFIGURATION_WARNING_CFLAGS)",
-					"$(GTM_HOST_WARNING_CFLAGS)",
-					"-Wno-format",
-				);
 			};
 			name = Debug;
 		};
 		1DBD214E08BA80EA00186707 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B84BDD10ED63320003D9F0F /* ReleaseTigerOrLater.xcconfig */;
+			baseConfigurationReference = 43DE3FF413B8FA4C00E764AD /* ReleaseSnowLeopardOrLater.xcconfig */;
 			buildSettings = {
+				GCC_ENABLE_OBJC_GC = supported;
+				GTM_GENERAL_WARNING_CFLAGS1 = "-Wall -Wendif-labels -Winvalid-pch -Wformat -Wmissing-format-attribute -Wwrite-strings -Wstack-protector -Wstrict-aliasing=2";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = macosx10.6;
-				WARNING_CFLAGS = (
-					"$(inherited)",
-					"$(GTM_GENERAL_WARNING_CFLAGS)",
-					"$(GTM_PLATFORM_WARNING_CFLAGS)",
-					"$(GTM_CONFIGURATION_WARNING_CFLAGS)",
-					"$(GTM_HOST_WARNING_CFLAGS)",
-					"-Wno-format",
-				);
 			};
 			name = Release;
 		};
