@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B0202900ECB2AA700A6EB85 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B02028F0ECB2AA700A6EB85 /* Security.framework */; };
 		8B4A3EB00ED245F0006BFDD8 /* About.html in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A3EAF0ED245F0006BFDD8 /* About.html */; };
-		8B4A41B20ED31D25006BFDD8 /* com.github.osxfuse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A41B10ED31D25006BFDD8 /* com.github.osxfuse.plist */; };
+		8B4A41B20ED31D25006BFDD8 /* com.github.osxfuse.OSXFUSE.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A41B10ED31D25006BFDD8 /* com.github.osxfuse.OSXFUSE.plist */; };
 		8B84BF130ED64CDE003D9F0F /* GTMSystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B84BF110ED64CDE003D9F0F /* GTMSystemVersion.m */; };
 		8BE4F6370EDB2A2C0087B5C1 /* OSXFUSE_48x48.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BE4F6360EDB2A2C0087B5C1 /* OSXFUSE_48x48.png */; };
 		8BF53A230EE5AC3800D981A0 /* OSXFUSE.searchTerms in Resources */ = {isa = PBXBuildFile; fileRef = 8BF53A220EE5AC3800D981A0 /* OSXFUSE.searchTerms */; };
@@ -46,7 +46,7 @@
 		8B449EFE0ED379BC00E7026D /* xcconfigs-readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xcconfigs-readme.txt"; sourceTree = "<group>"; };
 		8B4A3DE40ED243EE006BFDD8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		8B4A3EAD0ED245DA006BFDD8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = English; path = English.lproj/About.html; sourceTree = "<group>"; };
-		8B4A41B10ED31D25006BFDD8 /* com.github.osxfuse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.github.osxfuse.plist; sourceTree = "<group>"; };
+		8B4A41B10ED31D25006BFDD8 /* com.github.osxfuse.OSXFUSE.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.github.osxfuse.OSXFUSE.plist; sourceTree = "<group>"; };
 		8B84BF110ED64CDE003D9F0F /* GTMSystemVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; name = GTMSystemVersion.m; path = "externals/google-toolbox-for-mac/Foundation/GTMSystemVersion.m"; sourceTree = SOURCE_ROOT; tabWidth = 2; usesTabs = 0; };
 		8B84BF120ED64CDE003D9F0F /* GTMSystemVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = GTMSystemVersion.h; path = "externals/google-toolbox-for-mac/Foundation/GTMSystemVersion.h"; sourceTree = SOURCE_ROOT; tabWidth = 2; usesTabs = 0; };
 		8B84BF200ED64D59003D9F0F /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = "externals/google-toolbox-for-mac/GTMDefines.h"; sourceTree = SOURCE_ROOT; tabWidth = 2; usesTabs = 0; };
@@ -106,7 +106,7 @@
 				8BE4F6360EDB2A2C0087B5C1 /* OSXFUSE_48x48.png */,
 				8BE4F6390EDB2A300087B5C1 /* OSXFUSE.icns */,
 				8B4A3EAF0ED245F0006BFDD8 /* About.html */,
-				8B4A41B10ED31D25006BFDD8 /* com.github.osxfuse.plist */,
+				8B4A41B10ED31D25006BFDD8 /* com.github.osxfuse.OSXFUSE.plist */,
 				8D202CF70486D31800D8A456 /* Info.plist */,
 				8BF53A220EE5AC3800D981A0 /* OSXFUSE.searchTerms */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
@@ -248,7 +248,7 @@
 				8D202CED0486D31800D8A456 /* InfoPlist.strings in Resources */,
 				8BF53A450EE5AD7600D981A0 /* OSXFUSEPref.xib in Resources */,
 				8B4A3EB00ED245F0006BFDD8 /* About.html in Resources */,
-				8B4A41B20ED31D25006BFDD8 /* com.github.osxfuse.plist in Resources */,
+				8B4A41B20ED31D25006BFDD8 /* com.github.osxfuse.OSXFUSE.plist in Resources */,
 				8BE4F6370EDB2A2C0087B5C1 /* OSXFUSE_48x48.png in Resources */,
 				8BF53A3F0EE5AD0300D981A0 /* OSXFUSE.icns in Resources */,
 				8BF53A230EE5AC3800D981A0 /* OSXFUSE.searchTerms in Resources */,

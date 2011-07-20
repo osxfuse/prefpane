@@ -12,7 +12,7 @@
 
 static NSString *kAutoInstallToolName = @"autoinstall-osxfuse-core";
 static NSString *kRemoveToolPath = @"/Library/Filesystems/osxfusefs.fs/Support/uninstall-osxfuse-core.sh";
-static NSString *kPreferencesName = @"com.github.osxfuse.plist";
+static NSString *kPreferencesName = @"com.github.osxfuse.OSXFUSE.plist";
 static NSString *kURLKey = @"URL";
 static NSString *kBetaValue = @"http://macfuse.googlecode.com/svn/trunk/DeveloperRelease.plist";
 static const NSTimeInterval kNetworkTimeOutInterval = 15; 
