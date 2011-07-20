@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>FUSE for OS X</string>
+	<string>FUSE for OS X (OSXFUSE)</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
@@ -27,7 +27,7 @@
 	<key>NSPrefPaneIconFile</key>
 	<string>OSXFUSE.icns</string>
 	<key>NSPrefPaneIconLabel</key>
-	<string>FUSE for OS X</string>
+	<string>FUSE for OS X\n(OSXFUSE)</string>
 	<key>NSPrefPaneSearchParameters</key>
 	<string>OSXFUSE</string>
 	<key>NSPrincipalClass</key>
