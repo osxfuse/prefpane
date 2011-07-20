@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>OSXFUSE.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.github.osxfuse.prefpane</string>
+	<string>com.github.osxfuse.OSXFUSEPrefPane</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
