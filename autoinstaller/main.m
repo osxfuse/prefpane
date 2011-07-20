@@ -94,7 +94,7 @@ static KSTicket *GetOSXFUSETicket(NSString *ticketUrl) {
     version = installedVersion;
   }
 
-  return [KSTicket ticketWithProductID:@"com.github.osxfuse.osxfusefs"
+  return [KSTicket ticketWithProductID:@"com.github.osxfuse.OSXFUSE"
                                version:version
                       existenceChecker:xc
                              serverURL:url];
