@@ -22,7 +22,7 @@
 
 // The URL to the KSPlistServer-style rules plist to use for OSXFUSE updates.
 static NSString* const kDefaultRulesURL =
-  @"http://macfuse.googlecode.com/svn/trunk/CurrentRelease.plist";
+  @"http://osxfuse.github.com/releases/CurrentRelease.plist";
 
 
 // Usage
