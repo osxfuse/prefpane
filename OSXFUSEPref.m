@@ -346,7 +346,6 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
 
 - (void)updateOSXFUSE:(id)sender {
   if (![self authorize]) return;
-  [self removeOSXFUSE:sender];
   NSData *output = nil;
   [spinner startAnimation:self];
   NSString *installedVersion = [self installedVersion];
