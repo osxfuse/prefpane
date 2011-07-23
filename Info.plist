@@ -27,7 +27,7 @@
 	<key>NSPrefPaneIconFile</key>
 	<string>OSXFUSE.icns</string>
 	<key>NSPrefPaneIconLabel</key>
-	<string>FUSE for OS X\n(OSXFUSE)</string>
+	<string>FUSE for OS X</string>
 	<key>NSPrefPaneSearchParameters</key>
 	<string>OSXFUSE</string>
 	<key>NSPrincipalClass</key>

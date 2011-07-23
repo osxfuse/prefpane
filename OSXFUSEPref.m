@@ -296,24 +296,24 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   SEL selector = nil;
   [self setUpdateAvailable:availableVersion != nil];
   if ([availableVersion length] && installedVersion) {
-    NSString *formatString = NSLocalizedString(@"Update Available: %@", nil);
+    NSString *formatString = NSLocalizedString(@"Update available: %@", nil);
     updateString = [NSString stringWithFormat:formatString, availableVersion];
-    buttonText = NSLocalizedString(@"Update FUSE for OS X", nil);
+    buttonText = NSLocalizedString(@"Update OSXFUSE", nil);
     selector = @selector(updateOSXFUSE:);
   } else if (availableVersion && installedVersion) {
-    updateString = NSLocalizedString(@"No Updates Available At This Time", nil);
-    buttonText = NSLocalizedString(@"Check For Updates", nil);
+    updateString = NSLocalizedString(@"No updates available at this time", nil);
+    buttonText = NSLocalizedString(@"Check for updates", nil);
     selector = @selector(checkForUpdates:);
   } else {
     if ([availableVersion length]) {
       NSString *formatString 
-        = NSLocalizedString(@"Version Available To Install: %@", nil);
+        = NSLocalizedString(@"Version available to install: %@", nil);
       updateString = [NSString stringWithFormat:formatString, availableVersion];
-      buttonText = NSLocalizedString(@"Install FUSE for OS X", nil);
+      buttonText = NSLocalizedString(@"Install OSXFUSE", nil);
       selector = @selector(updateOSXFUSE:);
     } else {
-      updateString = NSLocalizedString(@"Unable To Contact Update Server", nil);
-      buttonText = NSLocalizedString(@"Check For Updates", nil);
+      updateString = NSLocalizedString(@"Unable to contact update server", nil);
+      buttonText = NSLocalizedString(@"Check for updates", nil);
       selector = @selector(checkForUpdates:);
     }
   }
@@ -323,7 +323,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   [self setInstalled:isInstalled];
   if (!installedVersion) {
     installedVersion 
-      = NSLocalizedString(@"FUSE for OS X does not appear to be installed.", nil);
+      = NSLocalizedString(@"OSXFUSE does not appear to be installed.", nil);
   } 
   [self setInstalledVersionText:installedVersion];
   [updateButton setTitle:buttonText];
@@ -382,7 +382,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   if (![self authorize]) return;
   NSData *output = nil;
   [spinner startAnimation:self];
-  [self setMessageText:NSLocalizedString(@"Removing FUSE for OS X…", nil)];
+  [self setMessageText:NSLocalizedString(@"Removing OSXFUSE…", nil)];
   int result = [self runTaskForPath:[self removeToolPath] 
                       withArguments:[NSArray arrayWithObject:@"-q"]
                          authorized:YES
