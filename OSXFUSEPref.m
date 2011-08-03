@@ -237,7 +237,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
             = [NSDictionary dictionaryWithContentsOfFile:fusePath];
           if (fusePlist) {
             NSString *flavor = [fusePlist objectForKey:@"BuildFlavor"];
-            if (flavor) {
+            if (flavor && [flavor length] > 0) {
               versionString = [NSString stringWithFormat:@"%@ (%@)", 
                                versionString, flavor];
             }
