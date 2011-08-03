@@ -324,7 +324,12 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   if (!installedVersion) {
     installedVersion 
       = NSLocalizedString(@"OSXFUSE does not appear to be installed.", nil);
-  } 
+  } else {
+      NSString *installedFormat = NSLocalizedString(@"Installed Version: %@",
+                                                    nil);
+      installedVersion = [NSString stringWithFormat:installedFormat,
+                          installedVersion, nil];
+  }
   [self setInstalledVersionText:installedVersion];
   [updateButton setTitle:buttonText];
   [updateButton setTarget:self];
