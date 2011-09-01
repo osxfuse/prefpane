@@ -9,6 +9,7 @@
 #include <openssl/pem.h>
 #include <openssl/evp.h>
 #include <openssl/rsa.h>
+#include <AvailabilityMacros.h>
 #import "Signer.h"
 
 
@@ -97,8 +98,12 @@
     return NO;
   
   int success = 0;
-  
+
+#if MAC_OS_X_VERSION_MAX_ALLOWED < 1060
+  unsigned char *bytes = (unsigned char *)[publicKey_ bytes];
+#else
   const unsigned char *bytes = (unsigned char *)[publicKey_ bytes];
+#endif
   RSA *rsa = d2i_RSA_PUBKEY(NULL, &bytes, [publicKey_ length]);
   if (rsa) {    
     EVP_PKEY *keyWrapper = EVP_PKEY_new();
