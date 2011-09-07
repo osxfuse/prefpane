@@ -129,6 +129,7 @@
 		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* autoinstaller_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autoinstaller_Prefix.pch; sourceTree = "<group>"; };
+		4390FA561417BDA200E4CF8B /* UpdateEngine.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UpdateEngine.xcconfig; sourceTree = "<group>"; };
 		4397826D13A704AE00C60D51 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		43BCA5B913A7DAC000305194 /* KSOutOfBandDataAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSOutOfBandDataAction.h; sourceTree = "<group>"; };
 		43BCA5BA13A7DAC000305194 /* KSOutOfBandDataAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSOutOfBandDataAction.m; sourceTree = "<group>"; };
@@ -549,6 +550,7 @@
 		F931FBE90E92B6F9009FB4B0 /* XcodeConfigs */ = {
 			isa = PBXGroup;
 			children = (
+				4390FA561417BDA200E4CF8B /* UpdateEngine.xcconfig */,
 				F931FBEA0E92B6F9009FB4B0 /* Project */,
 				F931FBED0E92B6F9009FB4B0 /* subconfig */,
 				F931FBF30E92B6F9009FB4B0 /* Target */,
@@ -829,15 +831,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F931FBEB0E92B6F9009FB4B0 /* DebugTigerOrLater.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(NATIVE_ARCH)";
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PREFIX_HEADER = autoinstaller_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = 4.2;
 				LIBRARY_SEARCH_PATHS = "\"../externals/google-toolbox-for-mac/TigerGcov\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_LDFLAGS = "";
-				SDKROOT = macosx10.6;
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -845,11 +847,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F931FBEC0E92B6F9009FB4B0 /* ReleaseTigerOrLater.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(NATIVE_ARCH)";
 				GCC_PREFIX_HEADER = autoinstaller_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				SDKROOT = macosx10.6;
+				GCC_VERSION = 4.2;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				SDKROOT = "";
 			};
 			name = Release;
 		};
@@ -925,7 +927,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = "Build All";
 				ZERO_LINK = NO;
@@ -945,7 +946,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;

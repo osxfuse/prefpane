@@ -21,6 +21,30 @@
 		8D202CF40486D31800D8A456 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F506C035013D953901CA16C8 /* PreferencePanes.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4390FAA31418020100E4CF8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F92468F10E3163D1004ADF93;
+			remoteInfo = "Extensions Tests";
+		};
+		4390FAA51418020100E4CF8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F9246A200E3199F9004ADF93;
+			remoteInfo = plist_signer;
+		};
+		4390FAA71418020100E4CF8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F931FE600E92D311009FB4B0;
+			remoteInfo = "autoinstall-osxfuse-core";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		8BDF5DD00ECE903A006AF1EF /* Copy Executables (2) */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -153,6 +177,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4390FA9D1418020100E4CF8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4390FAA41418020100E4CF8B /* Extensions Tests.octest */,
+				4390FAA61418020100E4CF8B /* plist_signer */,
+				4390FAA81418020100E4CF8B /* autoinstall-osxfuse-core */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8B449ED70ED379BC00E7026D /* externals */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,12 +267,42 @@
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* MacFuse */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4390FA9D1418020100E4CF8B /* Products */;
+					ProjectRef = 8BDF5DB30ECE8FD9006AF1EF /* autoinstaller.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D202CE80486D31800D8A456 /* OSXFUSE */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4390FAA41418020100E4CF8B /* Extensions Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Extensions Tests.octest";
+			remoteRef = 4390FAA31418020100E4CF8B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4390FAA61418020100E4CF8B /* plist_signer */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = plist_signer;
+			remoteRef = 4390FAA51418020100E4CF8B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4390FAA81418020100E4CF8B /* autoinstall-osxfuse-core */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "autoinstall-osxfuse-core";
+			remoteRef = 4390FAA71418020100E4CF8B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D202CEC0486D31800D8A456 /* Resources */ = {
@@ -321,7 +385,6 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = OSXFUSEPref_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = OSXFUSE;
 				WRAPPER_EXTENSION = prefPane;
 			};
@@ -333,7 +396,6 @@
 			buildSettings = {
 				GCC_PREFIX_HEADER = OSXFUSEPref_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = OSXFUSE;
 				WRAPPER_EXTENSION = prefPane;
 			};
@@ -345,7 +407,8 @@
 			buildSettings = {
 				GCC_ENABLE_OBJC_GC = supported;
 				GTM_GENERAL_WARNING_CFLAGS1 = "-Wall -Wendif-labels -Winvalid-pch -Wformat -Wmissing-format-attribute -Wwrite-strings -Wstack-protector -Wstrict-aliasing=2";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -355,7 +418,8 @@
 			buildSettings = {
 				GCC_ENABLE_OBJC_GC = supported;
 				GTM_GENERAL_WARNING_CFLAGS1 = "-Wall -Wendif-labels -Winvalid-pch -Wformat -Wmissing-format-attribute -Wwrite-strings -Wstack-protector -Wstrict-aliasing=2";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				SDKROOT = "";
 			};
 			name = Release;
 		};
