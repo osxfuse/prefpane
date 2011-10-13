@@ -831,15 +831,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F931FBEB0E92B6F9009FB4B0 /* DebugTigerOrLater.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PREFIX_HEADER = autoinstaller_Prefix.pch;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				LIBRARY_SEARCH_PATHS = "\"../externals/google-toolbox-for-mac/TigerGcov\"";
-				MACOSX_DEPLOYMENT_TARGET = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = "";
-				SDKROOT = "";
+				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
@@ -847,11 +847,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F931FBEC0E92B6F9009FB4B0 /* ReleaseTigerOrLater.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PREFIX_HEADER = autoinstaller_Prefix.pch;
-				GCC_VERSION = 4.2;
-				MACOSX_DEPLOYMENT_TARGET = "";
-				SDKROOT = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};
@@ -859,6 +859,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F931FBF40E92B6F9009FB4B0 /* DebugUnittest.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -880,6 +881,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F931FBF60E92B6F9009FB4B0 /* ReleaseUnittest.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
