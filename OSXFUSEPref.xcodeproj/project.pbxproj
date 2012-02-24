@@ -407,6 +407,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_ENABLE_OBJC_GC = supported;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GTM_GENERAL_WARNING_CFLAGS1 = "-Wall -Wendif-labels -Winvalid-pch -Wformat -Wmissing-format-attribute -Wwrite-strings -Wstack-protector -Wstrict-aliasing=2";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
@@ -420,6 +421,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_ENABLE_OBJC_GC = supported;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GTM_GENERAL_WARNING_CFLAGS1 = "-Wall -Wendif-labels -Winvalid-pch -Wformat -Wmissing-format-attribute -Wwrite-strings -Wstack-protector -Wstrict-aliasing=2";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
