@@ -229,7 +229,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
         if ([versionNumber intValue] != 0) {
           versionString = versionNumber;
           NSString *fusePath 
-            = @"/Library/FileSystems/fusefs.fs/Contents/Info.plist";
+            = @"/Library/FileSystems/osxfusefs.fs/Contents/Info.plist";
           if ([GTMSystemVersion isTiger]) {
             fusePath = [@"/System" stringByAppendingPathComponent:fusePath];
           }
