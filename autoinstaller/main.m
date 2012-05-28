@@ -110,7 +110,7 @@ static NSDictionary *GetPreferences(void) {
   NSDictionary *prefs = nil;
   
   GTMPath *path = [GTMPath pathWithFullPath:
-                   @"/Library/Preferences/com.github.osxfuse.plist"];
+                   @"/Library/Preferences/com.github.osxfuse.OSXFUSE.plist"];
   if (path == nil)
     return nil;
   
