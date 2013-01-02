@@ -61,7 +61,7 @@ static BOOL IsTiger(void) {
 //
 static NSString *GetOSXFUSEVersion(void) {
   NSString *mountFusePath =
-    @"/Library/Filesystems/osxfusefs.fs/Support/mount_osxfusefs";
+    @"/Library/Filesystems/osxfuse.fs/Contents/Resources/mount_osxfuse";
   
   if (IsTiger()) {
     mountFusePath = [@"/System" stringByAppendingPathComponent:mountFusePath];

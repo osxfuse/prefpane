@@ -11,7 +11,7 @@
 #import "GTMSystemVersion.h"
 
 static NSString *kAutoInstallToolName = @"autoinstall-osxfuse-core";
-static NSString *kRemoveToolPath = @"/Library/Filesystems/osxfusefs.fs/Support/uninstall-osxfuse-core.sh";
+static NSString *kRemoveToolPath = @"/Library/Filesystems/osxfuse.fs/Contents/Resources/uninstall_osxfuse.sh";
 static NSString *kPreferencesName = @"com.github.osxfuse.OSXFUSE.plist";
 static NSString *kURLKey = @"URL";
 static NSString *kBetaValue = @"http://osxfuse.github.com/releases/DeveloperRelease.plist";
@@ -229,7 +229,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
         if ([versionNumber intValue] != 0) {
           versionString = versionNumber;
           NSString *fusePath 
-            = @"/Library/FileSystems/osxfusefs.fs/Contents/Info.plist";
+            = @"/Library/FileSystems/osxfuse.fs/Contents/Info.plist";
           if ([GTMSystemVersion isTiger]) {
             fusePath = [@"/System" stringByAppendingPathComponent:fusePath];
           }
