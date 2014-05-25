@@ -417,6 +417,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GTM_GENERAL_WARNING_CFLAGS1 = "-Wall -Wendif-labels -Winvalid-pch -Wformat -Wmissing-format-attribute -Wwrite-strings -Wstack-protector -Wstrict-aliasing=2";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OSXFUSE_VERSION = 3.0.0;
 				SDKROOT = macosx10.7;
 			};
 			name = Debug;
@@ -434,6 +435,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GTM_GENERAL_WARNING_CFLAGS1 = "-Wall -Wendif-labels -Winvalid-pch -Wformat -Wmissing-format-attribute -Wwrite-strings -Wstack-protector -Wstrict-aliasing=2";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OSXFUSE_VERSION = 3.0.0;
 				SDKROOT = macosx10.7;
 			};
 			name = Release;
