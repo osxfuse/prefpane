@@ -8,7 +8,6 @@
 #import <Carbon/Carbon.h>
 #import <unistd.h>
 #include <sys/stat.h>
-#import "GTMSystemVersion.h"
 
 static NSString *kAutoInstallToolName = @"autoinstall-osxfuse-core";
 static NSString *kRemoveToolPath = @"/Library/Filesystems/osxfuse.fs/Contents/Resources/uninstall_osxfuse.sh";
@@ -230,9 +229,6 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
           versionString = versionNumber;
           NSString *fusePath 
             = @"/Library/FileSystems/osxfuse.fs/Contents/Info.plist";
-          if ([GTMSystemVersion isTiger]) {
-            fusePath = [@"/System" stringByAppendingPathComponent:fusePath];
-          }
           NSDictionary *fusePlist 
             = [NSDictionary dictionaryWithContentsOfFile:fusePath];
           if (fusePlist) {
@@ -429,12 +425,6 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
     = [[[NSAttributedString alloc] initWithPath:path documentAttributes:nil] 
        autorelease];
   [aboutBoxView setAttributedStringValue:attrString];
-  if ([GTMSystemVersion isTiger]) {
-    NSView *view = [self mainView];
-    NSSize size = [view frame].size;
-    size.width = 594;
-    [view setFrameSize:size]; // Resize for Tiger
-  }
 }
 
 - (void)applicationDidBecomeActive:(NSNotification *)notification {
@@ -462,11 +452,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
 
 - (NSString *)removeToolPath {
   NSString *path = nil;
-  if ([GTMSystemVersion isLeopardOrGreater]) {
-    path = kRemoveToolPath;
-  } else {
-    path = [@"/System/" stringByAppendingPathComponent:kRemoveToolPath];
-  }
+  path = kRemoveToolPath;
   return path;
 }
 
