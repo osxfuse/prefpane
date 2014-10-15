@@ -297,7 +297,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   if ([availableVersion length] && installedVersion) {
     NSString *formatString = NSLocalizedString(@"Update available: %@", nil);
     updateString = [NSString stringWithFormat:formatString, availableVersion];
-    buttonText = NSLocalizedString(@"Update OSXFUSE", nil);
+    buttonText = NSLocalizedString(@"Update FUSE for OS X", nil);
     selector = @selector(updateOSXFUSE:);
     [self setUpdateAvailable: YES];
   } else if (availableVersion && installedVersion) {
@@ -310,7 +310,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
       NSString *formatString 
         = NSLocalizedString(@"Version available to install: %@", nil);
       updateString = [NSString stringWithFormat:formatString, availableVersion];
-      buttonText = NSLocalizedString(@"Install OSXFUSE", nil);
+      buttonText = NSLocalizedString(@"Install FUSE for OS X", nil);
       selector = @selector(updateOSXFUSE:);
       [self setUpdateAvailable: YES];
     } else {
@@ -326,7 +326,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   [self setInstalled:isInstalled];
   if (!installedVersion) {
     installedVersion 
-      = NSLocalizedString(@"OSXFUSE does not appear to be installed.", nil);
+      = NSLocalizedString(@"FUSE for OS X does not appear to be installed.", nil);
   } else {
       NSString *installedFormat = NSLocalizedString(@"Installed Version: %@",
                                                     nil);
@@ -389,7 +389,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   if (![self authorize]) return;
   NSData *output = nil;
   [spinner startAnimation:self];
-  [self setMessageText:NSLocalizedString(@"Removing OSXFUSE…", nil)];
+  [self setMessageText:NSLocalizedString(@"Removing FUSE for OS X…", nil)];
   int result = [self runTaskForPath:[self removeToolPath] 
                       withArguments:[NSArray arrayWithObject:@"-q"]
                          authorized:YES
