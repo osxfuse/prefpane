@@ -10,7 +10,7 @@
 #include <sys/stat.h>
 
 static NSString *kAutoInstallToolName = @"autoinstall-osxfuse-core";
-static NSString *kRemoveToolPath = @"/Library/Filesystems/osxfuse.fs/Contents/Resources/uninstall_osxfuse.sh";
+static NSString *kRemoveToolPath = @"/Library/Filesystems/osxfuse.fs/Contents/Resources/uninstall_osxfuse.app";
 static NSString *kPreferencesName = @"com.github.osxfuse.OSXFUSE.plist";
 static NSString *kURLKey = @"URL";
 static NSString *kBetaValue = @"http://osxfuse.github.io/releases/DeveloperRelease.plist";
@@ -382,13 +382,12 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   NSString *removeToolPath = [self removeToolPath];
   struct stat buf;
   if (stat([removeToolPath fileSystemRepresentation], &buf)) return;
-  if (![self authorize]) return;
   NSData *output = nil;
   [spinner startAnimation:self];
   [self setMessageText:NSLocalizedString(@"Removing FUSE for OS X…", nil)];
-  int result = [self runTaskForPath:[self removeToolPath] 
-                      withArguments:[NSArray arrayWithObject:@"-q"]
-                         authorized:YES
+  int result = [self runTaskForPath:@"/usr/bin/open"
+                      withArguments:[NSArray arrayWithObject:[self removeToolPath]]
+                         authorized:NO
                              output:&output];
   [spinner stopAnimation:self];
   if (result) {
