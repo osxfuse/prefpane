@@ -671,6 +671,8 @@
 /* Begin PBXProject section */
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "autoinstaller" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -916,6 +918,7 @@
 			buildSettings = {
 				OTHER_LDFLAGS = "-lcrypto";
 				PRODUCT_NAME = plist_signer;
+				VALID_ARCHS = "ppc i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -924,6 +927,7 @@
 			buildSettings = {
 				OTHER_LDFLAGS = "-lcrypto";
 				PRODUCT_NAME = plist_signer;
+				VALID_ARCHS = "ppc i386 x86_64";
 			};
 			name = Release;
 		};
@@ -952,6 +956,7 @@
 			buildSettings = {
 				OTHER_LDFLAGS = "-lcrypto";
 				PRODUCT_NAME = "autoinstall-osxfuse-core";
+				VALID_ARCHS = "ppc i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -966,6 +971,7 @@
 				OTHER_LDFLAGS = "-lcrypto";
 				PREBINDING = NO;
 				PRODUCT_NAME = "autoinstall-osxfuse-core";
+				VALID_ARCHS = "ppc i386 x86_64";
 				ZERO_LINK = NO;
 			};
 			name = Release;
