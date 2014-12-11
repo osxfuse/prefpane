@@ -227,8 +227,8 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
         versionNumber = [versionNumber substringFromIndex:[versionTag length]];
         if ([versionNumber intValue] != 0) {
           versionString = versionNumber;
-          NSString *fusePath 
-            = @"/Library/FileSystems/osxfuse.fs/Contents/Info.plist";
+          NSString *fusePath
+            = @"/Library/Filesystems/osxfuse.fs/Contents/Info.plist";
           NSDictionary *fusePlist 
             = [NSDictionary dictionaryWithContentsOfFile:fusePath];
           if (fusePlist) {
