@@ -134,7 +134,7 @@ static Class gServerClass;  // Weak
 
   [updateInfos_ removeAllObjects];
   [outOfBandData_ removeAllObjects];
-  NSMutableDictionary *outPipeContents =
+  NSDictionary *outPipeContents =
     [NSDictionary dictionaryWithObjectsAndKeys:
                   updateInfos_, KSActionUpdateInfosKey,
                   outOfBandData_, KSActionOutOfBandDataKey,
