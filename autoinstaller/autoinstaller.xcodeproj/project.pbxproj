@@ -23,6 +23,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4311B1521B2DF2DF00E1765E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4311B1511B2DF2DF00E1765E /* Security.framework */; };
+		4311B1531B2DF2F900E1765E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4311B1511B2DF2DF00E1765E /* Security.framework */; };
+		4311B1541B2DF30300E1765E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4311B1511B2DF2DF00E1765E /* Security.framework */; };
 		4397826E13A704AE00C60D51 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4397826D13A704AE00C60D51 /* SenTestingKit.framework */; };
 		43BCA5BC13A7DAF700305194 /* KSOutOfBandDataAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA5BA13A7DAC000305194 /* KSOutOfBandDataAction.m */; };
 		43F956B113A7CC6E00332B06 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F9568C13A7CC4B00332B06 /* GTMHTTPFetcher.m */; };
@@ -129,6 +132,7 @@
 		08FB7796FE84155DC02AAC07 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32A70AAB03705E1F00C91783 /* autoinstaller_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autoinstaller_Prefix.pch; sourceTree = "<group>"; };
+		4311B1511B2DF2DF00E1765E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4390FA561417BDA200E4CF8B /* UpdateEngine.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UpdateEngine.xcconfig; sourceTree = "<group>"; };
 		4397826D13A704AE00C60D51 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		43BCA5B913A7DAC000305194 /* KSOutOfBandDataAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSOutOfBandDataAction.h; sourceTree = "<group>"; };
@@ -278,10 +282,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4397826E13A704AE00C60D51 /* SenTestingKit.framework in Frameworks */,
 				F93101490E92D9A5009FB4B0 /* Carbon.framework in Frameworks */,
 				F93101450E92D99D009FB4B0 /* CoreServices.framework in Frameworks */,
 				F924691D0E31689E004ADF93 /* Foundation.framework in Frameworks */,
+				4311B1521B2DF2DF00E1765E /* Security.framework in Frameworks */,
+				4397826E13A704AE00C60D51 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9246A5E0E319CEA004ADF93 /* Foundation.framework in Frameworks */,
+				4311B1531B2DF2F900E1765E /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,8 +305,9 @@
 			files = (
 				F93100220E92D4FE009FB4B0 /* Carbon.framework in Frameworks */,
 				F93100160E92D465009FB4B0 /* CoreServices.framework in Frameworks */,
-				F931FEB00E92D455009FB4B0 /* IOKit.framework in Frameworks */,
 				F931FEA30E92D3F2009FB4B0 /* Foundation.framework in Frameworks */,
+				F931FEB00E92D455009FB4B0 /* IOKit.framework in Frameworks */,
+				4311B1541B2DF30300E1765E /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +317,7 @@
 		08FB7794FE84155DC02AAC07 /* autoinstaller */ = {
 			isa = PBXGroup;
 			children = (
+				4311B1511B2DF2DF00E1765E /* Security.framework */,
 				32A70AAB03705E1F00C91783 /* autoinstaller_Prefix.pch */,
 				F931F9AE0E92B699009FB4B0 /* update-engine */,
 				F954C0C90E2D6C6400E776EB /* UpdateEngineExtensions */,
@@ -833,15 +841,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F931FBEB0E92B6F9009FB4B0 /* DebugTigerOrLater.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PREFIX_HEADER = autoinstaller_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				LIBRARY_SEARCH_PATHS = "\"../externals/google-toolbox-for-mac/TigerGcov\"";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_LDFLAGS = "";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wendif-labels",
@@ -854,11 +862,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F931FBEC0E92B6F9009FB4B0 /* ReleaseTigerOrLater.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_PREFIX_HEADER = autoinstaller_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx10.7;
+				GCC_VERSION = "";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				SDKROOT = macosx;
 				WARNING_CFLAGS = (
 					"-Wall",
 					"-Wendif-labels",
@@ -871,7 +879,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F931FBF40E92B6F9009FB4B0 /* DebugUnittest.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -894,7 +902,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F931FBF60E92B6F9009FB4B0 /* ReleaseUnittest.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

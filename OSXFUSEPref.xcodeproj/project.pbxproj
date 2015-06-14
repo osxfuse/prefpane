@@ -402,17 +402,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43DE3FF313B8FA4C00E764AD /* DebugSnowLeopardOrLater.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_ENABLE_OBJC_GC = unsupported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx10.5]" = supported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx10.6]" = supported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx10.7]" = supported;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GTM_GENERAL_WARNING_CFLAGS1 = "-Wall -Wendif-labels -Winvalid-pch -Wformat -Wmissing-format-attribute -Wwrite-strings -Wstack-protector -Wstrict-aliasing=2";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				OSXFUSE_VERSION = 3.0.0;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -420,17 +420,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43DE3FF413B8FA4C00E764AD /* ReleaseSnowLeopardOrLater.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_ENABLE_OBJC_GC = unsupported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx10.5]" = supported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx10.6]" = supported;
 				"GCC_ENABLE_OBJC_GC[sdk=macosx10.7]" = supported;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GTM_GENERAL_WARNING_CFLAGS1 = "-Wall -Wendif-labels -Winvalid-pch -Wformat -Wmissing-format-attribute -Wwrite-strings -Wstack-protector -Wstrict-aliasing=2";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				OSXFUSE_VERSION = 3.0.0;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
