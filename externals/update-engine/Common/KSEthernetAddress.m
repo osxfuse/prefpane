@@ -13,8 +13,8 @@
 // limitations under the License.
 
 #import "KSEthernetAddress.h"
-#import <openssl/md5.h>
 
+#import <CommonCrypto/CommonDigest.h>
 #import <CoreFoundation/CoreFoundation.h>
 
 #import <IOKit/IOKitLib.h>
@@ -74,17 +74,14 @@ static kern_return_t GetMACAddress(io_iterator_t intfIterator,
 
   const char *s = [address UTF8String];
 
-  MD5_CTX c;
-  MD5_Init(&c);
-  MD5_Update(&c, s, strlen(s));
-
   unsigned char hash[16];
-  MD5_Final(hash, &c);
+  CC_MD5(s, strlen(s), hash);
 
-  UInt32 *hash32 = (UInt32*)hash;
+  UInt32 *hash32 = (UInt32 *)hash;
 
   NSString *result = [NSString stringWithFormat:@"%04x%04x%04x%04x",
-                               hash32[0], hash32[1], hash32[2], hash32[3] ];
+                               (unsigned int)hash32[0], (unsigned int)hash32[1],
+                               (unsigned int)hash32[2], (unsigned int)hash32[3]];
   return result;
 }
 
