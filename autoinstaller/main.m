@@ -57,7 +57,7 @@ static BOOL IsTiger(void) {
 // Returns the version of the currently-installed OSXFUSE. If not found, returns
 // nil. The version is obtained by running:
 //
-//   MOUNT_FUSEFS_CALL_BY_LIB=1 .../mount_osxfusefs --version
+//   MOUNT_OSXFUSE_CALL_BY_LIB=1 .../mount_osxfuse --version
 //
 static NSString *GetOSXFUSEVersion(void) {
   NSString *mountFusePath =
@@ -68,7 +68,7 @@ static NSString *GetOSXFUSEVersion(void) {
   }
   
   NSString *cmd = [NSString stringWithFormat:
-                   @"MOUNT_FUSEFS_CALL_BY_LIB=1 "
+                   @"MOUNT_OSXFUSE_CALL_BY_LIB=1 "
                    @"%@ --version 2>&1 | /usr/bin/grep -i version |"
                    @"/usr/bin/awk '{print $NF}'",
                    mountFusePath];
