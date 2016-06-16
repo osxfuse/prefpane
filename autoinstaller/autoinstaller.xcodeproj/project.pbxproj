@@ -924,7 +924,9 @@
 		F9246A220E3199FA004ADF93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-lcrypto";
+				OTHER_LDFLAGS = "";
+				"OTHER_LDFLAGS[sdk=macosx10.5]" = "-lcrypto";
+				"OTHER_LDFLAGS[sdk=macosx10.6]" = "-lcrypto";
 				PRODUCT_NAME = plist_signer;
 				VALID_ARCHS = "ppc i386 x86_64";
 			};
@@ -933,7 +935,9 @@
 		F9246A230E3199FA004ADF93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-lcrypto";
+				OTHER_LDFLAGS = "";
+				"OTHER_LDFLAGS[sdk=macosx10.5]" = "-lcrypto";
+				"OTHER_LDFLAGS[sdk=macosx10.6]" = "-lcrypto";
 				PRODUCT_NAME = plist_signer;
 				VALID_ARCHS = "ppc i386 x86_64";
 			};
@@ -962,7 +966,9 @@
 		F931FE620E92D311009FB4B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-lcrypto";
+				OTHER_LDFLAGS = "";
+				"OTHER_LDFLAGS[sdk=macosx10.5]" = "-lcrypto";
+				"OTHER_LDFLAGS[sdk=macosx10.6]" = "-lcrypto";
 				PRODUCT_NAME = "autoinstall-osxfuse-core";
 				VALID_ARCHS = "ppc i386 x86_64";
 			};
@@ -976,7 +982,9 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				INSTALL_PATH = /usr/local/bin;
-				OTHER_LDFLAGS = "-lcrypto";
+				OTHER_LDFLAGS = "";
+				"OTHER_LDFLAGS[sdk=macosx10.5]" = "-lcrypto";
+				"OTHER_LDFLAGS[sdk=macosx10.6]" = "-lcrypto";
 				PREBINDING = NO;
 				PRODUCT_NAME = "autoinstall-osxfuse-core";
 				VALID_ARCHS = "ppc i386 x86_64";
