@@ -125,7 +125,7 @@
 							<object class="NSButtonCell" key="NSCell" id="942732200">
 								<int key="NSCellFlags">67108864</int>
 								<int key="NSCellFlags2">134217728</int>
-								<string key="NSContents">Remove FUSE for OS X</string>
+								<string key="NSContents">Remove FUSE</string>
 								<reference key="NSSupport" ref="508274235"/>
 								<reference key="NSControlView" ref="574549948"/>
 								<int key="NSButtonFlags">-2038284288</int>

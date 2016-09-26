@@ -293,7 +293,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   if ([availableVersion length] && installedVersion) {
     NSString *formatString = NSLocalizedString(@"Update available: %@", nil);
     updateString = [NSString stringWithFormat:formatString, availableVersion];
-    buttonText = NSLocalizedString(@"Update FUSE for macOS", nil);
+    buttonText = NSLocalizedString(@"Update FUSE", nil);
     selector = @selector(updateOSXFUSE:);
     [self setUpdateAvailable: YES];
   } else if (availableVersion && installedVersion) {
@@ -306,7 +306,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
       NSString *formatString 
         = NSLocalizedString(@"Version available to install: %@", nil);
       updateString = [NSString stringWithFormat:formatString, availableVersion];
-      buttonText = NSLocalizedString(@"Install FUSE for macOS", nil);
+      buttonText = NSLocalizedString(@"Install FUSE", nil);
       selector = @selector(updateOSXFUSE:);
       [self setUpdateAvailable: YES];
     } else {
@@ -322,7 +322,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   [self setInstalled:isInstalled];
   if (!installedVersion) {
     installedVersion 
-      = NSLocalizedString(@"FUSE for macOS does not appear to be installed.", nil);
+      = NSLocalizedString(@"FUSE does not appear to be installed.", nil);
   } else {
       NSString *installedFormat = NSLocalizedString(@"Installed Version: %@",
                                                     nil);
@@ -384,7 +384,7 @@ static const NSTimeInterval kNetworkTimeOutInterval = 15;
   if (stat([removeToolPath fileSystemRepresentation], &buf)) return;
   NSData *output = nil;
   [spinner startAnimation:self];
-  [self setMessageText:NSLocalizedString(@"Removing FUSE for macOS …", nil)];
+  [self setMessageText:NSLocalizedString(@"Removing FUSE …", nil)];
   int result = [self runTaskForPath:@"/usr/bin/open"
                       withArguments:[NSArray arrayWithObject:[self removeToolPath]]
                          authorized:NO

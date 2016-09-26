@@ -10,7 +10,7 @@
 					<key>index</key>
 					<string>osxfuse, fuse, file, update, remove</string>
 					<key>title</key>
-					<string>FUSE for macOS</string>
+					<string>FUSE</string>
 				</dict>
 			</array>
 		</dict>
