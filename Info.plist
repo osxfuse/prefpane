@@ -30,6 +30,8 @@
 	<string>FUSE</string>
 	<key>NSPrefPaneSearchParameters</key>
 	<string>OSXFUSE</string>
+	<key>NSPrefPaneAllowsXAppleSystemPreferencesURLScheme</key>
+	<true/>
 	<key>NSPrincipalClass</key>
 	<string>OSXFUSEPref</string>
 </dict>
