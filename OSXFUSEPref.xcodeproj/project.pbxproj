@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43952BBD1F0D6A4600FB3B3E /* OSXFUSE_48x48@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43952BB81F0D6A3B00FB3B3E /* OSXFUSE_48x48@2x.png */; };
 		8B0202900ECB2AA700A6EB85 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B02028F0ECB2AA700A6EB85 /* Security.framework */; };
 		8B4A3EB00ED245F0006BFDD8 /* About.html in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A3EAF0ED245F0006BFDD8 /* About.html */; };
 		8B4A41B20ED31D25006BFDD8 /* com.github.osxfuse.OSXFUSE.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B4A41B10ED31D25006BFDD8 /* com.github.osxfuse.OSXFUSE.plist */; };
@@ -62,6 +63,7 @@
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		43952BB81F0D6A3B00FB3B3E /* OSXFUSE_48x48@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OSXFUSE_48x48@2x.png"; sourceTree = "<group>"; };
 		43DE3FF313B8FA4C00E764AD /* DebugSnowLeopardOrLater.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugSnowLeopardOrLater.xcconfig; sourceTree = "<group>"; };
 		43DE3FF413B8FA4C00E764AD /* ReleaseSnowLeopardOrLater.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ReleaseSnowLeopardOrLater.xcconfig; sourceTree = "<group>"; };
 		8B02028F0ECB2AA700A6EB85 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8BE4F6360EDB2A2C0087B5C1 /* OSXFUSE_48x48.png */,
+				43952BB81F0D6A3B00FB3B3E /* OSXFUSE_48x48@2x.png */,
 				8BE4F6390EDB2A300087B5C1 /* OSXFUSE.icns */,
 				8B4A3EAF0ED245F0006BFDD8 /* About.html */,
 				8B4A41B10ED31D25006BFDD8 /* com.github.osxfuse.OSXFUSE.plist */,
@@ -312,6 +315,7 @@
 				8B4A3EB00ED245F0006BFDD8 /* About.html in Resources */,
 				8B4A41B20ED31D25006BFDD8 /* com.github.osxfuse.OSXFUSE.plist in Resources */,
 				8BE4F6370EDB2A2C0087B5C1 /* OSXFUSE_48x48.png in Resources */,
+				43952BBD1F0D6A4600FB3B3E /* OSXFUSE_48x48@2x.png in Resources */,
 				8BF53A3F0EE5AD0300D981A0 /* OSXFUSE.icns in Resources */,
 				8BF53A230EE5AC3800D981A0 /* OSXFUSE.searchTerms in Resources */,
 			);
